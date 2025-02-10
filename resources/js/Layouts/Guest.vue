@@ -3,19 +3,19 @@
 </script>
 
 <template>
-    <header>
+    <header >
         <nav>
             <div>
                 <h1>LOGO</h1>
                 <ul>
                     <li>
-                        <Link :href="route('site.home')">Home - JEITO BlackDev</Link>
+                        <Link :href="route('site.home')">Home</Link>
                     </li>
                     <li>
-                        <Link :href="route('users.index')">Listagem - JEITO BlackDev</Link>
+                        <Link :href="route('users.index')">Listagem</Link>
                     </li>
                     <li>
-                        <Link :href="route('site.contact')">Contato - JEITO BlackDev</Link>
+                        <Link :href="route('site.contact')">Contato</Link>
                     </li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
         <slot/>
     </main>
     <footer>
-        <p>Copyright Todos os Direitos Reservados - Purgato Technology </p>
+        <p>&copy;Copyright Todos os Direitos Reservados - Purgato Technology </p>
     </footer>
 </template>
 
