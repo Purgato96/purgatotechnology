@@ -1,0 +1,10 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "resources/js/Layouts/Guest.vue": [],
+  "resources/js/Pages/Contact.vue": [],
+  "resources/js/Pages/Home.vue": [],
+  "resources/js/Pages/Teste.vue": [],
+  "resources/js/Pages/Users/Index.vue": [],
+  "resources/js/ssr.js": [],
+  "vendor/tightenco/ziggy/dist/index.js": []
+}
