@@ -1,12 +1,13 @@
 
 ## Sobre o Projeto
 
-Será desenvolvido um projeto utilizando do Laravel, Inertia e Vue para exemplificar como se faz as devidas instalações de ambas as ferramentas dentro de um único projeto
+Será desenvolvido um projeto utilizando do Laravel, Inertia, Vue e Tailwindcss para exemplificar como se faz as devidas instalações de ambas as ferramentas dentro de um único projeto
 
 ### Instalações
 - [Laravel](https://laravel.com/docs/11.x).
 - [Inertia](https://inertiajs.com).
 - [Vue](https://vuejs.org).
+- [Tailwindcss](https://tailwindcss.com/docs/installation/using-vite).
 
 
 -   Laravel:
