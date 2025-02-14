@@ -1,36 +1,22 @@
-<script setup>
-
-</script>
-
 <template>
-    <header >
-        <nav>
-            <div>
-                <h1>LOGO</h1>
-                <ul>
-                    <li>
-                        <Link :href="route('site.home')">Home</Link>
-                    </li>
-                    <li>
-                        <Link :href="route('users.index')">Listagem</Link>
-                    </li>
-                    <li>
-                        <Link :href="route('site.contact')">Contato</Link>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
+<!--  header  -->
+    <header class="bg-[#2d3e50] text-[#82b3e8] p-10 mb-10">
+        <div>
+                <Navigation/>
+        </div>
     </header>
-
+<!--  Conteúdo Principal da página  -->
     <main>
         <slot/>
     </main>
-    <footer>
-        <p>&copy;Copyright Todos os Direitos Reservados - Purgato Technology </p>
+
+<!--  Footer  -->
+    <footer class="bg-[#57789c] text-white text-center flex justify-center py-4" >
+        <Footer/>
     </footer>
 </template>
 
-<style scoped>
-
-</style>
+<script setup>
+import Navigation from "@/Components/Navigation.vue";
+import Footer from "@/Components/Footer.vue";
+</script>

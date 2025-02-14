@@ -1,16 +1,17 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    sleep(2);
-    return Inertia::render('Home');
-})->name('site.home');
-
-Route::resource('users', UserController::class);
-Route::get('/contato', function () {
-    sleep(3);
-    return Inertia::render('Contact');
-})->name('site.contact');
+Route::controller(SiteController::class)->group(function () {
+    Route::get('/',  'index')->name('site.home');
+    Route::get('/sobre',  'about')->name('site.about');
+    Route::get('/serviços',  'services')->name('site.services');
+    Route::get('/blog',  'blog')->name('site.blog');
+    Route::get('/contato', 'contact')->name('site.contact');
+});
+Route::get('/admin', function () {
+    return Inertia::render('admin/Dashboard');
+});

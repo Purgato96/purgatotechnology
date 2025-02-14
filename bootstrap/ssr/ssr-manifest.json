@@ -1,10 +1,14 @@
 {
   "\u0000plugin-vue:export-helper": [],
+  "resources/js/Components/Footer.vue": [],
+  "resources/js/Components/Navigation.vue": [],
   "resources/js/Layouts/Guest.vue": [],
-  "resources/js/Pages/Contact.vue": [],
-  "resources/js/Pages/Home.vue": [],
-  "resources/js/Pages/Teste.vue": [],
-  "resources/js/Pages/Users/Index.vue": [],
+  "resources/js/Pages/admin/Dashboard.vue": [],
+  "resources/js/Pages/site/About.vue": [],
+  "resources/js/Pages/site/Blog.vue": [],
+  "resources/js/Pages/site/Contact.vue": [],
+  "resources/js/Pages/site/Home.vue": [],
+  "resources/js/Pages/site/Services.vue": [],
   "resources/js/ssr.js": [],
   "vendor/tightenco/ziggy/dist/index.js": []
 }

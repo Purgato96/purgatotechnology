@@ -1,8 +1,10 @@
-import { useSSRContext, resolveComponent, withCtx, createVNode, createTextVNode, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderSlot } from "vue/server-renderer";
+import { useSSRContext, resolveComponent, withCtx, createVNode, resolveDynamicComponent, ref, unref, createTextVNode, createBlock, openBlock, Fragment, renderList, toDisplayString, Transition, mergeProps, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderStyle, ssrRenderList, ssrRenderVNode, ssrInterpolate, ssrRenderAttr, ssrRenderSlot } from "vue/server-renderer";
+import { CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
+import { PopoverGroup, Popover, PopoverButton, PopoverPanel, Dialog, DialogPanel, Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -10,8 +12,52 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$4 = {};
+const _sfc_main$8 = {};
+function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
+}
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+};
+const Dashboard = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$4]]);
+const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Dashboard
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$7 = {};
+function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
+  _push(`<h1${ssrRenderAttrs(_attrs)}>Sobre</h1>`);
+}
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/About.vue");
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+};
+const About = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["ssrRender", _sfc_ssrRender$3]]);
+const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: About
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$6 = {};
 function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
+  _push(`<h1${ssrRenderAttrs(_attrs)}>Blog</h1>`);
+}
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$2]]);
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: Blog
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$5 = {};
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
   const _component_Head = resolveComponent("Head");
   _push(`<!--[-->`);
   _push(ssrRenderComponent(_component_Head, null, {
@@ -28,33 +74,50 @@ function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
   }, _parent));
   _push(`<h1>Página de contato</h1><!--]-->`);
 }
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Contact.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Contact.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const Contact = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["ssrRender", _sfc_ssrRender$2]]);
-const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Contact = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$1]]);
+const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Contact
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$3 = {
+const _sfc_main$4 = {
   __name: "Home",
   __ssrInlineRender: true,
-  props: {
-    auth: Object,
-    required: true
-  },
   setup(__props) {
-    const props = __props;
+    const features = [
+      {
+        name: "Push to deploy",
+        description: "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        icon: CloudArrowUpIcon
+      },
+      {
+        name: "SSL certificates",
+        description: "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+        icon: LockClosedIcon
+      },
+      {
+        name: "Simple queues",
+        description: "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+        icon: ArrowPathIcon
+      },
+      {
+        name: "Advanced security",
+        description: "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+        icon: FingerPrintIcon
+      }
+    ];
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Head = resolveComponent("Head");
       _push(`<!--[-->`);
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Home</title><meta head-key="description" name="description" content="Seja bem vindo a página home do site Purgato Technology!"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Home</title><meta head-key="description" name="description" content="Seja bem vindo a página home do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Home"),
@@ -62,87 +125,59 @@ const _sfc_main$3 = {
                 "head-key": "description",
                 name: "description",
                 content: "Seja bem vindo a página home do site Purgato Technology!"
+              }),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+              }),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: "Matheus Purgato | Laravel Developer"
               })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<h1>Página Home</h1> ${ssrInterpolate(props.auth)}<!--]-->`);
+      _push(`<div class="bg-white"><div class="relative isolate px-6 pt-10 lg:px-6"><div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"><div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-48"><div class="text-center"><h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Purgato Technology</h1><div class="mt-8 text-center text-lg font-medium text-gray-500 sm:text-xl/8"><h4 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">Soluções Web &amp; Cloud Sob Medida</h4><p class="mt-4 text-xl text-gray-600 sm:text-lg"> Desenvolvimento, hospedagem e tecnologia para o seu negócio crescer sem limites. </p></div></div></div><div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div></div></div><div class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mx-auto max-w-2xl lg:text-center"><h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2><p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">Everything you need to deploy your app</p><p class="mt-6 text-lg/8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p></div><div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"><dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"><!--[-->`);
+      ssrRenderList(features, (feature) => {
+        _push(`<div class="relative pl-16"><dt class="text-base/7 font-semibold text-gray-900"><div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">`);
+        ssrRenderVNode(_push, createVNode(resolveDynamicComponent(feature.icon), {
+          class: "size-6 text-white",
+          "aria-hidden": "true"
+        }, null), _parent);
+        _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-gray-600">${ssrInterpolate(feature.description)}</dd></div>`);
+      });
+      _push(`<!--]--></dl></div></div></div><!--]-->`);
     };
   }
 };
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Home.vue");
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+};
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$4
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$3 = {};
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
+  _push(`<h1${ssrRenderAttrs(_attrs)}>Welcome to services page</h1>`);
+}
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Home.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Services.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Services = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender]]);
+const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$3
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$2 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  _push(`<!--[--><h1>Teste deu certo!</h1> ${ssrInterpolate(_ctx.route().current("site.teste"))}<!--]-->`);
-}
-const _sfc_setup$2 = _sfc_main$2.setup;
-_sfc_main$2.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Teste.vue");
-  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
-};
-const Teste = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["ssrRender", _sfc_ssrRender$1]]);
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: Teste
-}, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$1 = {
-  __name: "Index",
-  __ssrInlineRender: true,
-  props: {
-    users: {
-      type: Array,
-      required: true
-    }
-  },
-  setup(__props) {
-    return (_ctx, _push, _parent, _attrs) => {
-      const _component_Head = resolveComponent("Head");
-      _push(`<!--[-->`);
-      _push(ssrRenderComponent(_component_Head, null, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<title${_scopeId}>Listagem de Usuários</title>`);
-          } else {
-            return [
-              createVNode("title", null, "Listagem de Usuários")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`<h1>Listagem de Usuários</h1><h2>Tabela</h2><table><tr><td>Nome</td><td>Email</td></tr><!--[-->`);
-      ssrRenderList(__props.users, (user) => {
-        _push(`<tr><td>${ssrInterpolate(user.name)}</td><td>${ssrInterpolate(user.email)}</td></tr>`);
-      });
-      _push(`<!--]--></table><th></th><h2>Lista</h2><ul><!--[-->`);
-      ssrRenderList(__props.users, (user) => {
-        _push(`<li>${ssrInterpolate(user.name)} - ${ssrInterpolate(user.email)}</li>`);
-      });
-      _push(`<!--]--></ul><!--]-->`);
-    };
-  }
-};
-const _sfc_setup$1 = _sfc_main$1.setup;
-_sfc_main$1.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Users/Index.vue");
-  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
-};
-const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: _sfc_main$1
+  default: Services
 }, Symbol.toStringTag, { value: "Module" }));
 function t() {
   return t = Object.assign ? Object.assign.bind() : function(t4) {
@@ -157,7 +192,7 @@ var e = String.prototype.replace, r = /%20/g, n = "RFC3986", o = { default: n, f
   return e.call(t4, r, "+");
 }, RFC3986: function(t4) {
   return String(t4);
-} }, RFC1738: "RFC1738", RFC3986: n }, i = Object.prototype.hasOwnProperty, u = Array.isArray, a = function() {
+} }, RFC1738: "RFC1738" }, i = Object.prototype.hasOwnProperty, u = Array.isArray, a = function() {
   for (var t4 = [], e2 = 0; e2 < 256; ++e2) t4.push("%" + ((e2 < 16 ? "0" : "") + e2.toString(16)).toUpperCase());
   return t4;
 }(), s = function(t4, e2) {
@@ -395,7 +430,7 @@ class N extends String {
       "function" == typeof i2.filter ? n2 = (0, i2.filter)("", n2) : p(i2.filter) && (r2 = i2.filter);
       var u2 = [];
       if ("object" != typeof n2 || null === n2) return "";
-      var a2 = l[e3.arrayFormat in l ? e3.arrayFormat : "indices" in e3 ? e3.indices ? "indices" : "repeat" : "indices"];
+      var a2 = l[e3 && e3.arrayFormat in l ? e3.arrayFormat : e3 && "indices" in e3 ? e3.indices ? "indices" : "repeat" : "indices"];
       r2 || (r2 = Object.keys(n2)), i2.sort && r2.sort(i2.sort);
       for (var s2 = 0; s2 < r2.length; ++s2) {
         var f2 = r2[s2];
@@ -475,73 +510,436 @@ const k = { install(t4, e2) {
   const r2 = (t5, r3, n2, o2 = e2) => T(t5, r3, n2, o2);
   parseInt(t4.version) > 2 ? (t4.config.globalProperties.route = r2, t4.provide("route", r2)) : t4.mixin({ methods: { route: r2 } });
 } };
-const _sfc_main = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_Link = resolveComponent("Link");
-  _push(`<!--[--><header><nav><div><h1>LOGO</h1><ul><li>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("site.home")
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Home - JEITO BlackDev`);
-      } else {
-        return [
-          createTextVNode("Home - JEITO BlackDev")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("users.index")
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Listagem - JEITO BlackDev`);
-      } else {
-        return [
-          createTextVNode("Listagem - JEITO BlackDev")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li>`);
-  _push(ssrRenderComponent(_component_Link, {
-    href: _ctx.route("site.contact")
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Contato - JEITO BlackDev`);
-      } else {
-        return [
-          createTextVNode("Contato - JEITO BlackDev")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li></ul></div></nav></header><main>`);
-  ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-  _push(`</main><footer><p>Copyright Todos os Direitos Reservados - Purgato Technology </p></footer><!--]-->`);
-}
+const imageUrl = "/resources/img/site/logo-purgato-technology.png";
+const _sfc_main$2 = {
+  __name: "Navigation",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const mobileMenuOpen = ref(false);
+    const services = [
+      { name: "Desenvolvimento Web", href: "#" },
+      { name: "SEO e Marketing Digital", href: "#" },
+      { name: "Consultoria Tecnológica", href: "#" }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
+      _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
+      _push(`</button></div>`);
+      _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a>`);
+            _push2(ssrRenderComponent(unref(Popover), { class: "relative" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(ssrRenderComponent(unref(PopoverButton), { class: "flex items-center gap-x-1 text-sm font-semibold text-white" }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(` Serviços `);
+                        _push4(ssrRenderComponent(unref(ChevronDownIcon), { class: "size-5 text-gray-400" }, null, _parent4, _scopeId3));
+                      } else {
+                        return [
+                          createTextVNode(" Serviços "),
+                          createVNode(unref(ChevronDownIcon), { class: "size-5 text-gray-400" })
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  _push3(``);
+                  _push3(ssrRenderComponent(unref(PopoverPanel), { class: "absolute left-0 z-10 mt-3 w-48 bg-white shadow-lg ring-1 ring-gray-900/5 rounded-lg" }, {
+                    default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(`<div class="p-2"${_scopeId3}><!--[-->`);
+                        ssrRenderList(services, (item) => {
+                          _push4(`<a${ssrRenderAttr("href", item.href)} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"${_scopeId3}>${ssrInterpolate(item.name)}</a>`);
+                        });
+                        _push4(`<!--]--></div>`);
+                      } else {
+                        return [
+                          createVNode("div", { class: "p-2" }, [
+                            (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                              return createVNode("a", {
+                                key: item.name,
+                                href: item.href,
+                                class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              }, toDisplayString(item.name), 9, ["href"]);
+                            }), 64))
+                          ])
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                } else {
+                  return [
+                    createVNode(unref(PopoverButton), { class: "flex items-center gap-x-1 text-sm font-semibold text-white" }, {
+                      default: withCtx(() => [
+                        createTextVNode(" Serviços "),
+                        createVNode(unref(ChevronDownIcon), { class: "size-5 text-gray-400" })
+                      ]),
+                      _: 1
+                    }),
+                    createVNode(Transition, {
+                      "enter-active-class": "transition ease-out duration-200",
+                      "enter-from-class": "opacity-0 translate-y-1",
+                      "enter-to-class": "opacity-100 translate-y-0",
+                      "leave-active-class": "transition ease-in duration-150",
+                      "leave-from-class": "opacity-100 translate-y-0",
+                      "leave-to-class": "opacity-0 translate-y-1"
+                    }, {
+                      default: withCtx(() => [
+                        createVNode(unref(PopoverPanel), { class: "absolute left-0 z-10 mt-3 w-48 bg-white shadow-lg ring-1 ring-gray-900/5 rounded-lg" }, {
+                          default: withCtx(() => [
+                            createVNode("div", { class: "p-2" }, [
+                              (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                                return createVNode("a", {
+                                  key: item.name,
+                                  href: item.href,
+                                  class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                }, toDisplayString(item.name), 9, ["href"]);
+                              }), 64))
+                            ])
+                          ]),
+                          _: 1
+                        })
+                      ]),
+                      _: 1
+                    })
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-white"${_scopeId}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
+          } else {
+            return [
+              createVNode("a", {
+                href: _ctx.route("site.home"),
+                class: "text-sm font-semibold text-white"
+              }, "Home", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.about"),
+                class: "text-sm font-semibold text-white"
+              }, "Sobre", 8, ["href"]),
+              createVNode(unref(Popover), { class: "relative" }, {
+                default: withCtx(() => [
+                  createVNode(unref(PopoverButton), { class: "flex items-center gap-x-1 text-sm font-semibold text-white" }, {
+                    default: withCtx(() => [
+                      createTextVNode(" Serviços "),
+                      createVNode(unref(ChevronDownIcon), { class: "size-5 text-gray-400" })
+                    ]),
+                    _: 1
+                  }),
+                  createVNode(Transition, {
+                    "enter-active-class": "transition ease-out duration-200",
+                    "enter-from-class": "opacity-0 translate-y-1",
+                    "enter-to-class": "opacity-100 translate-y-0",
+                    "leave-active-class": "transition ease-in duration-150",
+                    "leave-from-class": "opacity-100 translate-y-0",
+                    "leave-to-class": "opacity-0 translate-y-1"
+                  }, {
+                    default: withCtx(() => [
+                      createVNode(unref(PopoverPanel), { class: "absolute left-0 z-10 mt-3 w-48 bg-white shadow-lg ring-1 ring-gray-900/5 rounded-lg" }, {
+                        default: withCtx(() => [
+                          createVNode("div", { class: "p-2" }, [
+                            (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                              return createVNode("a", {
+                                key: item.name,
+                                href: item.href,
+                                class: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              }, toDisplayString(item.name), 9, ["href"]);
+                            }), 64))
+                          ])
+                        ]),
+                        _: 1
+                      })
+                    ]),
+                    _: 1
+                  })
+                ]),
+                _: 1
+              }),
+              createVNode("a", {
+                href: _ctx.route("site.blog"),
+                class: "text-sm font-semibold text-white"
+              }, "Blog", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.contact"),
+                class: "text-sm font-semibold text-white"
+              }, "Contato", 8, ["href"])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</nav>`);
+      _push(ssrRenderComponent(unref(Dialog), {
+        as: "div",
+        class: "relative z-50 lg:hidden",
+        onClose: ($event) => mobileMenuOpen.value = false,
+        open: mobileMenuOpen.value
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="fixed inset-0 bg-black/30"${_scopeId}></div>`);
+            _push2(ssrRenderComponent(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
+                  _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
+                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a>`);
+                  _push3(ssrRenderComponent(unref(Disclosure), null, {
+                    default: withCtx(({ open }, _push4, _parent4, _scopeId3) => {
+                      if (_push4) {
+                        _push4(ssrRenderComponent(unref(DisclosureButton), { class: "flex w-full justify-between text-sm font-semibold text-gray-900" }, {
+                          default: withCtx((_3, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(` Serviços `);
+                              _push5(ssrRenderComponent(unref(ChevronDownIcon), {
+                                class: [open ? "rotate-180" : "", "size-5"]
+                              }, null, _parent5, _scopeId4));
+                            } else {
+                              return [
+                                createTextVNode(" Serviços "),
+                                createVNode(unref(ChevronDownIcon), {
+                                  class: [open ? "rotate-180" : "", "size-5"]
+                                }, null, 8, ["class"])
+                              ];
+                            }
+                          }),
+                          _: 2
+                        }, _parent4, _scopeId3));
+                        _push4(ssrRenderComponent(unref(DisclosurePanel), { class: "mt-2 space-y-2" }, {
+                          default: withCtx((_3, _push5, _parent5, _scopeId4) => {
+                            if (_push5) {
+                              _push5(`<!--[-->`);
+                              ssrRenderList(services, (item) => {
+                                _push5(`<a${ssrRenderAttr("href", item.href)} class="block pl-4 text-sm text-gray-700 hover:bg-gray-100"${_scopeId4}>${ssrInterpolate(item.name)}</a>`);
+                              });
+                              _push5(`<!--]-->`);
+                            } else {
+                              return [
+                                (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                                  return createVNode("a", {
+                                    key: item.name,
+                                    href: item.href,
+                                    class: "block pl-4 text-sm text-gray-700 hover:bg-gray-100"
+                                  }, toDisplayString(item.name), 9, ["href"]);
+                                }), 64))
+                              ];
+                            }
+                          }),
+                          _: 2
+                        }, _parent4, _scopeId3));
+                      } else {
+                        return [
+                          createVNode(unref(DisclosureButton), { class: "flex w-full justify-between text-sm font-semibold text-gray-900" }, {
+                            default: withCtx(() => [
+                              createTextVNode(" Serviços "),
+                              createVNode(unref(ChevronDownIcon), {
+                                class: [open ? "rotate-180" : "", "size-5"]
+                              }, null, 8, ["class"])
+                            ]),
+                            _: 2
+                          }, 1024),
+                          createVNode(unref(DisclosurePanel), { class: "mt-2 space-y-2" }, {
+                            default: withCtx(() => [
+                              (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                                return createVNode("a", {
+                                  key: item.name,
+                                  href: item.href,
+                                  class: "block pl-4 text-sm text-gray-700 hover:bg-gray-100"
+                                }, toDisplayString(item.name), 9, ["href"]);
+                              }), 64))
+                            ]),
+                            _: 1
+                          })
+                        ];
+                      }
+                    }),
+                    _: 1
+                  }, _parent3, _scopeId2));
+                  _push3(`<a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
+                } else {
+                  return [
+                    createVNode("div", { class: "flex justify-between items-center" }, [
+                      createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
+                      createVNode("button", {
+                        onClick: ($event) => mobileMenuOpen.value = false
+                      }, [
+                        createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
+                      ], 8, ["onClick"])
+                    ]),
+                    createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
+                      createVNode("a", {
+                        href: _ctx.route("site.home"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Home", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.about"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Sobre", 8, ["href"]),
+                      createVNode(unref(Disclosure), null, {
+                        default: withCtx(({ open }) => [
+                          createVNode(unref(DisclosureButton), { class: "flex w-full justify-between text-sm font-semibold text-gray-900" }, {
+                            default: withCtx(() => [
+                              createTextVNode(" Serviços "),
+                              createVNode(unref(ChevronDownIcon), {
+                                class: [open ? "rotate-180" : "", "size-5"]
+                              }, null, 8, ["class"])
+                            ]),
+                            _: 2
+                          }, 1024),
+                          createVNode(unref(DisclosurePanel), { class: "mt-2 space-y-2" }, {
+                            default: withCtx(() => [
+                              (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                                return createVNode("a", {
+                                  key: item.name,
+                                  href: item.href,
+                                  class: "block pl-4 text-sm text-gray-700 hover:bg-gray-100"
+                                }, toDisplayString(item.name), 9, ["href"]);
+                              }), 64))
+                            ]),
+                            _: 1
+                          })
+                        ]),
+                        _: 1
+                      }),
+                      createVNode("a", {
+                        href: _ctx.route("site.blog"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Blog", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.contact"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Contato", 8, ["href"])
+                    ])
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode("div", { class: "fixed inset-0 bg-black/30" }),
+              createVNode(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
+                default: withCtx(() => [
+                  createVNode("div", { class: "flex justify-between items-center" }, [
+                    createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
+                    createVNode("button", {
+                      onClick: ($event) => mobileMenuOpen.value = false
+                    }, [
+                      createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
+                    ], 8, ["onClick"])
+                  ]),
+                  createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
+                    createVNode("a", {
+                      href: _ctx.route("site.home"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Home", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.about"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Sobre", 8, ["href"]),
+                    createVNode(unref(Disclosure), null, {
+                      default: withCtx(({ open }) => [
+                        createVNode(unref(DisclosureButton), { class: "flex w-full justify-between text-sm font-semibold text-gray-900" }, {
+                          default: withCtx(() => [
+                            createTextVNode(" Serviços "),
+                            createVNode(unref(ChevronDownIcon), {
+                              class: [open ? "rotate-180" : "", "size-5"]
+                            }, null, 8, ["class"])
+                          ]),
+                          _: 2
+                        }, 1024),
+                        createVNode(unref(DisclosurePanel), { class: "mt-2 space-y-2" }, {
+                          default: withCtx(() => [
+                            (openBlock(), createBlock(Fragment, null, renderList(services, (item) => {
+                              return createVNode("a", {
+                                key: item.name,
+                                href: item.href,
+                                class: "block pl-4 text-sm text-gray-700 hover:bg-gray-100"
+                              }, toDisplayString(item.name), 9, ["href"]);
+                            }), 64))
+                          ]),
+                          _: 1
+                        })
+                      ]),
+                      _: 1
+                    }),
+                    createVNode("a", {
+                      href: _ctx.route("site.blog"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Blog", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.contact"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Contato", 8, ["href"])
+                  ])
+                ]),
+                _: 1
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<!--]-->`);
+    };
+  }
+};
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Navigation.vue");
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
+};
+const _sfc_main$1 = {
+  __name: "Footer",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const year = (/* @__PURE__ */ new Date()).getFullYear();
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<footer${ssrRenderAttrs(mergeProps({ class: "text-white text-center p-4 md:p-6 mt-10" }, _attrs))}><div class="max-w-screen-lg mx-auto space-y-2 text-sm md:text-base"><p> Criado e Desenvolvido por <span class="underline font-bold"><a href="https://purgatotechnology.com.br" target="_blank" rel="noopener noreferrer"> Purgato Technology </a></span></p><p>Purgato Technology - © Todos os Direitos Reservados 2021 - ${ssrInterpolate(unref(year))}</p><p class="text-xs md:text-sm">CNPJ: 41.270.594/0001-38 | I.E: 536.155.620.117</p></div></footer>`);
+    };
+  }
+};
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Footer.vue");
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
+};
+const _sfc_main = {
+  __name: "Guest",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10 mb-10"><div>`);
+      _push(ssrRenderComponent(_sfc_main$2, null, null, _parent));
+      _push(`</div></header><main>`);
+      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
+      _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4 mt-10">`);
+      _push(ssrRenderComponent(_sfc_main$1, null, null, _parent));
+      _push(`</footer><!--]-->`);
+    };
+  }
+};
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/Guest.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const Guest = /* @__PURE__ */ _export_sfc(_sfc_main, [["ssrRender", _sfc_ssrRender]]);
 createServer(
   (page) => createInertiaApp({
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Contact.vue": __vite_glob_0_0, "./Pages/Home.vue": __vite_glob_0_1, "./Pages/Teste.vue": __vite_glob_0_2, "./Pages/Users/Index.vue": __vite_glob_0_3 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/site/About.vue": __vite_glob_0_1, "./Pages/site/Blog.vue": __vite_glob_0_2, "./Pages/site/Contact.vue": __vite_glob_0_3, "./Pages/site/Home.vue": __vite_glob_0_4, "./Pages/site/Services.vue": __vite_glob_0_5 });
       let page2 = pages[`./Pages/${name}.vue`];
-      page2.default.layout = page2.default.layout || Guest;
+      page2.default.layout = page2.default.layout || _sfc_main;
       return page2;
     },
     setup({ App, props, plugin }) {

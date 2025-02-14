@@ -6,6 +6,7 @@ import { renderToString } from '@vue/server-renderer'
 import Guest from "./Layouts/Guest.vue";
 
 
+
 createServer(page =>
     createInertiaApp({
         page,
