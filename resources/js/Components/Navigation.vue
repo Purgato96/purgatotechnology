@@ -28,7 +28,7 @@ const imageUrl = '/resources/img/site/logo-purgato-technology.png';
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <!-- LOGO -->
             <div class="flex lg:flex-1">
-                <img class="h-17 w-auto" :src="imageUrl" alt="Purgato Technology" />
+                <a :href="route('site.home')"><img class="h-17 w-auto" :src="imageUrl" alt="Purgato Technology" /></a>
             </div>
 
             <!-- MENU MOBILE -->

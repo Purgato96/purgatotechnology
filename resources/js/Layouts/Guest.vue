@@ -1,6 +1,6 @@
 <template>
 <!--  header  -->
-    <header class="bg-[#2d3e50] text-[#82b3e8] p-10 mb-10">
+    <header class="bg-[#2d3e50] text-[#82b3e8] p-10">
         <div>
                 <Navigation/>
         </div>

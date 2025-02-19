@@ -1,6 +1,6 @@
-import { useSSRContext, resolveComponent, withCtx, createVNode, resolveDynamicComponent, ref, unref, createTextVNode, createBlock, openBlock, Fragment, renderList, toDisplayString, Transition, mergeProps, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderStyle, ssrRenderList, ssrRenderVNode, ssrInterpolate, ssrRenderAttr, ssrRenderSlot } from "vue/server-renderer";
-import { CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { useSSRContext, mergeProps, resolveComponent, withCtx, createVNode, resolveDynamicComponent, ref, unref, createTextVNode, createBlock, openBlock, Fragment, renderList, toDisplayString, Transition, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderVNode, ssrRenderStyle, ssrRenderSlot } from "vue/server-renderer";
+import { EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
@@ -13,7 +13,7 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 const _sfc_main$8 = {};
-function _sfc_ssrRender$4(_ctx, _push, _parent, _attrs) {
+function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
 }
 const _sfc_setup$8 = _sfc_main$8.setup;
 _sfc_main$8.setup = (props, ctx) => {
@@ -21,14 +21,14 @@ _sfc_main$8.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
   return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const Dashboard = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$4]]);
+const Dashboard = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["ssrRender", _sfc_ssrRender$2]]);
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Dashboard
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$7 = {};
-function _sfc_ssrRender$3(_ctx, _push, _parent, _attrs) {
-  _push(`<h1${ssrRenderAttrs(_attrs)}>Sobre</h1>`);
+function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
+  _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-black py-12 sm:py-32" }, _attrs))}><div class="mx-auto max-w-7xl px-12 lg:px-16"><div class="mx-auto max-w-2xl lg:text-center"><h2 class="text-base/7 font-semibold text-sky-600">Sobre a Purgato Technology</h2><p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-sky-300 sm:text-5xl lg:text-balance"> Tecnologia Web de Alta Performance para Micro e Pequenas Empresas</p><p class="mt-6 text-lg/8 text-sky-600">Aprimorando a presença digital com desenvolvimento eficaz, SEO avançado e hospedagem de alta performance.</p></div><div class="mt-16 space-y-16 lg:space-y-24"><section><h3 class="text-3xl font-semibold text-sky-300">Nossa História</h3><p class="mt-4 text-lg text-sky-600"> Fundada em 18 de março de 2021, a Purgato Technology nasceu do desejo de levar o melhor da tecnologia web para micro e pequenas empresas. Desde a infância, sempre tive o sonho de trabalhar com tecnologia e criar soluções inovadoras. Ao perceber a dificuldade que muitas empresas enfrentam com sites lentos e servidores de baixa qualidade, decidi criar uma empresa que oferecesse serviços modernos e eficientes. </p><p class="mt-4 text-lg text-sky-600"> Nosso compromisso é resolver problemas reais: sites que não performam bem e servidores que não garantem estabilidade. Queremos proporcionar uma experiência digital superior, permitindo que nossos clientes alcancem melhores posições nos mecanismos de busca e sejam reconhecidos por Inteligências Artificiais. </p></section><section><h3 class="text-3xl font-semibold text-sky-300">Especializações</h3><p class="mt-4 text-lg text-sky-600"> Somos especializados na stack LIVT (Laravel, Inertia, Vue, TailwindCSS), além de oferecermos hospedagem de alta performance e desenvolvimento em WordPress. Com formação técnica em informática e em andamento no bacharelado em Sistemas de Informação, buscamos sempre implementar sistemas mais eficazes e inovadores. </p></section><section><h3 class="text-3xl font-semibold text-sky-300">Missão, Visão e Valores</h3><div class="mt-8 space-y-8"><div><h4 class="text-2xl font-semibold text-sky-300">Missão</h4><p class="mt-2 text-lg text-sky-600"> Oferecer soluções de desenvolvimento web eficientes, com foco em desempenho, segurança e inovação, ajudando micro e pequenas empresas a prosperarem no ambiente digital. </p></div><div><h4 class="text-2xl font-semibold text-sky-300">Visão</h4><p class="mt-2 text-lg text-sky-600"> Ser referência em desenvolvimento web e hospedagem de alta performance, reconhecida pela qualidade, compromisso com o cliente e resultados que geram crescimento. </p></div><div><h4 class="text-2xl font-semibold text-sky-300">Valores</h4><ul class="mt-2 space-y-2 text-lg text-sky-600"><li><strong>Excelência:</strong> Entregar sempre a melhor solução com alta performance e segurança.</li><li><strong>Inovação:</strong> Buscar novas tecnologias e práticas para melhorar continuamente nossos serviços.</li><li><strong>Compromisso:</strong> Priorizar a satisfação dos nossos clientes e suas necessidades.</li><li><strong>Transparência:</strong> Agir com ética e clareza em todas as etapas do processo.</li></ul></div></div></section></div></div></div>`);
 }
 const _sfc_setup$7 = _sfc_main$7.setup;
 _sfc_main$7.setup = (props, ctx) => {
@@ -36,54 +36,156 @@ _sfc_main$7.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/About.vue");
   return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const About = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["ssrRender", _sfc_ssrRender$3]]);
+const About = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["ssrRender", _sfc_ssrRender$1]]);
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: About
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$6 = {};
-function _sfc_ssrRender$2(_ctx, _push, _parent, _attrs) {
-  _push(`<h1${ssrRenderAttrs(_attrs)}>Blog</h1>`);
-}
+const _sfc_main$6 = {
+  __name: "Blog",
+  __ssrInlineRender: true,
+  props: {
+    posts: Array
+  },
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Blog</title><meta head-key="description" name="description" content="Seja bem vindo a página blog do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+          } else {
+            return [
+              createVNode("title", null, "Blog"),
+              createVNode("meta", {
+                "head-key": "description",
+                name: "description",
+                content: "Seja bem vindo a página blog do site Purgato Technology!"
+              }),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+              }),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: "Matheus Purgato | Laravel Developer"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mx-auto max-w-2xl lg:mx-0"><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Últimas Postagens</h2><p class="mt-2 text-lg/8 text-gray-600">Fique por dentro de tudo o que está acontecendo no mundo da tecnologia</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"><!--[-->`);
+      ssrRenderList(__props.posts, (post) => {
+        var _a, _b, _c;
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between"><div class="flex items-center gap-x-4 text-xs"><time${ssrRenderAttr("datetime", post.created_at)} class="text-gray-500">${ssrInterpolate(new Date(post.created_at).toLocaleDateString())}</time><span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">${ssrInterpolate(((_a = post.category) == null ? void 0 : _a.title) || "Sem categoria")}</span></div><div class="group relative"><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"><a${ssrRenderAttr("href", "/blog/" + post.id)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">${ssrInterpolate(post.description)}</p></div><div class="relative mt-8 flex items-center gap-x-4"><div class="text-sm/6"><p class="font-semibold text-gray-900"><a href="#"><span class="absolute inset-0"></span> ${ssrInterpolate(((_b = post.author) == null ? void 0 : _b.name) || "Autor Desconhecido")}</a></p><p class="text-gray-600">${ssrInterpolate(((_c = post.author) == null ? void 0 : _c.position) || "Redator")}</p></div></div></article>`);
+      });
+      _push(`<!--]--></div></div></div><!--]-->`);
+    };
+  }
+};
 const _sfc_setup$6 = _sfc_main$6.setup;
 _sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["ssrRender", _sfc_ssrRender$2]]);
 const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Blog
+  default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$5 = {};
-function _sfc_ssrRender$1(_ctx, _push, _parent, _attrs) {
-  const _component_Head = resolveComponent("Head");
-  _push(`<!--[-->`);
-  _push(ssrRenderComponent(_component_Head, null, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<title${_scopeId}>Contato</title>`);
-      } else {
-        return [
-          createVNode("title", null, "Contato")
-        ];
+const _sfc_main$5 = {
+  __name: "Contact",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const contactLinks = {
+      email: "mailto:contato@purgatotechnology.com.br",
+      instagram: "https://www.instagram.com/purgatotechnology/",
+      facebook: "https://www.facebook.com/PurgatoTechnology/",
+      whatsapp: "https://wa.me/+5519993492828"
+      // Substitua "seunumerodetelefone" pelo número no formato internacional (ex.: 5511999999999)
+    };
+    const features = [
+      {
+        name: "Email",
+        description: "Entre em contato por e-mail para dúvidas, suporte ou solicitações personalizadas.",
+        link: contactLinks.email,
+        icon: EnvelopeIcon
+      },
+      {
+        name: "WhatsApp",
+        description: "Converse diretamente conosco no WhatsApp para atendimento rápido e eficiente.",
+        link: contactLinks.whatsapp,
+        icon: PhoneIcon
+      },
+      {
+        name: "Instagram",
+        description: "Acompanhe nossas novidades e entre em contato pelo nosso perfil no Instagram.",
+        link: contactLinks.instagram,
+        icon: UserIcon
+      },
+      {
+        name: "Facebook",
+        description: "Fique por dentro de nossas atualizações e fale conosco pelo Facebook.",
+        link: contactLinks.facebook,
+        icon: UserIcon
       }
-    }),
-    _: 1
-  }, _parent));
-  _push(`<h1>Página de contato</h1><!--]-->`);
-}
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Contato</title><meta head-key="description" name="description" content="Entre em contato conosco na Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+          } else {
+            return [
+              createVNode("title", null, "Contato"),
+              createVNode("meta", {
+                "head-key": "description",
+                name: "description",
+                content: "Entre em contato conosco na Purgato Technology!"
+              }),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: "Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS"
+              }),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: "Matheus Purgato | Laravel Developer"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="bg-black py-12 sm:py-32"><div class="mx-auto max-w-7xl px-12 lg:px-16"><div class="mx-auto max-w-2xl lg:text-center"><h2 class="text-base/7 font-semibold text-sky-600">Entre em Contato Conosco</h2><p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-sky-300 sm:text-5xl lg:text-balance"> Estamos prontos para te atender!</p><p class="mt-6 text-lg/8 text-sky-600">Tem dúvidas, sugestões ou precisa de suporte? Fale conosco pelos canais abaixo.</p></div><div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"><dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"><!--[-->`);
+      ssrRenderList(features, (feature) => {
+        _push(`<div class="relative pl-16"><a${ssrRenderAttr("href", feature.link)}><dt class="text-base/7 font-semibold text-sky-300"><div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-sky-600">`);
+        ssrRenderVNode(_push, createVNode(resolveDynamicComponent(feature.icon), {
+          class: "size-6 text-white",
+          "aria-hidden": "true"
+        }, null), _parent);
+        _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-sky-600">${ssrInterpolate(feature.description)}</dd></a></div>`);
+      });
+      _push(`<!--]--></dl></div></div></div><!--]-->`);
+    };
+  }
+};
 const _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Contact.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const Contact = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["ssrRender", _sfc_ssrRender$1]]);
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Contact
+  default: _sfc_main$5
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$4 = {
   __name: "Home",
@@ -91,23 +193,23 @@ const _sfc_main$4 = {
   setup(__props) {
     const features = [
       {
-        name: "Push to deploy",
-        description: "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        name: "Hospedagem Escalável",
+        description: "Infraestrutura moderna que cresce com o seu negócio, garantindo alta disponibilidade e desempenho.",
         icon: CloudArrowUpIcon
       },
       {
-        name: "SSL certificates",
-        description: "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+        name: "SSL Gratuito e Segurança Reforçada",
+        description: "Proteja seu site e os dados dos seus clientes com SSL gratuito, backups automáticos e firewall avançado.",
         icon: LockClosedIcon
       },
       {
-        name: "Simple queues",
-        description: "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+        name: "Desenvolvimento Sob Medida",
+        description: "Sites e sistemas personalizados com tecnologias modernas (Laravel, Vue, Tailwind) para máxima performance.",
         icon: ArrowPathIcon
       },
       {
-        name: "Advanced security",
-        description: "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+        name: "Suporte Especializado 24/7",
+        description: "Atendimento especializado para manter seu site sempre online e otimizado, sem dor de cabeça.",
         icon: FingerPrintIcon
       }
     ];
@@ -141,16 +243,16 @@ const _sfc_main$4 = {
         }),
         _: 1
       }, _parent));
-      _push(`<div class="bg-white"><div class="relative isolate px-6 pt-10 lg:px-6"><div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"><div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-48"><div class="text-center"><h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Purgato Technology</h1><div class="mt-8 text-center text-lg font-medium text-gray-500 sm:text-xl/8"><h4 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-2xl">Soluções Web &amp; Cloud Sob Medida</h4><p class="mt-4 text-xl text-gray-600 sm:text-lg"> Desenvolvimento, hospedagem e tecnologia para o seu negócio crescer sem limites. </p></div></div></div><div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div></div></div><div class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mx-auto max-w-2xl lg:text-center"><h2 class="text-base/7 font-semibold text-indigo-600">Deploy faster</h2><p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">Everything you need to deploy your app</p><p class="mt-6 text-lg/8 text-gray-600">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p></div><div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"><dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"><!--[-->`);
+      _push(`<div class="bg-white"><div class="relative px-2 pt-2 lg:px-2"><div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"><div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-48"><div class="text-center"><h1 class="text-5xl font-semibold tracking-tight text-balance text-[#2d3e50] sm:text-7xl">Purgato Technology</h1><div class="mt-8 text-center text-lg font-medium text-[#2d3e50] sm:text-xl/8"><h4 class="text-3xl font-bold tracking-tight text-[#2d3e50] sm:text-2xl">Soluções Web &amp; Cloud Sob Medida</h4><p class="mt-4 text-xl text-[#57789c] sm:text-lg"> Desenvolvimento, hospedagem e tecnologia para o seu negócio crescer sem limites. </p></div></div></div><div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true"><div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div></div></div><div class="bg-black py-12 sm:py-32"><div class="mx-auto max-w-7xl px-12 lg:px-16"><div class="mx-auto max-w-2xl lg:text-center"><h2 class="text-base/7 font-semibold text-emerald-600">Hospedagem de Alta Performance</h2><p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-emerald-300 sm:text-5xl lg:text-balance"> Seu site mais rápido, seguro e sempre no ar!</p><p class="mt-6 text-lg/8 text-emerald-600">Infraestrutura poderosa, escalável e confiável para garantir a melhor experiência para seus clientes.</p></div><div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl"><dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"><!--[-->`);
       ssrRenderList(features, (feature) => {
-        _push(`<div class="relative pl-16"><dt class="text-base/7 font-semibold text-gray-900"><div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600">`);
+        _push(`<div class="relative pl-16"><dt class="text-base/7 font-semibold text-emerald-300"><div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-emerald-600">`);
         ssrRenderVNode(_push, createVNode(resolveDynamicComponent(feature.icon), {
           class: "size-6 text-white",
           "aria-hidden": "true"
         }, null), _parent);
-        _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-gray-600">${ssrInterpolate(feature.description)}</dd></div>`);
+        _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-emerald-600">${ssrInterpolate(feature.description)}</dd></div>`);
       });
-      _push(`<!--]--></dl></div></div></div><!--]-->`);
+      _push(`<!--]--></dl></div></div></div><div class="bg-white"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
     };
   }
 };
@@ -518,11 +620,11 @@ const _sfc_main$2 = {
     const mobileMenuOpen = ref(false);
     const services = [
       { name: "Desenvolvimento Web", href: "#" },
-      { name: "SEO e Marketing Digital", href: "#" },
-      { name: "Consultoria Tecnológica", href: "#" }
+      { name: "Hospedagem Cloud PErsonalizada", href: "#" },
+      { name: "Consultoria de SEO", href: "#" }
     ];
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
+      _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a${ssrRenderAttr("href", _ctx.route("site.home"))}><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></a></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
       _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
       _push(`</button></div>`);
       _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
@@ -916,11 +1018,11 @@ const _sfc_main = {
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10 mb-10"><div>`);
+      _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10"><div>`);
       _push(ssrRenderComponent(_sfc_main$2, null, null, _parent));
       _push(`</div></header><main>`);
       ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-      _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4 mt-10">`);
+      _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4">`);
       _push(ssrRenderComponent(_sfc_main$1, null, null, _parent));
       _push(`</footer><!--]-->`);
     };
