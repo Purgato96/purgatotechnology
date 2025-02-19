@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="dakr:bg-black py-12 sm:py-32">
+    <div class="bg-white dark:bg-black py-12 sm:py-32">
         <div class="mx-auto max-w-7xl px-12 lg:px-16">
             <div class="mx-auto max-w-2xl lg:text-center">
                 <h2 class="text-base/7 font-semibold text-sky-600">Sobre a Purgato Technology</h2>
