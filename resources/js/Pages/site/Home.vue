@@ -39,60 +39,54 @@ const features = [
               content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
     </Head>
-
-    <!-- Hero Principal -->
-    <div class="bg-white">
-        <div class="relative px-2 pt-2 lg:px-2">
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                 aria-hidden="true">
-                <div
-                    class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"/>
+<!-- Hero Principal -->
+    <div class="bg-white dark:bg-black">
+        <header class="absolute inset-x-0 top-0 z-50">
+        </header>
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
             </div>
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-48">
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
                 <div class="text-center">
-                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-[#2d3e50] sm:text-7xl">Purgato
+                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-[#57789c] dark:text-sky-600 sm:text-7xl">Purgato
                         Technology</h1>
 
-                    <div class="mt-8 text-center text-lg font-medium text-[#2d3e50] sm:text-xl/8">
-                        <h4 class="text-3xl font-bold tracking-tight text-[#2d3e50] sm:text-2xl">Soluções Web & Cloud
+                    <div class="mt-8 text-center text-lg font-medium dark:text-sky-300 sm:text-xl/8">
+                        <h4 class="text-3xl font-bold tracking-tight text-[#57789c]  dark:text-sky-300 sm:text-2xl">Soluções Web & Cloud
                             Sob Medida</h4>
-                        <p class="mt-4 text-xl text-[#57789c] sm:text-lg">
+                        <p class="mt-4 text-xl text-[#57789c] dark:text-sky-300 sm:text-lg">
                             Desenvolvimento, hospedagem e tecnologia para o seu negócio crescer sem limites.
                         </p>
                     </div>
                 </div>
             </div>
-            <div
-                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                aria-hidden="true">
-                <div
-                    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"/>
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
             </div>
         </div>
     </div>
     <!-- Serviços de Hospedagem -->
-    <div class="bg-black py-12 sm:py-32">
+    <div class="bg-white dark:bg-black py-12 sm:py-32">
         <div class="mx-auto max-w-7xl px-12 lg:px-16">
             <div class="mx-auto max-w-2xl lg:text-center">
-                <h2 class="text-base/7 font-semibold text-emerald-600">Hospedagem de Alta Performance</h2>
-                <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-emerald-300 sm:text-5xl lg:text-balance">
+                <h2 class="text-base/7 font-semibold text-[#57789c] dark:text-emerald-600">Hospedagem de Alta Performance</h2>
+                <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#57789c] dark:text-emerald-300 sm:text-5xl lg:text-balance">
                     Seu site mais rápido, seguro e sempre no ar!</p>
-                <p class="mt-6 text-lg/8 text-emerald-600">Infraestrutura poderosa, escalável e confiável para garantir
+                <p class="mt-6 text-lg/8 text-[#57789c] dark:text-emerald-600">Infraestrutura poderosa, escalável e confiável para garantir
                     a melhor experiência para seus clientes.</p>
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                     <div v-for="feature in features" :key="feature.name" class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-emerald-300">
+                        <dt class="text-base/7 font-semibold text-[#57789c] dark:text-emerald-300">
                             <div
-                                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-emerald-600">
+                                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#57789c]  dark:bg-emerald-600">
                                 <component :is="feature.icon" class="size-6 text-white" aria-hidden="true"/>
                             </div>
                             {{ feature.name }}
                         </dt>
-                        <dd class="mt-2 text-base/7 text-emerald-600">{{ feature.description }}</dd>
+                        <dd class="mt-2 text-base/7 text-[#57789c] dark:text-emerald-600">{{ feature.description }}</dd>
                     </div>
                 </dl>
             </div>
@@ -144,7 +138,7 @@ const features = [
         </div>
     </div>-->
 <!--  Contato  -->
-        <div class="bg-white">
+        <div class="bg-white dark:bg-black">
             <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
                 <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
                     <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
