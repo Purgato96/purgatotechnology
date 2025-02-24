@@ -44,13 +44,13 @@ const tab =  ref('mission')
                 <section>
                     <h3 class="text-3xl font-semibold text-[#2d3e50] dark:text-sky-300">Missão, Visão e Valores</h3>
                     <div class="inline-flex">
-                        <button @click="tab = 'mission'" class="bg-emerald-700 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-l">
+                        <button @click="tab = 'mission'" class="bg-[#2d3e50] hover:bg-[#57789c] text-white font-bold py-2 px-4 rounded-l">
                             Missão
                         </button>
-                        <button @click="tab = 'vision'" class="bg-emerald-700 hover:bg-sky-700 text-white font-bold py-2 px-4 ">
+                        <button @click="tab = 'vision'" class="bg-[#2d3e50] hover:bg-[#57789c] text-white font-bold py-2 px-4 ">
                             Visão
                         </button>
-                        <button @click="tab = 'values'"  class="bg-emerald-700 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-r">
+                        <button @click="tab = 'values'"  class="bg-[#2d3e50] hover:bg-[#57789c] text-white font-bold py-2 px-4 rounded-r">
                             Valores
                         </button>
                     </div>
