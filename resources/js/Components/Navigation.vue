@@ -18,7 +18,7 @@ const mobileMenuOpen = ref(false)
 
 const services = [
     { name: 'Desenvolvimento Web', href: '#' },
-    { name: 'Hospedagem Cloud PErsonalizada', href: '#' },
+    { name: 'Hospedagem Cloud Personalizada', href: '#' },
     { name: 'Consultoria de SEO', href: '#' },
 ]
 const imageUrl = '/resources/img/site/logo-purgato-technology.png';

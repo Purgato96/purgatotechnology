@@ -38,6 +38,22 @@ const features = [
         <meta head-key="keywords" name="keywords"
               content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+        <!-- Schema.org -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Purgato Technology",
+                "url": "https://purgatotechnology.com.br",
+                "description": "Soluções de tecnologia web de alta performance para micro e pequenas empresas, incluindo desenvolvimento web, hospedagem e SEO.",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://purgatotechnology.com.br/?s={search_term}",
+                    "query-input": "required name=search_term"
+                }
+            }
+        </script>
+
     </Head>
     <!-- Hero Principal -->
     <div class="bg-white dark:bg-black">

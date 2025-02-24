@@ -45,6 +45,23 @@ const features = [
         <meta head-key="keywords" name="keywords"
               content="Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+
+        <!-- Schema.org -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ContactPage",
+                "name": "Contato - Purgato Technology",
+                "url": "https://purgatotechnology.com.br/contato",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+55 19 99349-2828",
+                    "contactType": "customer service",
+                    "email": "contato@purgatotechnology.com.br"
+                }
+            }
+        </script>
+
     </Head>
 
     <div class="dark:bg-black py-12 sm:py-32">
@@ -53,7 +70,8 @@ const features = [
                 <h2 class="text-base/7 font-semibold text-[#57789c] dark:text-sky-600">Entre em Contato Conosco</h2>
                 <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#2d3e50] dark:text-sky-300 sm:text-5xl lg:text-balance">
                     Estamos prontos para te atender!</p>
-                <p class="mt-6 text-lg/8 text-[#57789c] dark:text-sky-600">Tem dúvidas, sugestões ou precisa de suporte? Fale conosco pelos canais abaixo.</p>
+                <p class="mt-6 text-lg/8 text-[#57789c] dark:text-sky-600">Tem dúvidas, sugestões ou precisa de suporte?
+                    Fale conosco pelos canais abaixo.</p>
             </div>
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
@@ -62,7 +80,8 @@ const features = [
                             <dt class="text-base/7 font-semibold dark:text-sky-300">
                                 <div
                                     class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#2d3e50] dark:bg-sky-600">
-                                    <component :is="feature.icon" class="size-6 text-white dark:text-white" aria-hidden="true"/>
+                                    <component :is="feature.icon" class="size-6 text-white dark:text-white"
+                                               aria-hidden="true"/>
                                 </div>
                                 {{ feature.name }}
                             </dt>
