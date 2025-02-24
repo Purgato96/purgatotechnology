@@ -83,9 +83,9 @@ const features = [
             <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                 <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                     <div v-for="feature in features" :key="feature.name" class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-[#57789c] dark:text-emerald-300">
+                        <dt class="text-base/7 font-semibold text-[#2d3e50] dark:text-emerald-300">
                             <div
-                                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#57789c]  dark:bg-emerald-600">
+                                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#2d3e50]  dark:bg-emerald-600">
                                 <component :is="feature.icon" class="size-6 text-white" aria-hidden="true"/>
                             </div>
                             {{ feature.name }}
