@@ -20,18 +20,9 @@ class SiteController extends Controller {
     }
 
     public function blog() {
-        $posts = Post::with('author')->latest()->get()->map(function ($post) {
-            return [
-                'id' => $post->id,
-                'title' => $post->title,
-                'description' => $post->description,
-                'content' => $post->content,
-                'date' => $post->created_at->format('d/m/Y'),
-                'datetime' => $post->created_at->toISOString(),
-                'author' => $post->author,
-            ];
-        });
-        return Inertia::render('site/Blog', compact('posts'));
+        $posts = Post::orderBy('created_at', 'desc')->paginate(10); // 10 posts por página
+        return Inertia::render('site/Blog', [
+            'posts' => $posts]);
 //        return Inertia::render('site/Blog');
     }
 

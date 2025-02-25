@@ -12,6 +12,6 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/blog',  'blog')->name('site.blog');
     Route::get('/contato', 'contact')->name('site.contact');
 });
-Route::get('/admin', function () {
+/*Route::get('/admin', function () {
     return Inertia::render('admin/Dashboard');
-});
+});*/

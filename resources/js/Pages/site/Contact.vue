@@ -46,23 +46,22 @@ const features = [
               content="Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
 
-        <!-- Schema.org -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "ContactPage",
-                "name": "Contato - Purgato Technology",
-                "url": "https://purgatotechnology.com.br/contato",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+55 19 99349-2828",
-                    "contactType": "customer service",
-                    "email": "contato@purgatotechnology.com.br"
-                }
-            }
-        </script>
 
     </Head>
+    <SeoSchema :schema="JSON.stringify({
+
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+    'name': 'Contato - Purgato Technology',
+    'url': 'https://purgatotechnology.com.br/contato',
+    'contactPoint': {
+    '@type': 'ContactPoint',
+    'telephone': '+55 19 99349-2828',
+    'contactType': 'customer service',
+    'email': 'contato@purgatotechnology.com.br'},
+    'description': 'Empresa especializada em desenvolvimento web, SEO e hospedagem de alta performance.'
+    })"
+    />
 
     <div class="dark:bg-black py-12 sm:py-32">
         <div class="mx-auto max-w-7xl px-12 lg:px-16">

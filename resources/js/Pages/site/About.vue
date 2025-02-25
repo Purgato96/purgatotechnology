@@ -12,31 +12,28 @@ const tab = ref('mission')
         <meta head-key="keywords" name="keywords"
               content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
-
-        <!-- Schema.org -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Purgato Technology",
-                "url": "https://purgatotechnology.com.br",
-                "logo": "https://purgatotechnology.com.br/logo.png",
-                "description": "Empresa especializada em desenvolvimento web, SEO e hospedagem de alta performance.",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+55 19 99349-2828",
-                    "contactType": "customer service",
-                    "email": "contato@purgatotechnology.com.br"
-                },
-                "sameAs": [
-                    "https://www.instagram.com/purgatotechnology",
-                    "https://www.facebook.com/purgatotechnology",
-                    "https://www.linkedin.com/company/purgato-technology/"
-                ]
-            }
-        </script>
-
     </Head>
+
+    <SeoSchema :schema="JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Purgato Technology',
+    'url': 'https://purgatotechnology.com.br',
+    'logo': 'https://purgatotechnology.com.br/logo.png',
+    'description': 'Empresa especializada em desenvolvimento web, SEO e hospedagem de alta performance.',
+    'contactPoint': {
+    '@type': 'ContactPoint',
+    'telephone': '+55 19 99349-2828',
+    'contactType': 'customer service',
+    'email': 'contato@purgatotechnology.com.br'
+    },
+    'sameAs': [
+    'https://www.instagram.com/purgatotechnology',
+    'https://www.facebook.com/purgatotechnology',
+    'https://www.linkedin.com/company/purgato-technology/'
+    ]
+    })"
+    />
     <div class="bg-white dark:bg-black py-12 sm:py-32">
         <div class="mx-auto max-w-5xl px-12 lg:px-16">
             <div class="mx-auto max-w-2xl lg:text-center">
