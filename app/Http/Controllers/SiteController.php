@@ -26,6 +26,10 @@ class SiteController extends Controller {
 //        return Inertia::render('site/Blog');
     }
 
+    public function form() {
+        return Inertia::render('site/Form');
+    }
+
     public function contact() {
         return Inertia::render('site/Contact');
     }
