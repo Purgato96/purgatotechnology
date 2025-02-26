@@ -10,10 +10,11 @@ const props = defineProps({
     <Head>
         <title>Blog</title>
         <meta head-key="description" name="description"
-              content="Seja bem vindo a página blog do site Purgato Technology!">
+              content="Acompanhe nosso blog para dicas de desenvolvimento web, SEO, hospedagem cloud e as últimas tendências em tecnologia.">
         <meta head-key="keywords" name="keywords"
-              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="blog de tecnologia, desenvolvimento web, SEO, hospedagem cloud, Laravel, Vue, Inertia, Tailwind CSS, marketing digital, dicas, tendências">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
+
 
 
     </Head>

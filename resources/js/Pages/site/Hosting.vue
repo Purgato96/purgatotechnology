@@ -14,7 +14,9 @@ const tiers = [
             'SSL Gratuito',
             'Desempenho',
             'Até 5 E-mails',
-            'Suporte 24/7'
+            'Suporte 24/7',
+            'WordPress | WooCommerce',
+            'Até 100.000 Visualizações por mês'
         ],
         featured: false,
     },
@@ -34,7 +36,9 @@ const tiers = [
             '1 CPU Core',
             '100 GB CDN',
             'Cache Premium',
-            'Suporte 24/7'
+            'Suporte 24/7',
+            'Laravel | Vue | Magento',
+            '+100.000 Visualizações por mês'
         ],
         featured: true,
     },
@@ -45,10 +49,10 @@ const tiers = [
     <Head>
         <title>Hospedagem</title>
         <meta head-key="description" name="description"
-              content="Seja bem vindo a página home do site Purgato Technology!">
+              content="Hospedagem Cloud personalizada com alta performance, segurança e suporte especializado para seu site ou sistema.">
         <meta head-key="keywords" name="keywords"
-              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="hospedagem cloud, servidores rápidos, alta performance, segurança, uptime, cloud computing, escalabilidade, armazenamento, tecnologia, otimização">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
     </Head>
     <div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8">
         <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">

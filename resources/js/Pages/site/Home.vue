@@ -34,10 +34,11 @@ const features = [
     <Head>
         <title>Home</title>
         <meta head-key="description" name="description"
-              content="Seja bem vindo a página home do site Purgato Technology!">
+              content="Soluções em desenvolvimento web, SEO e hospedagem cloud de alta performance para impulsionar seu negócio online.">
         <meta head-key="keywords" name="keywords"
-              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="desenvolvimento web, hospedagem cloud, SEO, performance, Purgato Technology, tecnologia, sites rápidos, otimização, segurança, inovação, laravel, vue, tailwind">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
+
     </Head>
     <!-- Hero Principal -->
     <div class="bg-white dark:bg-black">

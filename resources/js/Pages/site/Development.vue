@@ -4,37 +4,37 @@ import {CheckIcon} from '@heroicons/vue/20/solid'
 
 const tiers = [
     {
-        name: 'Cloud Compartilhado',
+        name: 'Desenvolvimento WordPress',
         id: 'tier-hobby',
-        href: 'https://cloud.purgatotechnology.com.br/register',
-        priceMonthly: 'R$49,90',
-        description: "O plano perfeito se você está apenas começando na web.",
+        href: 'mailto:contato@purgatotechnology.com.br',
+        priceMonthly: 'R$1970,00',
+        description: "O site perfeito para você está apenas começando na web.",
         features: [
-            'Backup diário',
-            'SSL Gratuito',
-            'Desempenho',
-            'Até 5 E-mails',
-            'Suporte 24/7'
+            'Fácil Gerenciamento ',
+            'Grande Ecossistema ',
+            'SEO Amigável ',
+            'Baixo Custo Inicial ',
+            'Comunidade Ativa '
         ],
         featured: false,
     },
     {
-        name: 'Cloud Dedicado',
+        name: 'Desenvolvimento LIVT',
         id: 'tier-enterprise',
-        href: 'https://cloud.purgatotechnology.com.br/register',
-        priceMonthly: 'R$149,90',
-        description: 'A plano para quem quer estar entre os melhores na web.',
+        href: 'mailto:contato@purgatotechnology.com.br',
+        priceMonthly: 'R$3170,00',
+        description: 'Tenha um site de alta performance com a stack LIVT e destaque-se entre os melhores da web.',
         features: [
-            'Backup diário',
-            'SSL Gratuito',
             'Alta Performance',
-            'E-mails Ilimitados',
-            '1GB Ram',
-            '25GB SSD',
-            '1 CPU Core',
-            '100 GB CDN',
-            'Cache Premium',
-            'Suporte 24/7'
+            'Infraestrutura Escalável',
+            'Segurança Avançada',
+            'Total Personalização',
+            'Maior Controle',
+            'Melhor Experiência do Usuário',
+            'Menor Tempo de Carregamento',
+            'SEO Avançado',
+            'Integrações Personalizadas',
+            'Menos Dependência de Plugins'
         ],
         featured: true,
     },
@@ -45,10 +45,10 @@ const tiers = [
     <Head>
         <title>Desenvolvimento</title>
         <meta head-key="description" name="description"
-              content="Seja bem vindo a página home do site Purgato Technology!">
+              content="Desenvolvimento web personalizado com Laravel, Vue e Tailwind, focado em performance, SEO e experiência do usuário.">
         <meta head-key="keywords" name="keywords"
-              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="desenvolvimento web, criação de sites, Laravel, Inertia, Vue, Tailwind CSS, websites modernos, performance, design responsivo, otimização, programação">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
     </Head>
     <div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8">
         <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">

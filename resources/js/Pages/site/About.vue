@@ -8,10 +8,10 @@ const tab = ref('mission')
     <Head>
         <title>Sobre</title>
         <meta head-key="description" name="description"
-              content="Seja bem vindo a página sobre do site Purgato Technology!">
+              content="Saiba mais sobre a Purgato Technology, especialista em desenvolvimento web, SEO e hospedagem cloud de alta performance.">
         <meta head-key="keywords" name="keywords"
-              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="Purgato Technology, empresa de tecnologia, desenvolvimento web, hospedagem cloud, SEO, inovação, tecnologia, performance, experiência, confiabilidade">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
     </Head>
     <div class="bg-white dark:bg-black py-12 sm:py-32">
         <div class="mx-auto max-w-5xl px-12 lg:px-16">

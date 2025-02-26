@@ -41,10 +41,10 @@ const features = [
     <Head>
         <title>Contato</title>
         <meta head-key="description" name="description"
-              content="Entre em contato conosco na Purgato Technology!">
+              content="Entre em contato com a Purgato Technology para soluções em desenvolvimento web, SEO e hospedagem cloud personalizada.">
         <meta head-key="keywords" name="keywords"
-              content="Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS">
-        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+              content="contato, suporte, atendimento, Purgato Technology, consultoria, desenvolvimento web, hospedagem cloud, SEO, informações, dúvidas">
+        <meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO">
 
 
     </Head>
