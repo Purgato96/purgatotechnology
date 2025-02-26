@@ -1,6 +1,49 @@
+
+<script setup>
+import {CheckIcon} from '@heroicons/vue/20/solid'
+
+const tiers = [
+    {
+        name: 'Cloud Compartilhado',
+        id: 'tier-hobby',
+        href: 'https://cloud.purgatotechnology.com.br/register',
+        priceMonthly: 'R$49,90',
+        description: "O plano perfeito se você está apenas começando na web.",
+        features: [
+            'Backup diário',
+            'SSL Gratuito',
+            'Desempenho',
+            'Até 5 E-mails',
+            'Suporte 24/7'
+        ],
+        featured: false,
+    },
+    {
+        name: 'Cloud Dedicado',
+        id: 'tier-enterprise',
+        href: 'https://cloud.purgatotechnology.com.br/register',
+        priceMonthly: 'R$149,90',
+        description: 'A plano para quem quer estar entre os melhores na web.',
+        features: [
+            'Backup diário',
+            'SSL Gratuito',
+            'Alta Performance',
+            'E-mails Ilimitados',
+            '1GB Ram',
+            '25GB SSD',
+            '1 CPU Core',
+            '100 GB CDN',
+            'Cache Premium',
+            'Suporte 24/7'
+        ],
+        featured: true,
+    },
+]
+</script>
+
 <template>
     <Head>
-        <title>Serviços</title>
+        <title>Hospedagem</title>
         <meta head-key="description" name="description"
               content="Seja bem vindo a página home do site Purgato Technology!">
         <meta head-key="keywords" name="keywords"
@@ -14,7 +57,7 @@
                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"/>
         </div>
         <div class="mx-auto max-w-4xl text-center">
-            <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Planos</h2>
+            <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Hospedagem</h2>
             <p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-sky-600 sm:text-6xl">
                 Escolha o plano certo para você</p>
         </div>
@@ -30,7 +73,7 @@
                     {{ tier.name }}</h3>
                 <p class="mt-4 flex items-baseline gap-x-2">
                     <span
-                        :class="[tier.featured ? 'text-white' : 'text-gray-900', 'text-5xl font-semibold tracking-tight']">A partir de  {{
+                        :class="[tier.featured ? 'text-white' : 'text-gray-900', 'text-5xl font-semibold tracking-tight']"> A partir de {{
                             tier.priceMonthly
                         }}</span>
                     <span :class="[tier.featured ? 'text-gray-400' : 'text-gray-500', 'text-base']">/Mês</span>
@@ -47,49 +90,8 @@
                     </li>
                 </ul>
                 <a :href="tier.href" :aria-describedby="tier.id"
-                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Get
-                    started today</a>
+                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero Esse</a>
             </div>
         </div>
     </div>
 </template>
-
-<script setup>
-import {CheckIcon} from '@heroicons/vue/20/solid'
-
-const tiers = [
-    {
-        name: 'Desenvolvimento',
-        id: 'tier-hobby',
-        href: '/form',
-        priceMonthly: 'R$250',
-        description: "O plano perfeito se você está apenas começando na web.",
-        features: [
-            'Responsividade',
-            'Desempenho',
-            'Rankeamento nos motores de busca',
-            'Suporte Padrão'
-        ],
-        featured: false,
-    },
-    {
-        name: 'Desenvolvimento + Hospedagem',
-        id: 'tier-enterprise',
-        href: 'https://purgatotechnology.com.br/form',
-        priceMonthly: 'R$500',
-        description: 'A plano para quem quer estar entre os melhores na web.',
-        features: [
-            'Responsividade',
-            'Desempenho',
-            'Rankeamento nos motores de busca',
-            'Suporte Prioritário',
-            'Hospedagem Cloud',
-            'Alta Performance',
-            'Multiplos e-mails',
-            'Backup',
-            '',
-            'Suporte 24hrs',
-        ],
-        featured: true,
-    },
-]</script>

@@ -15,8 +15,12 @@ class SiteController extends Controller {
         return Inertia::render('site/About');
     }
 
-    public function services() {
-        return Inertia::render('site/Services');
+    public function hosting() {
+        return Inertia::render('site/Hosting');
+    }
+
+    public function development() {
+        return Inertia::render('site/Development');
     }
 
     public function blog() {
