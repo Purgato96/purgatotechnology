@@ -17,15 +17,6 @@ const props = defineProps({
 
 
     </Head>
-    <!-- Schema.org -->
-    <SeoSchema :schema="JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    'name': 'Blog da Purgato Technology',
-    'url': 'https://purgatotechnology.com.br/blog',
-    'description': 'Dicas, novidades e conteúdos sobre desenvolvimento web, SEO e hospedagem de alta performance.'
-    })"
-    />
 
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">

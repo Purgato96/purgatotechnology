@@ -21,7 +21,7 @@ createInertiaApp({
             .component('Link', Link)
             .component('Head', Head)
             .mount(el)
-    },
+},
     /*Prgress Bar*/
     progress: {
         delay: 250,

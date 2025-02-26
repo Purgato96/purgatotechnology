@@ -1,4 +1,12 @@
 <template>
+    <Head>
+        <title>Serviços</title>
+        <meta head-key="description" name="description"
+              content="Seja bem vindo a página home do site Purgato Technology!">
+        <meta head-key="keywords" name="keywords"
+              content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
+        <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
+    </Head>
     <div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8">
         <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
             <div
@@ -84,5 +92,4 @@ const tiers = [
         ],
         featured: true,
     },
-]
-</script>
+]</script>

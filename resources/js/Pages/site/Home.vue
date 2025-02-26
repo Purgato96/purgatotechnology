@@ -39,13 +39,6 @@ const features = [
               content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog">
         <meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer">
     </Head>
-    <SeoSchema :schema="JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  'name': 'Purgato Technology',
-  'url': 'https://purgatotechnology.com.br',
-  'description': 'Empresa especializada em desenvolvimento web, SEO e hospedagem de alta performance.'
-})"/>
     <!-- Hero Principal -->
     <div class="bg-white dark:bg-black">
         <div class="relative isolate px-6 pt-14 lg:px-8">

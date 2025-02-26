@@ -21,6 +21,32 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9706230547321289"
             crossorigin="anonymous"></script>
     <!-- End Ads Sense Google -->
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Purgato Technology",
+            "url": "https://purgatotechnology.com.br",
+            "description": "Empresa especializada em desenvolvimento web, SEO e hospedagem de alta performance.",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+55 19 99349-2828",
+                "contactType": "customer service",
+                "email": "contato@purgatotechnology.com.br"
+            },
+            "sameAs": [
+                "https://www.instagram.com/purgatotechnology",
+                "https://www.facebook.com/purgatotechnology",
+                "https://www.linkedin.com/company/purgato-technology/"
+            ],
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://purgatotechnology.com.br/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
 </head>
 <body class="font-sans antialiased">
 <!-- Google Tag Manager (noscript) -->
