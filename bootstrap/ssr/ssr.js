@@ -1,12 +1,11 @@
-import { useSSRContext, ref, resolveComponent, withCtx, createVNode, resolveDynamicComponent, mergeProps, unref, createTextVNode, toDisplayString, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderClass, ssrIncludeBooleanAttr, ssrRenderVNode, ssrRenderAttrs, ssrRenderStyle, ssrRenderSlot } from "vue/server-renderer";
+import { useSSRContext, ref, resolveComponent, withCtx, createVNode, resolveDynamicComponent, unref, mergeProps, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderClass, ssrIncludeBooleanAttr, ssrRenderVNode, ssrRenderStyle, ssrRenderAttrs, ssrRenderSlot } from "vue/server-renderer";
 import { EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { ChevronDownIcon } from "@heroicons/vue/16/solid";
-import { SwitchGroup, Switch, SwitchLabel, PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
 import { CheckIcon } from "@heroicons/vue/20/solid";
 import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
+import { PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -39,24 +38,24 @@ const _sfc_main$8 = {
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Sobre</title><meta head-key="description" name="description" content="Seja bem vindo a página sobre do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Sobre</title><meta head-key="description" name="description" content="Saiba mais sobre a Purgato Technology, especialista em desenvolvimento web, SEO e hospedagem cloud de alta performance."${_scopeId}><meta head-key="keywords" name="keywords" content="Purgato Technology, empresa de tecnologia, desenvolvimento web, hospedagem cloud, SEO, inovação, tecnologia, performance, experiência, confiabilidade"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Sobre"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Seja bem vindo a página sobre do site Purgato Technology!"
+                content: "Saiba mais sobre a Purgato Technology, especialista em desenvolvimento web, SEO e hospedagem cloud de alta performance."
               }),
               createVNode("meta", {
                 "head-key": "keywords",
                 name: "keywords",
-                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+                content: "Purgato Technology, empresa de tecnologia, desenvolvimento web, hospedagem cloud, SEO, inovação, tecnologia, performance, experiência, confiabilidade"
               }),
               createVNode("meta", {
                 "head-key": "author",
                 name: "author",
-                content: "Matheus Purgato | Laravel Developer"
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
@@ -98,24 +97,24 @@ const _sfc_main$7 = {
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Blog</title><meta head-key="description" name="description" content="Seja bem vindo a página blog do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Blog</title><meta head-key="description" name="description" content="Acompanhe nosso blog para dicas de desenvolvimento web, SEO, hospedagem cloud e as últimas tendências em tecnologia."${_scopeId}><meta head-key="keywords" name="keywords" content="blog de tecnologia, desenvolvimento web, SEO, hospedagem cloud, Laravel, Vue, Inertia, Tailwind CSS, marketing digital, dicas, tendências"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Blog"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Seja bem vindo a página blog do site Purgato Technology!"
+                content: "Acompanhe nosso blog para dicas de desenvolvimento web, SEO, hospedagem cloud e as últimas tendências em tecnologia."
               }),
               createVNode("meta", {
                 "head-key": "keywords",
                 name: "keywords",
-                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+                content: "blog de tecnologia, desenvolvimento web, SEO, hospedagem cloud, Laravel, Vue, Inertia, Tailwind CSS, marketing digital, dicas, tendências"
               }),
               createVNode("meta", {
                 "head-key": "author",
                 name: "author",
-                content: "Matheus Purgato | Laravel Developer"
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
@@ -194,24 +193,24 @@ const _sfc_main$6 = {
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Contato</title><meta head-key="description" name="description" content="Entre em contato conosco na Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Contato</title><meta head-key="description" name="description" content="Entre em contato com a Purgato Technology para soluções em desenvolvimento web, SEO e hospedagem cloud personalizada."${_scopeId}><meta head-key="keywords" name="keywords" content="contato, suporte, atendimento, Purgato Technology, consultoria, desenvolvimento web, hospedagem cloud, SEO, informações, dúvidas"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Contato"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Entre em contato conosco na Purgato Technology!"
+                content: "Entre em contato com a Purgato Technology para soluções em desenvolvimento web, SEO e hospedagem cloud personalizada."
               }),
               createVNode("meta", {
                 "head-key": "keywords",
                 name: "keywords",
-                content: "Contato, Email, WhatsApp, Instagram, Facebook, TailwindCSS"
+                content: "contato, suporte, atendimento, Purgato Technology, consultoria, desenvolvimento web, hospedagem cloud, SEO, informações, dúvidas"
               }),
               createVNode("meta", {
                 "head-key": "author",
                 name: "author",
-                content: "Matheus Purgato | Laravel Developer"
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
@@ -242,109 +241,97 @@ const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$5 = {
-  __name: "Form",
+  __name: "Development",
   __ssrInlineRender: true,
   setup(__props) {
-    const agreed = ref(false);
+    const tiers = [
+      {
+        name: "Desenvolvimento WordPress",
+        id: "tier-hobby",
+        href: "mailto:contato@purgatotechnology.com.br",
+        priceMonthly: "R$1970,00",
+        description: "O site perfeito para você está apenas começando na web.",
+        features: [
+          "Fácil Gerenciamento ",
+          "Grande Ecossistema ",
+          "SEO Amigável ",
+          "Baixo Custo Inicial ",
+          "Comunidade Ativa "
+        ],
+        featured: false
+      },
+      {
+        name: "Desenvolvimento LIVT",
+        id: "tier-enterprise",
+        href: "mailto:contato@purgatotechnology.com.br",
+        priceMonthly: "R$3170,00",
+        description: "Tenha um site de alta performance com a stack LIVT e destaque-se entre os melhores da web.",
+        features: [
+          "Alta Performance",
+          "Infraestrutura Escalável",
+          "Segurança Avançada",
+          "Total Personalização",
+          "Maior Controle",
+          "Melhor Experiência do Usuário",
+          "Menor Tempo de Carregamento",
+          "SEO Avançado",
+          "Integrações Personalizadas",
+          "Menos Dependência de Plugins"
+        ],
+        featured: true
+      }
+    ];
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8" }, _attrs))}><div class="mx-auto max-w-2xl text-center"><h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Solicite seu orçamento</h2><p class="mt-2 text-lg/8 text-gray-600">Gostou dos nossos planos? Quer saber mais informações? Preencha o formulário abaixo.</p></div><form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20"><div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"><div><label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nome</label><div class="mt-2.5"><input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></div></div><div><label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Sobrenome</label><div class="mt-2.5"><input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></div></div><div class="sm:col-span-2"><label for="company" class="block text-sm/6 font-semibold text-gray-900">Empresa</label><div class="mt-2.5"><input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></div></div><div class="sm:col-span-2"><label for="email" class="block text-sm/6 font-semibold text-gray-900">Email</label><div class="mt-2.5"><input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></div></div><div class="sm:col-span-2"><label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Telefone</label><div class="mt-2.5"><div class="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600"><div class="grid shrink-0 grid-cols-1 focus-within:relative"><select id="country" name="country" autocomplete="country" aria-label="Country" class="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"><option>BR</option><option>US</option><option>CA</option></select>`);
-      _push(ssrRenderComponent(unref(ChevronDownIcon), {
-        class: "pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4",
-        "aria-hidden": "true"
-      }, null, _parent));
-      _push(`</div><input type="text" name="phone-number" id="phone-number" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"></div></div></div><div class="sm:col-span-2"><label for="plan" class="block text-sm/6 font-medium text-gray-900 dark:text-sky-600">Plano</label><div class="mt-2 grid grid-cols-1"><select id="plan" name="plan" autocomplete="country-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"><option>Desenvolvimento</option><option>Desenvolvimento + Hospedagem</option></select>`);
-      _push(ssrRenderComponent(unref(ChevronDownIcon), {
-        class: "pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4",
-        "aria-hidden": "true"
-      }, null, _parent));
-      _push(`</div></div><div class="sm:col-span-2"><label for="message" class="block text-sm/6 font-semibold text-gray-900">Mensagem</label><div class="mt-2.5"><textarea name="message" id="message" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"></textarea></div></div>`);
-      _push(ssrRenderComponent(unref(SwitchGroup), {
-        as: "div",
-        class: "flex gap-x-4 sm:col-span-2"
-      }, {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex h-6 items-center"${_scopeId}>`);
-            _push2(ssrRenderComponent(unref(Switch), {
-              modelValue: agreed.value,
-              "onUpdate:modelValue": ($event) => agreed.value = $event,
-              class: [agreed.value ? "bg-indigo-600" : "bg-gray-200", "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-gray-900/5 transition-colors duration-200 ease-in-out ring-inset focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"]
-            }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<span class="sr-only"${_scopeId2}>Agree to policies</span><span aria-hidden="true" class="${ssrRenderClass([agreed.value ? "translate-x-3.5" : "translate-x-0", "size-4 transform rounded-full bg-white ring-1 shadow-xs ring-gray-900/5 transition duration-200 ease-in-out"])}"${_scopeId2}></span>`);
-                } else {
-                  return [
-                    createVNode("span", { class: "sr-only" }, "Agree to policies"),
-                    createVNode("span", {
-                      "aria-hidden": "true",
-                      class: [agreed.value ? "translate-x-3.5" : "translate-x-0", "size-4 transform rounded-full bg-white ring-1 shadow-xs ring-gray-900/5 transition duration-200 ease-in-out"]
-                    }, null, 2)
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(`</div>`);
-            _push2(ssrRenderComponent(unref(SwitchLabel), { class: "text-sm/6 text-gray-600" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(` Ao selecionar esta opção, você concorda com nossa ${ssrInterpolate(" ")} <a href="#" class="font-semibold text-indigo-600"${_scopeId2}>política de privacidade</a>. `);
-                } else {
-                  return [
-                    createTextVNode(" Ao selecionar esta opção, você concorda com nossa " + toDisplayString(" ") + " "),
-                    createVNode("a", {
-                      href: "#",
-                      class: "font-semibold text-indigo-600"
-                    }, "política de privacidade"),
-                    createTextVNode(". ")
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
+            _push2(`<title${_scopeId}>Desenvolvimento</title><meta head-key="description" name="description" content="Desenvolvimento web personalizado com Laravel, Vue e Tailwind, focado em performance, SEO e experiência do usuário."${_scopeId}><meta head-key="keywords" name="keywords" content="desenvolvimento web, criação de sites, Laravel, Inertia, Vue, Tailwind CSS, websites modernos, performance, design responsivo, otimização, programação"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
-              createVNode("div", { class: "flex h-6 items-center" }, [
-                createVNode(unref(Switch), {
-                  modelValue: agreed.value,
-                  "onUpdate:modelValue": ($event) => agreed.value = $event,
-                  class: [agreed.value ? "bg-indigo-600" : "bg-gray-200", "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-gray-900/5 transition-colors duration-200 ease-in-out ring-inset focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"]
-                }, {
-                  default: withCtx(() => [
-                    createVNode("span", { class: "sr-only" }, "Agree to policies"),
-                    createVNode("span", {
-                      "aria-hidden": "true",
-                      class: [agreed.value ? "translate-x-3.5" : "translate-x-0", "size-4 transform rounded-full bg-white ring-1 shadow-xs ring-gray-900/5 transition duration-200 ease-in-out"]
-                    }, null, 2)
-                  ]),
-                  _: 1
-                }, 8, ["modelValue", "onUpdate:modelValue", "class"])
-              ]),
-              createVNode(unref(SwitchLabel), { class: "text-sm/6 text-gray-600" }, {
-                default: withCtx(() => [
-                  createTextVNode(" Ao selecionar esta opção, você concorda com nossa " + toDisplayString(" ") + " "),
-                  createVNode("a", {
-                    href: "#",
-                    class: "font-semibold text-indigo-600"
-                  }, "política de privacidade"),
-                  createTextVNode(". ")
-                ]),
-                _: 1
+              createVNode("title", null, "Desenvolvimento"),
+              createVNode("meta", {
+                "head-key": "description",
+                name: "description",
+                content: "Desenvolvimento web personalizado com Laravel, Vue e Tailwind, focado em performance, SEO e experiência do usuário."
+              }),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: "desenvolvimento web, criação de sites, Laravel, Inertia, Vue, Tailwind CSS, websites modernos, performance, design responsivo, otimização, programação"
+              }),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`</div><div class="mt-10"><button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Solicitar</button></div></form></div>`);
+      _push(`<div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8"><div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true"><div class="mx-auto aspect-1155/678 w-[72.1875rem] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] dark:bg-linear-to-tr dark:from-[#ffffff] dark:to-[#3055fc] opacity-30" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Desenvolvimento</h2><p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-sky-600 sm:text-6xl"> Escolha o plano certo para você</p></div><p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 dark:text-sky-300 sm:text-xl/8"> Escolha um plano acessível que inclua os melhores recursos para envolver seu público, fidelizar o cliente e impulsionar as vendas.</p><div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2"><!--[-->`);
+      ssrRenderList(tiers, (tier, tierIdx) => {
+        _push(`<div class="${ssrRenderClass([tier.featured ? "relative bg-gray-900 shadow-2xl" : "bg-white/60 dark:bg-white sm:mx-8 lg:mx-0", tier.featured ? "" : tierIdx === 0 ? "rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl" : "sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none", "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"])}"><h3${ssrRenderAttr("id", tier.id)} class="${ssrRenderClass([tier.featured ? "text-indigo-400" : "text-indigo-600", "text-base/7 font-semibold"])}">${ssrInterpolate(tier.name)}</h3><p class="mt-4 flex items-baseline gap-x-2"><span class="${ssrRenderClass([tier.featured ? "text-white" : "text-gray-900", "text-5xl font-semibold tracking-tight"])}"> A partir de ${ssrInterpolate(tier.priceMonthly)}</span><span class="${ssrRenderClass([tier.featured ? "text-gray-400" : "text-gray-500", "text-base"])}">/Mês</span></p><p class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-6 text-base/7"])}">${ssrInterpolate(tier.description)}</p><ul role="list" class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-8 space-y-3 text-sm/6 sm:mt-10"])}"><!--[-->`);
+        ssrRenderList(tier.features, (feature) => {
+          _push(`<li class="flex gap-x-3">`);
+          _push(ssrRenderComponent(unref(CheckIcon), {
+            class: [tier.featured ? "text-indigo-400" : "text-indigo-600", "h-6 w-5 flex-none"],
+            "aria-hidden": "true"
+          }, null, _parent));
+          _push(` ${ssrInterpolate(feature)}</li>`);
+        });
+        _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.href)}${ssrRenderAttr("aria-describedby", tier.id)} class="${ssrRenderClass([tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600", "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"])}">Quero Esse</a></div>`);
+      });
+      _push(`<!--]--></div></div><!--]-->`);
     };
   }
 };
 const _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Form.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Development.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -383,24 +370,24 @@ const _sfc_main$4 = {
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Home</title><meta head-key="description" name="description" content="Seja bem vindo a página home do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Home</title><meta head-key="description" name="description" content="Soluções em desenvolvimento web, SEO e hospedagem cloud de alta performance para impulsionar seu negócio online."${_scopeId}><meta head-key="keywords" name="keywords" content="desenvolvimento web, hospedagem cloud, SEO, performance, Purgato Technology, tecnologia, sites rápidos, otimização, segurança, inovação, laravel, vue, tailwind"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Home"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Seja bem vindo a página home do site Purgato Technology!"
+                content: "Soluções em desenvolvimento web, SEO e hospedagem cloud de alta performance para impulsionar seu negócio online."
               }),
               createVNode("meta", {
                 "head-key": "keywords",
                 name: "keywords",
-                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+                content: "desenvolvimento web, hospedagem cloud, SEO, performance, Purgato Technology, tecnologia, sites rápidos, otimização, segurança, inovação, laravel, vue, tailwind"
               }),
               createVNode("meta", {
                 "head-key": "author",
                 name: "author",
-                content: "Matheus Purgato | Laravel Developer"
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
@@ -431,41 +418,46 @@ const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$3 = {
-  __name: "Services",
+  __name: "Hosting",
   __ssrInlineRender: true,
   setup(__props) {
     const tiers = [
       {
-        name: "Desenvolvimento",
+        name: "Cloud Compartilhado",
         id: "tier-hobby",
-        href: "/form",
-        priceMonthly: "R$250",
+        href: "https://cloud.purgatotechnology.com.br/register",
+        priceMonthly: "R$49,90",
         description: "O plano perfeito se você está apenas começando na web.",
         features: [
-          "Responsividade",
+          "Backup diário",
+          "SSL Gratuito",
           "Desempenho",
-          "Rankeamento nos motores de busca",
-          "Suporte Padrão"
+          "Até 5 E-mails",
+          "Suporte 24/7",
+          "WordPress | WooCommerce",
+          "Até 100.000 Visualizações por mês"
         ],
         featured: false
       },
       {
-        name: "Desenvolvimento + Hospedagem",
+        name: "Cloud Dedicado",
         id: "tier-enterprise",
-        href: "https://purgatotechnology.com.br/form",
-        priceMonthly: "R$500",
+        href: "https://cloud.purgatotechnology.com.br/register",
+        priceMonthly: "R$149,90",
         description: "A plano para quem quer estar entre os melhores na web.",
         features: [
-          "Responsividade",
-          "Desempenho",
-          "Rankeamento nos motores de busca",
-          "Suporte Prioritário",
-          "Hospedagem Cloud",
+          "Backup diário",
+          "SSL Gratuito",
           "Alta Performance",
-          "Multiplos e-mails",
-          "Backup",
-          "",
-          "Suporte 24hrs"
+          "E-mails Ilimitados",
+          "1GB Ram",
+          "25GB SSD",
+          "1 CPU Core",
+          "100 GB CDN",
+          "Cache Premium",
+          "Suporte 24/7",
+          "Laravel | Vue | Magento",
+          "+100.000 Visualizações por mês"
         ],
         featured: true
       }
@@ -476,33 +468,33 @@ const _sfc_main$3 = {
       _push(ssrRenderComponent(_component_Head, null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Serviços</title><meta head-key="description" name="description" content="Seja bem vindo a página home do site Purgato Technology!"${_scopeId}><meta head-key="keywords" name="keywords" content="laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato | Laravel Developer"${_scopeId}>`);
+            _push2(`<title${_scopeId}>Hospedagem</title><meta head-key="description" name="description" content="Hospedagem Cloud personalizada com alta performance, segurança e suporte especializado para seu site ou sistema."${_scopeId}><meta head-key="keywords" name="keywords" content="hospedagem cloud, servidores rápidos, alta performance, segurança, uptime, cloud computing, escalabilidade, armazenamento, tecnologia, otimização"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
           } else {
             return [
-              createVNode("title", null, "Serviços"),
+              createVNode("title", null, "Hospedagem"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Seja bem vindo a página home do site Purgato Technology!"
+                content: "Hospedagem Cloud personalizada com alta performance, segurança e suporte especializado para seu site ou sistema."
               }),
               createVNode("meta", {
                 "head-key": "keywords",
                 name: "keywords",
-                content: "laravel, inertia, Vue, Tailwindcss, Hospedagem, Performance, Cloud, Blog"
+                content: "hospedagem cloud, servidores rápidos, alta performance, segurança, uptime, cloud computing, escalabilidade, armazenamento, tecnologia, otimização"
               }),
               createVNode("meta", {
                 "head-key": "author",
                 name: "author",
-                content: "Matheus Purgato | Laravel Developer"
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
               })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8"><div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true"><div class="mx-auto aspect-1155/678 w-[72.1875rem] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] dark:bg-linear-to-tr dark:from-[#ffffff] dark:to-[#3055fc] opacity-30" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Planos</h2><p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-sky-600 sm:text-6xl"> Escolha o plano certo para você</p></div><p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 dark:text-sky-300 sm:text-xl/8"> Escolha um plano acessível que inclua os melhores recursos para envolver seu público, fidelizar o cliente e impulsionar as vendas.</p><div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2"><!--[-->`);
+      _push(`<div class="relative isolate bg-white dark:bg-black px-6 py-24 sm:py-32 lg:px-8"><div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true"><div class="mx-auto aspect-1155/678 w-[72.1875rem] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] dark:bg-linear-to-tr dark:from-[#ffffff] dark:to-[#3055fc] opacity-30" style="${ssrRenderStyle({ "clip-path": "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" })}"></div></div><div class="mx-auto max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Hospedagem</h2><p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 dark:text-sky-600 sm:text-6xl"> Escolha o plano certo para você</p></div><p class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 dark:text-sky-300 sm:text-xl/8"> Escolha um plano acessível que inclua os melhores recursos para envolver seu público, fidelizar o cliente e impulsionar as vendas.</p><div class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2"><!--[-->`);
       ssrRenderList(tiers, (tier, tierIdx) => {
-        _push(`<div class="${ssrRenderClass([tier.featured ? "relative bg-gray-900 shadow-2xl" : "bg-white/60 dark:bg-white sm:mx-8 lg:mx-0", tier.featured ? "" : tierIdx === 0 ? "rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl" : "sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none", "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"])}"><h3${ssrRenderAttr("id", tier.id)} class="${ssrRenderClass([tier.featured ? "text-indigo-400" : "text-indigo-600", "text-base/7 font-semibold"])}">${ssrInterpolate(tier.name)}</h3><p class="mt-4 flex items-baseline gap-x-2"><span class="${ssrRenderClass([tier.featured ? "text-white" : "text-gray-900", "text-5xl font-semibold tracking-tight"])}">A partir de ${ssrInterpolate(tier.priceMonthly)}</span><span class="${ssrRenderClass([tier.featured ? "text-gray-400" : "text-gray-500", "text-base"])}">/Mês</span></p><p class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-6 text-base/7"])}">${ssrInterpolate(tier.description)}</p><ul role="list" class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-8 space-y-3 text-sm/6 sm:mt-10"])}"><!--[-->`);
+        _push(`<div class="${ssrRenderClass([tier.featured ? "relative bg-gray-900 shadow-2xl" : "bg-white/60 dark:bg-white sm:mx-8 lg:mx-0", tier.featured ? "" : tierIdx === 0 ? "rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl" : "sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none", "rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10"])}"><h3${ssrRenderAttr("id", tier.id)} class="${ssrRenderClass([tier.featured ? "text-indigo-400" : "text-indigo-600", "text-base/7 font-semibold"])}">${ssrInterpolate(tier.name)}</h3><p class="mt-4 flex items-baseline gap-x-2"><span class="${ssrRenderClass([tier.featured ? "text-white" : "text-gray-900", "text-5xl font-semibold tracking-tight"])}"> A partir de ${ssrInterpolate(tier.priceMonthly)}</span><span class="${ssrRenderClass([tier.featured ? "text-gray-400" : "text-gray-500", "text-base"])}">/Mês</span></p><p class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-6 text-base/7"])}">${ssrInterpolate(tier.description)}</p><ul role="list" class="${ssrRenderClass([tier.featured ? "text-gray-300" : "text-gray-600", "mt-8 space-y-3 text-sm/6 sm:mt-10"])}"><!--[-->`);
         ssrRenderList(tier.features, (feature) => {
           _push(`<li class="flex gap-x-3">`);
           _push(ssrRenderComponent(unref(CheckIcon), {
@@ -511,7 +503,7 @@ const _sfc_main$3 = {
           }, null, _parent));
           _push(` ${ssrInterpolate(feature)}</li>`);
         });
-        _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.href)}${ssrRenderAttr("aria-describedby", tier.id)} class="${ssrRenderClass([tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600", "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"])}">Get started today</a></div>`);
+        _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.href)}${ssrRenderAttr("aria-describedby", tier.id)} class="${ssrRenderClass([tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600", "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"])}">Quero Esse</a></div>`);
       });
       _push(`<!--]--></div></div><!--]-->`);
     };
@@ -871,7 +863,7 @@ const _sfc_main$2 = {
       _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.services"))} class="text-sm font-semibold text-white"${_scopeId}>Serviços</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
+            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
           } else {
             return [
               createVNode("a", {
@@ -883,9 +875,13 @@ const _sfc_main$2 = {
                 class: "text-sm font-semibold text-white"
               }, "Sobre", 8, ["href"]),
               createVNode("a", {
-                href: _ctx.route("site.services"),
+                href: _ctx.route("site.hosting"),
                 class: "text-sm font-semibold text-white"
-              }, "Serviços", 8, ["href"]),
+              }, "Hospedagem", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.development"),
+                class: "text-sm font-semibold text-white"
+              }, "Desenvolvimento", 8, ["href"]),
               createVNode("a", {
                 href: _ctx.route("site.contact"),
                 class: "text-sm font-semibold text-white"
@@ -910,7 +906,7 @@ const _sfc_main$2 = {
                 if (_push3) {
                   _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
-                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.services"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Serviços</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
+                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "flex justify-between items-center" }, [
@@ -931,9 +927,13 @@ const _sfc_main$2 = {
                         class: "text-sm font-semibold text-gray-900"
                       }, "Sobre", 8, ["href"]),
                       createVNode("a", {
-                        href: _ctx.route("site.services"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Serviços", 8, ["href"]),
+                        href: _ctx.route("site.hosting"),
+                        class: "text-sm font-semibold text-white"
+                      }, "Hospedagem", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.development"),
+                        class: "text-sm font-semibold text-white"
+                      }, "Desenvolvimento", 8, ["href"]),
                       createVNode("a", {
                         href: _ctx.route("site.contact"),
                         class: "text-sm font-semibold text-gray-900"
@@ -967,9 +967,13 @@ const _sfc_main$2 = {
                       class: "text-sm font-semibold text-gray-900"
                     }, "Sobre", 8, ["href"]),
                     createVNode("a", {
-                      href: _ctx.route("site.services"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Serviços", 8, ["href"]),
+                      href: _ctx.route("site.hosting"),
+                      class: "text-sm font-semibold text-white"
+                    }, "Hospedagem", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.development"),
+                      class: "text-sm font-semibold text-white"
+                    }, "Desenvolvimento", 8, ["href"]),
                     createVNode("a", {
                       href: _ctx.route("site.contact"),
                       class: "text-sm font-semibold text-gray-900"
@@ -1035,7 +1039,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/site/About.vue": __vite_glob_0_1, "./Pages/site/Blog.vue": __vite_glob_0_2, "./Pages/site/Contact.vue": __vite_glob_0_3, "./Pages/site/Form.vue": __vite_glob_0_4, "./Pages/site/Home.vue": __vite_glob_0_5, "./Pages/site/Services.vue": __vite_glob_0_6 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/site/About.vue": __vite_glob_0_1, "./Pages/site/Blog.vue": __vite_glob_0_2, "./Pages/site/Contact.vue": __vite_glob_0_3, "./Pages/site/Development.vue": __vite_glob_0_4, "./Pages/site/Home.vue": __vite_glob_0_5, "./Pages/site/Hosting.vue": __vite_glob_0_6 });
       let page2 = pages[`./Pages/${name}.vue`];
       page2.default.layout = page2.default.layout || _sfc_main;
       return page2;

@@ -7,9 +7,9 @@
   "resources/js/Pages/site/About.vue": [],
   "resources/js/Pages/site/Blog.vue": [],
   "resources/js/Pages/site/Contact.vue": [],
-  "resources/js/Pages/site/Form.vue": [],
+  "resources/js/Pages/site/Development.vue": [],
   "resources/js/Pages/site/Home.vue": [],
-  "resources/js/Pages/site/Services.vue": [],
+  "resources/js/Pages/site/Hosting.vue": [],
   "resources/js/ssr.js": [],
   "vendor/tightenco/ziggy/dist/index.js": []
 }

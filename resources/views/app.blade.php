@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/img/site/logo-purgato-technology.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/img/site/logo-purgato-technology.png">
+    <link rel="shortcut icon" href="{{ asset('img/site/favicon.ico') }}" type="image/png">
+
     <!-- Scripts -->
     @routes
     @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
