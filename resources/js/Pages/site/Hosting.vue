@@ -1,4 +1,3 @@
-
 <script setup>
 import {CheckIcon} from '@heroicons/vue/20/solid'
 
@@ -94,8 +93,15 @@ const tiers = [
                     </li>
                 </ul>
                 <a :href="tier.href" :aria-describedby="tier.id"
-                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero Esse</a>
+                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero
+                    Esse</a>
             </div>
         </div>
+        <div class="mx-auto mt-16 max-w-4xl text-center">
+            <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Selo de Parceria</h2>
+            <a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&utm_medium=badge&utm_source=partner&utm_content=partner&utm_term="><img
+                alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a>
+        </div>
     </div>
+
 </template>

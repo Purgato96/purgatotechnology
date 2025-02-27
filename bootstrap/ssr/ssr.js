@@ -505,7 +505,7 @@ const _sfc_main$3 = {
         });
         _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.href)}${ssrRenderAttr("aria-describedby", tier.id)} class="${ssrRenderClass([tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600", "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"])}">Quero Esse</a></div>`);
       });
-      _push(`<!--]--></div></div><!--]-->`);
+      _push(`<!--]--></div><div class="mx-auto mt-16 max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Selo de Parceria</h2><a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&amp;utm_medium=badge&amp;utm_source=partner&amp;utm_content=partner&amp;utm_term="><img alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a></div></div><!--]-->`);
     };
   }
 };
