@@ -63,8 +63,8 @@ const imageUrl = '/resources/img/site/logo-purgato-technology.png';
                 <div class="mt-6 flex flex-col space-y-4">
                     <a :href="route('site.home')" class="text-sm font-semibold text-gray-900">Home</a>
                     <a :href="route('site.about')" class="text-sm font-semibold text-gray-900">Sobre</a>
-                    <a :href="route('site.hosting')" class="text-sm font-semibold text-white">Hospedagem</a>
-                    <a :href="route('site.development')" class="text-sm font-semibold text-white">Desenvolvimento</a>
+                    <a :href="route('site.hosting')" class="text-sm font-semibold text-gray-900">Hospedagem</a>
+                    <a :href="route('site.development')" class="text-sm font-semibold text-gray-900">Desenvolvimento</a>
 <!--                    <a :href="route('site.blog')" class="text-sm font-semibold text-gray-900">Blog</a>-->
                     <a :href="route('site.contact')" class="text-sm font-semibold text-gray-900">Contato</a>
                 </div>
