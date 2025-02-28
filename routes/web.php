@@ -1,9 +1,14 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+/**
+ *Site
+*/
 
 Route::controller(SiteController::class)->group(function () {
     Route::get('/',  'index')->name('site.home');
@@ -14,6 +19,12 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/form',  'form')->name('site.form');
     Route::get('/contato', 'contact')->name('site.contact');
 });
-/*Route::get('/admin', function () {
-    return Inertia::render('admin/Dashboard');
-});*/
+
+/**
+ *Admin
+ */
+
+Route::controller( AdminController::class )->group(function () {
+    Route::get('/admin',  'index')->name('admin.home');
+});
+

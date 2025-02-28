@@ -1,31 +1,196 @@
-import { useSSRContext, ref, resolveComponent, withCtx, createVNode, resolveDynamicComponent, unref, mergeProps, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrInterpolate, ssrRenderClass, ssrIncludeBooleanAttr, ssrRenderVNode, ssrRenderStyle, ssrRenderAttrs, ssrRenderSlot } from "vue/server-renderer";
-import { EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { CheckIcon } from "@heroicons/vue/20/solid";
+import { ref, resolveComponent, mergeProps, withCtx, createBlock, createCommentVNode, openBlock, toDisplayString, unref, createVNode, Fragment, renderList, Transition, useSSRContext, resolveDynamicComponent, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderAttrs, ssrRenderClass, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSlot, ssrIncludeBooleanAttr, ssrRenderVNode, ssrRenderStyle } from "vue/server-renderer";
+import { BellIcon, EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { Menu, MenuButton, MenuItems, MenuItem, PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
 import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
+import { CheckIcon } from "@heroicons/vue/20/solid";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-import { PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
+const _sfc_main$9 = {
+  __name: "Dashboard",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const collapsed = ref(false);
+    const user = {
+      name: "Tom Cook",
+      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    };
+    const navigation = [
+      { name: "Dashboard", href: "/" },
+      { name: "Usuários", href: "/usuarios" },
+      { name: "Configurações", href: "/configuracoes" }
+    ];
+    const userNavigation = [
+      { name: "Perfil", href: "#" },
+      { name: "Configurações", href: "#" },
+      { name: "Sair", href: "#" }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_router_link = resolveComponent("router-link");
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-screen bg-gray-100" }, _attrs))}><aside class="${ssrRenderClass([
+        "w-64 bg-white shadow-md h-full transition-all duration-300",
+        { "w-16": collapsed.value }
+      ])}"><div class="p-4 flex justify-between items-center">`);
+      if (!collapsed.value) {
+        _push(`<span class="text-xl font-bold">Painel</span>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<button class="p-2 rounded hover:bg-gray-200"><svg class="${ssrRenderClass([{ "rotate-180": collapsed.value }, "w-6 h-6"])}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button></div><nav class="mt-4"><!--[-->`);
+      ssrRenderList(navigation, (item) => {
+        _push(ssrRenderComponent(_component_router_link, {
+          key: item.name,
+          to: item.href,
+          class: ["block py-2 px-4 rounded hover:bg-gray-200", { "bg-gray-300": _ctx.$route.path === item.href }]
+        }, {
+          default: withCtx((_, _push2, _parent2, _scopeId) => {
+            if (_push2) {
+              if (!collapsed.value) {
+                _push2(`<span${_scopeId}>${ssrInterpolate(item.name)}</span>`);
+              } else {
+                _push2(`<!---->`);
+              }
+            } else {
+              return [
+                !collapsed.value ? (openBlock(), createBlock("span", { key: 0 }, toDisplayString(item.name), 1)) : createCommentVNode("", true)
+              ];
+            }
+          }),
+          _: 2
+        }, _parent));
+      });
+      _push(`<!--]--></nav></aside><div class="flex-1 flex flex-col"><header class="bg-gray-800 text-white py-4 px-6 flex justify-between items-center"><h1 class="text-xl font-semibold">Dashboard</h1><div class="flex items-center"><button class="relative p-2 text-gray-300 hover:text-white">`);
+      _push(ssrRenderComponent(unref(BellIcon), { class: "size-6" }, null, _parent));
+      _push(`</button>`);
+      _push(ssrRenderComponent(unref(Menu), {
+        as: "div",
+        class: "relative ml-3"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(ssrRenderComponent(unref(MenuButton), { class: "flex items-center space-x-2 text-white" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<img class="w-8 h-8 rounded-full"${ssrRenderAttr("src", user.imageUrl)}${_scopeId2}><span${_scopeId2}>${ssrInterpolate(user.name)}</span>`);
+                } else {
+                  return [
+                    createVNode("img", {
+                      class: "w-8 h-8 rounded-full",
+                      src: user.imageUrl
+                    }, null, 8, ["src"]),
+                    createVNode("span", null, toDisplayString(user.name), 1)
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+            _push2(``);
+            _push2(ssrRenderComponent(unref(MenuItems), { class: "absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md" }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`<!--[-->`);
+                  ssrRenderList(userNavigation, (item) => {
+                    _push3(ssrRenderComponent(unref(MenuItem), {
+                      key: item.name
+                    }, {
+                      default: withCtx(({ active }, _push4, _parent4, _scopeId3) => {
+                        if (_push4) {
+                          _push4(`<a${ssrRenderAttr("href", item.href)} class="${ssrRenderClass([active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"])}"${_scopeId3}>${ssrInterpolate(item.name)}</a>`);
+                        } else {
+                          return [
+                            createVNode("a", {
+                              href: item.href,
+                              class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
+                            }, toDisplayString(item.name), 11, ["href"])
+                          ];
+                        }
+                      }),
+                      _: 2
+                    }, _parent3, _scopeId2));
+                  });
+                  _push3(`<!--]-->`);
+                } else {
+                  return [
+                    (openBlock(), createBlock(Fragment, null, renderList(userNavigation, (item) => {
+                      return createVNode(unref(MenuItem), {
+                        key: item.name
+                      }, {
+                        default: withCtx(({ active }) => [
+                          createVNode("a", {
+                            href: item.href,
+                            class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
+                          }, toDisplayString(item.name), 11, ["href"])
+                        ]),
+                        _: 2
+                      }, 1024);
+                    }), 64))
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
+          } else {
+            return [
+              createVNode(unref(MenuButton), { class: "flex items-center space-x-2 text-white" }, {
+                default: withCtx(() => [
+                  createVNode("img", {
+                    class: "w-8 h-8 rounded-full",
+                    src: user.imageUrl
+                  }, null, 8, ["src"]),
+                  createVNode("span", null, toDisplayString(user.name), 1)
+                ]),
+                _: 1
+              }),
+              createVNode(Transition, {
+                "enter-active-class": "transition ease-out duration-100",
+                "enter-from-class": "transform opacity-0 scale-95",
+                "enter-to-class": "transform opacity-100 scale-100",
+                "leave-active-class": "transition ease-in duration-75",
+                "leave-from-class": "transform opacity-100 scale-100",
+                "leave-to-class": "transform opacity-0 scale-95"
+              }, {
+                default: withCtx(() => [
+                  createVNode(unref(MenuItems), { class: "absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md" }, {
+                    default: withCtx(() => [
+                      (openBlock(), createBlock(Fragment, null, renderList(userNavigation, (item) => {
+                        return createVNode(unref(MenuItem), {
+                          key: item.name
+                        }, {
+                          default: withCtx(({ active }) => [
+                            createVNode("a", {
+                              href: item.href,
+                              class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
+                            }, toDisplayString(item.name), 11, ["href"])
+                          ]),
+                          _: 2
+                        }, 1024);
+                      }), 64))
+                    ]),
+                    _: 1
+                  })
+                ]),
+                _: 1
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></header><main class="p-6 flex-1 bg-white">`);
+      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
+      _push(`</main></div></div>`);
+    };
   }
-  return target;
 };
-const _sfc_main$9 = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-}
 const _sfc_setup$9 = _sfc_main$9.setup;
 _sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
   return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const Dashboard = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["ssrRender", _sfc_ssrRender]]);
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Dashboard
+  default: _sfc_main$9
 }, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$8 = {
   __name: "About",
@@ -906,7 +1071,7 @@ const _sfc_main$2 = {
                 if (_push3) {
                   _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
-                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
+                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "flex justify-between items-center" }, [
@@ -928,11 +1093,11 @@ const _sfc_main$2 = {
                       }, "Sobre", 8, ["href"]),
                       createVNode("a", {
                         href: _ctx.route("site.hosting"),
-                        class: "text-sm font-semibold text-white"
+                        class: "text-sm font-semibold text-gray-900"
                       }, "Hospedagem", 8, ["href"]),
                       createVNode("a", {
                         href: _ctx.route("site.development"),
-                        class: "text-sm font-semibold text-white"
+                        class: "text-sm font-semibold text-gray-900"
                       }, "Desenvolvimento", 8, ["href"]),
                       createVNode("a", {
                         href: _ctx.route("site.contact"),
@@ -968,11 +1133,11 @@ const _sfc_main$2 = {
                     }, "Sobre", 8, ["href"]),
                     createVNode("a", {
                       href: _ctx.route("site.hosting"),
-                      class: "text-sm font-semibold text-white"
+                      class: "text-sm font-semibold text-gray-900"
                     }, "Hospedagem", 8, ["href"]),
                     createVNode("a", {
                       href: _ctx.route("site.development"),
-                      class: "text-sm font-semibold text-white"
+                      class: "text-sm font-semibold text-gray-900"
                     }, "Desenvolvimento", 8, ["href"]),
                     createVNode("a", {
                       href: _ctx.route("site.contact"),
