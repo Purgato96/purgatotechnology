@@ -27,6 +27,8 @@ const features = [
         icon: FingerPrintIcon,
     },
 ];
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 </script>
 
 

@@ -39,6 +39,8 @@ const tiers = [
         featured: true,
     },
 ]
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 </script>
 
 <template>

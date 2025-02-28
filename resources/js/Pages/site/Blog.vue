@@ -4,6 +4,8 @@ import {defineProps} from 'vue';
 const props = defineProps({
     posts: Array
 });
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 </script>
 
 <template>

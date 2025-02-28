@@ -12,7 +12,7 @@ createServer(page =>
         resolve: name => {
             const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
             let page = pages[`./Pages/${name}.vue`]
-            page.default.layout = page.default.layout || Guest
+            page.default.layout = page.default.layout || (page => h(page))
             return page
         },
         setup({ App, props, plugin }) {

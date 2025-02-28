@@ -2,6 +2,9 @@
 import {ref} from "vue";
 
 const tab = ref('mission')
+
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 </script>
 
 <template>

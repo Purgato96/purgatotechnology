@@ -1,11 +1,25 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\SiteController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
+/**
+ *Admin
+ */
+Route::group(['prefix' => 'admin', 'controller' => AdminController::class], function () {
+    Route::get('/',  'login')->name('login');
+    Route::group(['as'=> 'admin.'], function () {
+        Route::post('/login/do',  'attempt')->name('login.do');
+        Route::get('/logout',  'logout')->name('logout');
+
+        Route::group([''], function () {
+            Route::get('/dashboard',  'dashboard')->name('dashboard');
+        });
+    });
+
+});
+//Route::get('/admin', [AdminController::class, 'login'])->name('login');
 /**
  *Site
 */
@@ -18,13 +32,6 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/blog',  'blog')->name('site.blog');
     Route::get('/form',  'form')->name('site.form');
     Route::get('/contato', 'contact')->name('site.contact');
-});
-
-/**
- *Admin
- */
-
-Route::controller( AdminController::class )->group(function () {
-    Route::get('/admin',  'index')->name('admin.home');
+//    Route::get('/login', 'login')->name('login');
 });
 

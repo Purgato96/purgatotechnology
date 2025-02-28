@@ -35,6 +35,8 @@ const features = [
         icon: UserIcon,
     }
 ];
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 </script>
 
 <template>
