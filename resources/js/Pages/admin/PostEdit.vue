@@ -1,25 +1,26 @@
 <script setup>
 import GuestAdmin from '@/Layouts/GuestAdmin.vue'; // Layout padrão
-defineOptions({ layout: GuestAdmin }); // Define o layout para o componente
-import { ref } from "vue";
-import { useForm } from "@inertiajs/vue3";
+defineOptions({layout: GuestAdmin}); // Define o layout para o componente
+import {ref} from "vue";
+import {useForm} from "@inertiajs/vue3";
 
 // Recebendo a prop `post` e `authors`, que serão passadas pela resposta da rota.
-defineProps({
+const props = defineProps({
     post: Object,
     authors: Array,
 });
 
-// Inicializando o formulário com os dados do post.
+// Agora você pode acessar props.post corretamente // Inicializando o formulário com os dados do post.
 const form = useForm({
-    title: post.title || "",
-    subtitle: post.subtitle || "",
-    content: post.content || "",
-    category: post.category || "",
-    author: post.author || "", // ID do autor
-    tags: post.tags || "",
-    image: null, // Imagem tratada separadamente com File API.
+    title: props.post?.title || "",
+    subtitle: props.post?.subtitle || "",
+    content: props.post?.content || "",
+    category: props.post?.category || "",
+    author: props.post?.author || "",
+    tags: props.post?.tags || "",
+    image: null,  // Imagem tratada separadamente com File API.
 });
+
 
 const errors = ref({});
 
@@ -30,7 +31,7 @@ const onFileChange = (event) => {
 
 // Função para atualizar o post.
 const updatePost = () => {
-    form.post(route("admin.posts.update", post.id), {
+    form.put(route("admin.posts.update", props.post.id), {
         onError: (errorBag) => {
             errors.value = errorBag;
         },
@@ -48,7 +49,6 @@ const updatePost = () => {
 
         <!-- Formulário de edição -->
         <form @submit.prevent="updatePost">
-            <!-- Título -->
             <div class="mb-4">
                 <label for="title" class="block text-sm font-medium text-gray-700">Título</label>
                 <input
@@ -109,11 +109,36 @@ const updatePost = () => {
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                 >
                     <option value="" selected disabled>Selecione um autor</option>
-                    <option v-for="authorOption in authors" :key="authorOption.id" :value="authorOption.id">
-                        {{ authorOption.name }}
+                    <option v-for="author in authors" :key="author.id" :value="author.id">
+                        {{ author.name }}
                     </option>
                 </select>
                 <p v-if="errors.author" class="text-red-500 text-sm mt-1">{{ errors.author }}</p>
+            </div>
+            <!-- Tag -->
+            <div class="mb-4">
+                <label for="tags" class="block text-sm font-medium text-gray-700">Tag</label>
+                <input
+                    id="tags"
+                    type="text"
+                    v-model="form.tags"
+                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
+                    :class="{ 'border-red-500': errors.tags }"
+                />
+                <p v-if="errors.tags" class="text-red-500 text-sm mt-1">{{ errors.tags }}</p>
+            </div>
+            <!-- Image -->
+            <div class="mb-4">
+                <label for="image" class="block text-sm font-medium text-gray-700">Imagem</label>
+                <input
+                    id="image"
+                    type="file"
+                    v-on="form.image"
+                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
+                    @change="event => image.value = event.target.files[0]"
+                    :class="{ 'border-red-500': errors.image }"
+                />
+                <p v-if="errors.image" class="text-red-500 text-sm mt-1">{{ errors.image }}</p>
             </div>
 
             <!-- Botões -->
@@ -122,7 +147,7 @@ const updatePost = () => {
                     Atualizar Post
                 </button>
                 <inertia-link
-                    :href="route('admin.posts.index')"
+                    :href="route('admin.posts.update', props.post.id)"
                     class="text-gray-600 hover:underline"
                 >
                     Cancelar
@@ -131,3 +156,18 @@ const updatePost = () => {
         </form>
     </div>
 </template>
+
+<!--<template>
+    <Head>
+        <title>Editando Post</title>
+    </Head>
+
+    <div v-if="props.post">
+        <h1 class="text-2xl font-bold mb-6">Editar Post</h1>
+        <pre>{{ props.post }}</pre>
+    </div>
+
+    <div v-else>
+        <p class="text-red-500">Erro: Post não encontrado!</p>
+    </div>
+</template>-->

@@ -66,13 +66,10 @@ class PostController extends Controller {
      * Show the form for editing the specified resource.
      */
     public function edit(Post $post) {
-        $authors = User::query()->select('id', 'name')->get();
-
         return Inertia::render('admin/PostEdit', [
             'post' => $post,
-            'authors' => $authors,
+            'authors' => User::all(),
         ]);
-        dd($post, $authors);
     }
 
     /**
