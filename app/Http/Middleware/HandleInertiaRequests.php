@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Inertia\Middleware;
 use Tighten\Ziggy\Ziggy;
 
@@ -34,11 +36,18 @@ class HandleInertiaRequests extends Middleware {
      */
     public function share(Request $request): array {
         return array_merge(parent::share($request), [
-            //'auth.user' => Auth::user()->first;
-            'auth.user' => [
-                'name' => 'Matheus Purgato',
-                'email' => 'matheuspurgato@gmail.com',
+            /*$user = Auth::user(),
+
+           'auth.user' => [
+                'name' =>  $user->name,
+                'email' => $user->email,
+            ],*/
+            // Garante que o usuário autenticado estará disponível em $page.props.auth.user
+            ...parent::share($request),
+            'auth' => [
+                'user' => $request->user(),
             ],
+
             'ziggy' => fn() => [
                 ...(new Ziggy)->toArray(),
                 'location' => $request->url(),

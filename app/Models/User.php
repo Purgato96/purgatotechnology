@@ -32,6 +32,9 @@ class User extends Authenticatable {
         'remember_token',
     ];
 
+    public function get(string $string) {
+    }
+
     /**
      * Get the attributes that should be cast.
      *

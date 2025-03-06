@@ -13,13 +13,22 @@ Route::group(['prefix' => 'admin', 'controller' => AdminController::class], func
         Route::post('/login/do',  'attempt')->name('login.do');
         Route::get('/logout',  'logout')->name('logout');
 
-        Route::group([''], function () {
+        Route::group(['middleware' => ['auth']], function () {
+            /*Dashboard*/
             Route::get('/dashboard',  'dashboard')->name('dashboard');
+            /*Administrando Usuários*/
+            Route::get('/users',  'users')->name('users');
+            Route::post('/users', 'store')->name('users.store'); // Criar
+            Route::get('/users/create', 'create')->name('users.create'); // Criar (view para formulário)
+            Route::get('/users/{user}/edit', 'edit')->name('users.edit'); // Editar (view para formulário)
+            Route::put('/users/{user}','update')->name('users.update'); // Atualizar
+            Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Deletar
+            /*Administrando Blog*/
+
         });
     });
 
 });
-//Route::get('/admin', [AdminController::class, 'login'])->name('login');
 /**
  *Site
 */
@@ -32,6 +41,6 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/blog',  'blog')->name('site.blog');
     Route::get('/form',  'form')->name('site.form');
     Route::get('/contato', 'contact')->name('site.contact');
-//    Route::get('/login', 'login')->name('login');
+
 });
 
