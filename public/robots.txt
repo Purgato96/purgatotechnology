@@ -3,5 +3,6 @@ Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /wp-login.php
 Disallow: /cgi-bin/
+Disallow: /storage/*
 
 Sitemap: https://purgatotechnology.com.br/sitemap.xml

@@ -51,6 +51,9 @@
             }
         }
     </script>
+	<!-- Script Google AdSense  -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9706230547321289"
+     crossorigin="anonymous"></script>
 </head>
 <body class="font-sans antialiased">
 <!-- Google Tag Manager (noscript) -->

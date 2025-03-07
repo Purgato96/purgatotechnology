@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-        <loc>http://localhost</loc>
+        <loc>https://purgatotechnology.com.br/up</loc>
     
             </url>
     <url>
-        <loc>http://localhost/users</loc>
+        <loc>https://purgatotechnology.com.br</loc>
     
             </url>
     <url>
-        <loc>http://localhost/users/create</loc>
+        <loc>https://purgatotechnology.com.br/sobre</loc>
     
             </url>
     <url>
-        <loc>http://localhost/users/{user}</loc>
+        <loc>https://purgatotechnology.com.br/hospedagem</loc>
     
             </url>
     <url>
-        <loc>http://localhost/users/{user}/edit</loc>
+        <loc>https://purgatotechnology.com.br/desenvolvimento</loc>
     
             </url>
     <url>
-        <loc>http://localhost/contato</loc>
+        <loc>https://purgatotechnology.com.br/blog</loc>
     
             </url>
     <url>
-        <loc>http://localhost/storage/{path}</loc>
+        <loc>https://purgatotechnology.com.br/form</loc>
+    
+            </url>
+    <url>
+        <loc>https://purgatotechnology.com.br/contato</loc>
+    
+            </url>
+    <url>
+        <loc>https://purgatotechnology.com.br/storage/{path}</loc>
     
             </url>
 </urlset>
