@@ -27,8 +27,6 @@ Route::group(['prefix' => 'admin'], function () {
                     Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Deletar
 
                 });
-            });
-            Route::group(['middleware' => 'auth'], function () {
                 Route::controller(PostController::class)->group(function () {
                     /*Administrando Posts*/
                     Route::get('posts', 'index')->name('posts');

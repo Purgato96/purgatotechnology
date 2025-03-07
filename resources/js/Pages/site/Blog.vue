@@ -43,6 +43,7 @@ const goToPage = (url) => {
                                 post.category
                             }}</a>
                     </div>
+                    <img v-if="post.image" :src="post.image" :alt="post.title" class="rounded-md shadow-md" />
                     <div class="group relative">
                         <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                             <a :href="`/blog/${post.id}`">

@@ -1,8 +1,9 @@
 <script setup>
 import GuestAdmin from '@/Layouts/GuestAdmin.vue'; // Layout padrão
-defineOptions({ layout: GuestAdmin }); // Define o layout para o componente
-import { ref } from 'vue'; // Reatividade
-import { router } from '@inertiajs/vue3'; // Inertia Router para criação do post
+defineOptions({layout: GuestAdmin}); // Define o layout para o componente
+import {ref} from 'vue'; // Reatividade
+import {router} from '@inertiajs/vue3'; // Inertia Router para criação do post
+import RichTextEditor from '@/Components/RichTextEditor.vue';
 
 // Campos do formulário
 const title = ref('');
@@ -83,14 +84,12 @@ const createPost = () => {
 
             <!-- Conteúdo -->
             <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700" for="content">Conteúdo</label>
-                <textarea
-                    id="content"
+                <label class="block text-sm font-medium text-gray-700" for="category">Conteúdo</label>
+                <RichTextEditor
                     v-model="content"
+                    id="content"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
-                    rows="5"
-                    required
-                ></textarea>
+                />
             </div>
 
             <!-- Categoria -->

@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
+use Spatie\Image\Image;
 
 class PostController extends Controller {
     /**
@@ -28,10 +29,9 @@ class PostController extends Controller {
                     'author_position' => $post->author ? $post->author->position : 'Escritor',
                     'href' => route('site.blog.show', $post->id), // Link para o post individual
                     'category' => $post->category, // Se a categoria existir no modelo.
-                    'image' => $post->image,
+                    'image' => $post->image ? asset("storage/{$post->image}") : null,
                 ]),
             ]);
-            //['posts' => $posts]); // Envia para o componente Vue
 
     }
 
@@ -61,10 +61,6 @@ class PostController extends Controller {
             'image' => 'nullable|image|max:2048',
             'slug' => 'nullable|string|max:255|unique:posts,slug',
         ]);
-
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('posts', 'public');
-        }
 
         Post::query()->create($validated);
 
@@ -102,10 +98,9 @@ class PostController extends Controller {
             'image' => 'nullable|image|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('posts', 'public');
+        if (!$validated['slug']) {
+            $validated['slug'] = Str::slug($validated['title']);
         }
-
         $post->update($validated);
 
         return redirect()->route('admin.posts')->with('success', 'Post atualizado com sucesso!');

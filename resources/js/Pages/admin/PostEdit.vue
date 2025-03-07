@@ -3,6 +3,7 @@ import GuestAdmin from '@/Layouts/GuestAdmin.vue'; // Layout padrão
 defineOptions({layout: GuestAdmin}); // Define o layout para o componente
 import {ref} from "vue";
 import {useForm} from "@inertiajs/vue3";
+import RichTextEditor from '@/Components/RichTextEditor.vue';
 
 // Recebendo a prop `post` e `authors`, que serão passadas pela resposta da rota.
 const props = defineProps({
@@ -76,14 +77,12 @@ const updatePost = () => {
 
             <!-- Conteúdo -->
             <div class="mb-4">
-                <label for="content" class="block text-sm font-medium text-gray-700">Conteúdo</label>
-                <textarea
-                    id="content"
+                <label class="block text-sm font-medium text-gray-700" for="category">Conteúdo</label>
+                <RichTextEditor
                     v-model="form.content"
-                    rows="5"
+                    id="content"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
-                    :class="{ 'border-red-500': errors.content }"
-                ></textarea>
+                />
                 <p v-if="errors.content" class="text-red-500 text-sm mt-1">{{ errors.content }}</p>
             </div>
 
@@ -133,10 +132,8 @@ const updatePost = () => {
                 <input
                     id="image"
                     type="file"
-                    v-on="form.image"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
-                    @change="event => image.value = event.target.files[0]"
-                    :class="{ 'border-red-500': errors.image }"
+                    @change="onFileChange"
                 />
                 <p v-if="errors.image" class="text-red-500 text-sm mt-1">{{ errors.image }}</p>
             </div>
@@ -156,18 +153,3 @@ const updatePost = () => {
         </form>
     </div>
 </template>
-
-<!--<template>
-    <Head>
-        <title>Editando Post</title>
-    </Head>
-
-    <div v-if="props.post">
-        <h1 class="text-2xl font-bold mb-6">Editar Post</h1>
-        <pre>{{ props.post }}</pre>
-    </div>
-
-    <div v-else>
-        <p class="text-red-500">Erro: Post não encontrado!</p>
-    </div>
-</template>-->

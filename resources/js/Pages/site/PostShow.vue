@@ -19,6 +19,7 @@ const props = defineProps({
     <div class="max-w-4xl mx-auto my-12 px-4">
         <article class="bg-white rounded-lg shadow-md p-6">
             <header>
+                <img v-if="post.image" :src="`/storage/${post.image}`" alt="Imagem do post" class="rounded-lg">
                 <h1 class="text-3xl font-bold text-gray-900">{{ post.title }}</h1>
                 <div class="mt-2 text-sm text-gray-600">
                     <span><strong>Por:</strong> {{ post.author }}</span> |
