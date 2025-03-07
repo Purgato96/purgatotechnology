@@ -3,7 +3,6 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
 import createServer from '@inertiajs/vue3/server'
 import { renderToString } from '@vue/server-renderer'
-import Guest from "./Layouts/Guest.vue";
 
 createServer(page =>
     createInertiaApp({

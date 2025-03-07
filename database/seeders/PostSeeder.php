@@ -16,12 +16,12 @@ class PostSeeder extends Seeder {
 
     public function run(): void {
 
-        //Post::factory(60)->create();
-        DB::table('posts')->insert([
+        Post::factory(90)->create();
+        /*DB::table('posts')->insert([
             'title' => Str::of($this->faker->paragraph())->limit(200)->value(),
             'subtitle' => Str::of($this->faker->paragraph())->limit(200)->value(),
             'content' => Str::of($this->faker->text())->limit(200)->value(),
             'author' => User::all()->random()->id,
-        ]);
+        ]);*/
     }
 }

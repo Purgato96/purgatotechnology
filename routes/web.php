@@ -51,7 +51,8 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/sobre', 'about')->name('site.about');
     Route::get('/hospedagem', 'hosting')->name('site.hosting');
     Route::get('/desenvolvimento', 'development')->name('site.development');
-    Route::get('/blog', 'blog')->name('site.blog');
+    Route::get('/blog', 'blog')->name('site.blog'); // Listagem
+    Route::get('/blog/{post}', 'blogShow')->name('site.blog.show'); // Post individual
     Route::get('/form', 'form')->name('site.form');
     Route::get('/contato', 'contact')->name('site.contact');
 });

@@ -4,7 +4,7 @@ import './bootstrap';
 import { createApp, h } from 'vue'
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import { createInertiaApp, Link, Head } from '@inertiajs/vue3'
-import Guest from './Layouts/Guest.vue'
+
 
 createInertiaApp({
     title: title => `${title} - Purgato Technology`,

@@ -28,7 +28,7 @@ const createPost = () => {
         subtitle: subtitle.value,
         content: content.value,
         category: category.value || 'uncategorized', // Valor padrão
-        author: author.value,
+        author_id: author.value,
         tags: tags.value,
         image: image.value, // Upload de arquivo
         slug: slug.value,

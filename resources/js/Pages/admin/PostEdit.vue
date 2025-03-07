@@ -16,7 +16,7 @@ const form = useForm({
     subtitle: props.post?.subtitle || "",
     content: props.post?.content || "",
     category: props.post?.category || "",
-    author: props.post?.author || "",
+    author_id: props.post?.author || "",
     tags: props.post?.tags || "",
     image: null,  // Imagem tratada separadamente com File API.
 });
@@ -105,7 +105,7 @@ const updatePost = () => {
                 <label class="block text-sm font-medium text-gray-700" for="author">Autor</label>
                 <select
                     id="author"
-                    v-model="form.author"
+                    v-model="form.author_id"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                 >
                     <option value="" selected disabled>Selecione um autor</option>

@@ -13,11 +13,11 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('content');
+            $table->text('content');
             $table->string('category')->default('uncategorized');
-            $table->unsignedBigInteger('author');
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
-            $table->foreign('author')->references('id')->on('users')->cascadeOnDelete();
+            $table->foreign('author_id')->references('id')->on('users')->cascadeOnDelete();
         });
     }
 

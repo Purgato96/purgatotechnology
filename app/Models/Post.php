@@ -13,18 +13,18 @@ class Post extends Model {
         'subtitle', // Deve estar listado aqui
         'content',
         'category',
-        'author',
+        'author_id',
         'tags',
         'image',
         'slug',
     ];
 
-    public function authorRelationship() {
-        return $this->belongsTo(User::class, 'author', 'id');
-    }
+    /*public function authorRelationship() {
+        return $this->belongsTo(User::class, 'author_id', 'id');
+    }*/
 
-    public function author(): \Illuminate\Database\Eloquent\Relations\BelongsTo {
-        return $this->belongsTo(User::class, 'author_id');
+    public function author() {
+        return $this->belongsTo(User::class, 'author_id', 'id');
     }
 }
 

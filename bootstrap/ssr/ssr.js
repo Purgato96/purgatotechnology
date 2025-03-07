@@ -1,129 +1,560 @@
-import { ref, resolveComponent, mergeProps, withCtx, createBlock, createCommentVNode, openBlock, toDisplayString, unref, createVNode, Fragment, renderList, Transition, useSSRContext, resolveDynamicComponent, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderAttrs, ssrRenderClass, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSlot, ssrIncludeBooleanAttr, ssrRenderVNode, ssrRenderStyle } from "vue/server-renderer";
-import { BellIcon, EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { Menu, MenuButton, MenuItems, MenuItem, PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
-import { createInertiaApp, Link, Head } from "@inertiajs/vue3";
+import { mergeProps, useSSRContext, resolveComponent, withCtx, createVNode, ref, unref, createTextVNode, computed, toRefs, resolveDynamicComponent, toDisplayString, createSSRApp, h as h$1 } from "vue";
+import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSlot, ssrRenderComponent, ssrRenderList, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderClass, ssrRenderVNode, ssrRenderStyle } from "vue/server-renderer";
+import { useForm, Head, createInertiaApp, Link } from "@inertiajs/vue3";
+import { PopoverGroup, Dialog, DialogPanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon, EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIcon, LockClosedIcon, ArrowPathIcon, FingerPrintIcon } from "@heroicons/vue/24/outline";
 import { CheckIcon } from "@heroicons/vue/20/solid";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-const _sfc_main$9 = {
+const _sfc_main$k = {
+  __name: "GuestAdmin",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-screen bg-gray-100" }, _attrs))}><aside class="w-64 bg-gray-800 text-white flex flex-col"><div class="p-4 text-lg font-bold">Painel Admin</div><nav class="flex-1 px-2 space-y-2"><a${ssrRenderAttr("href", _ctx.route("admin.dashboard"))} class="block px-4 py-2 rounded hover:bg-gray-700">Dashboard</a><a${ssrRenderAttr("href", _ctx.route("admin.users"))} class="block px-4 py-2 rounded hover:bg-gray-700">Usuários</a><a${ssrRenderAttr("href", _ctx.route("admin.posts"))} class="block px-4 py-2 rounded hover:bg-gray-700">Posts</a></nav></aside><div class="flex-1 flex flex-col"><header class="bg-white shadow-sm py-4 px-6 flex justify-between items-center"><h1 class="text-xl font-bold">Painel Administrativo</h1><div class="flex items-center space-x-4"><div class="flex items-center space-x-2"><span class="text-gray-700">${ssrInterpolate(_ctx.$page.props.auth.user.name ?? "Usuário não identificado")}</span></div><button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"> Logout </button></div></header><main class="flex-1 p-6">`);
+      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
+      _push(`</main></div></div>`);
+    };
+  }
+};
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/GuestAdmin.vue");
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+};
+const _sfc_main$j = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
   __name: "Dashboard",
   __ssrInlineRender: true,
   setup(__props) {
-    const collapsed = ref(false);
-    const user = {
-      name: "Tom Cook",
-      imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-    };
-    const navigation = [
-      { name: "Dashboard", href: "/" },
-      { name: "Usuários", href: "/usuarios" },
-      { name: "Configurações", href: "/configuracoes" }
-    ];
-    const userNavigation = [
-      { name: "Perfil", href: "#" },
-      { name: "Configurações", href: "#" },
-      { name: "Sair", href: "#" }
-    ];
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_router_link = resolveComponent("router-link");
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex h-screen bg-gray-100" }, _attrs))}><aside class="${ssrRenderClass([
-        "w-64 bg-white shadow-md h-full transition-all duration-300",
-        { "w-16": collapsed.value }
-      ])}"><div class="p-4 flex justify-between items-center">`);
-      if (!collapsed.value) {
-        _push(`<span class="text-xl font-bold">Painel</span>`);
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Dashboard</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Dashboard")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<h1>Dashboard</h1><p> Teste</p><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+};
+const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$j
+}, Symbol.toStringTag, { value: "Module" }));
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _sfc_main$i = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "PostCreate",
+  __ssrInlineRender: true,
+  props: {
+    authors: Array
+  },
+  setup(__props) {
+    const title = ref("");
+    const subtitle = ref("");
+    const content = ref("");
+    const category = ref("");
+    const author = ref("");
+    const tags = ref("");
+    ref(null);
+    const slug = ref("");
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title data-v-c80a8193${_scopeId}>Criar Novo Post</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Criar Novo Post")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<section data-v-c80a8193><h1 class="text-2xl font-bold mb-6" data-v-c80a8193>Criar Novo Post</h1><form data-v-c80a8193><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="title" data-v-c80a8193>Título</label><input type="text" id="title"${ssrRenderAttr("value", title.value)} class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" required data-v-c80a8193></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="subtitle" data-v-c80a8193>Subtítulo</label><input type="text" id="subtitle"${ssrRenderAttr("value", subtitle.value)} class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" data-v-c80a8193></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="content" data-v-c80a8193>Conteúdo</label><textarea id="content" class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" rows="5" required data-v-c80a8193>${ssrInterpolate(content.value)}</textarea></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="category" data-v-c80a8193>Categoria</label><input type="text" id="category"${ssrRenderAttr("value", category.value)} class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" placeholder="Exemplo: Tecnologia" data-v-c80a8193></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="author" data-v-c80a8193>Autor</label><select id="author" class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" required data-v-c80a8193><option value="" disabled selected data-v-c80a8193>Selecione um autor</option><!--[-->`);
+      ssrRenderList(__props.authors, (authorItem) => {
+        _push(`<option${ssrRenderAttr("value", authorItem.id)} data-v-c80a8193${ssrIncludeBooleanAttr(Array.isArray(author.value) ? ssrLooseContain(author.value, authorItem.id) : ssrLooseEqual(author.value, authorItem.id)) ? " selected" : ""}>${ssrInterpolate(authorItem.name)}</option>`);
+      });
+      _push(`<!--]--></select></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="tags" data-v-c80a8193>Tags</label><input type="text" id="tags"${ssrRenderAttr("value", tags.value)} class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" placeholder="Exemplo: novidade, tutorial, artigo" data-v-c80a8193></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="image" data-v-c80a8193>Imagem</label><input type="file" id="image" class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" data-v-c80a8193></div><div class="mb-4" data-v-c80a8193><label class="block text-sm font-medium text-gray-700" for="slug" data-v-c80a8193>Slug</label><input type="text" id="slug"${ssrRenderAttr("value", slug.value)} class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400" placeholder="Exemplo: meu-post-tutorial" data-v-c80a8193></div><button class="rounded-md bg-blue-600 hover:bg-blue-900 text-white px-4 py-2" type="submit" data-v-c80a8193> Criar Post </button></form></section><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/PostCreate.vue");
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+};
+const PostCreate = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["__scopeId", "data-v-c80a8193"]]);
+const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: PostCreate
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$h = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "PostEdit",
+  __ssrInlineRender: true,
+  props: {
+    post: Object,
+    authors: Array
+  },
+  setup(__props) {
+    var _a, _b, _c, _d, _e, _f;
+    const props = __props;
+    const form = useForm({
+      title: ((_a = props.post) == null ? void 0 : _a.title) || "",
+      subtitle: ((_b = props.post) == null ? void 0 : _b.subtitle) || "",
+      content: ((_c = props.post) == null ? void 0 : _c.content) || "",
+      category: ((_d = props.post) == null ? void 0 : _d.category) || "",
+      author_id: ((_e = props.post) == null ? void 0 : _e.author) || "",
+      tags: ((_f = props.post) == null ? void 0 : _f.tags) || "",
+      image: null
+      // Imagem tratada separadamente com File API.
+    });
+    const errors = ref({});
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      const _component_inertia_link = resolveComponent("inertia-link");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Editando Posts</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Editando Posts")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="max-w-4xl mx-auto bg-white shadow-md rounded p-6"><h1 class="text-2xl font-bold mb-6">Editar Post</h1><form><div class="mb-4"><label for="title" class="block text-sm font-medium text-gray-700">Título</label><input id="title" type="text"${ssrRenderAttr("value", unref(form).title)} class="${ssrRenderClass([{ "border-red-500": errors.value.title }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">`);
+      if (errors.value.title) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.title)}</p>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`<button class="p-2 rounded hover:bg-gray-200"><svg class="${ssrRenderClass([{ "rotate-180": collapsed.value }, "w-6 h-6"])}" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg></button></div><nav class="mt-4"><!--[-->`);
-      ssrRenderList(navigation, (item) => {
-        _push(ssrRenderComponent(_component_router_link, {
-          key: item.name,
-          to: item.href,
-          class: ["block py-2 px-4 rounded hover:bg-gray-200", { "bg-gray-300": _ctx.$route.path === item.href }]
-        }, {
-          default: withCtx((_, _push2, _parent2, _scopeId) => {
-            if (_push2) {
-              if (!collapsed.value) {
-                _push2(`<span${_scopeId}>${ssrInterpolate(item.name)}</span>`);
-              } else {
-                _push2(`<!---->`);
-              }
-            } else {
-              return [
-                !collapsed.value ? (openBlock(), createBlock("span", { key: 0 }, toDisplayString(item.name), 1)) : createCommentVNode("", true)
-              ];
-            }
-          }),
-          _: 2
-        }, _parent));
+      _push(`</div><div class="mb-4"><label for="subtitle" class="block text-sm font-medium text-gray-700">Subtítulo</label><input id="subtitle" type="text"${ssrRenderAttr("value", unref(form).subtitle)} class="${ssrRenderClass([{ "border-red-500": errors.value.subtitle }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">`);
+      if (errors.value.subtitle) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.subtitle)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="mb-4"><label for="content" class="block text-sm font-medium text-gray-700">Conteúdo</label><textarea id="content" rows="5" class="${ssrRenderClass([{ "border-red-500": errors.value.content }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">${ssrInterpolate(unref(form).content)}</textarea>`);
+      if (errors.value.content) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.content)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="mb-4"><label for="category" class="block text-sm font-medium text-gray-700">Categoria</label><input id="category" type="text"${ssrRenderAttr("value", unref(form).category)} class="${ssrRenderClass([{ "border-red-500": errors.value.category }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">`);
+      if (errors.value.category) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.category)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="mb-4"><label class="block text-sm font-medium text-gray-700" for="author">Autor</label><select id="author" class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"><option value="" selected disabled>Selecione um autor</option><!--[-->`);
+      ssrRenderList(__props.authors, (author) => {
+        _push(`<option${ssrRenderAttr("value", author.id)}${ssrIncludeBooleanAttr(Array.isArray(unref(form).author_id) ? ssrLooseContain(unref(form).author_id, author.id) : ssrLooseEqual(unref(form).author_id, author.id)) ? " selected" : ""}>${ssrInterpolate(author.name)}</option>`);
       });
-      _push(`<!--]--></nav></aside><div class="flex-1 flex flex-col"><header class="bg-gray-800 text-white py-4 px-6 flex justify-between items-center"><h1 class="text-xl font-semibold">Dashboard</h1><div class="flex items-center"><button class="relative p-2 text-gray-300 hover:text-white">`);
-      _push(ssrRenderComponent(unref(BellIcon), { class: "size-6" }, null, _parent));
-      _push(`</button>`);
-      _push(ssrRenderComponent(unref(Menu), {
-        as: "div",
-        class: "relative ml-3"
+      _push(`<!--]--></select>`);
+      if (errors.value.author) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.author)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="mb-4"><label for="tags" class="block text-sm font-medium text-gray-700">Tag</label><input id="tags" type="text"${ssrRenderAttr("value", unref(form).tags)} class="${ssrRenderClass([{ "border-red-500": errors.value.tags }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">`);
+      if (errors.value.tags) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.tags)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="mb-4"><label for="image" class="block text-sm font-medium text-gray-700">Imagem</label><input id="image" type="file" class="${ssrRenderClass([{ "border-red-500": errors.value.image }, "w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"])}">`);
+      if (errors.value.image) {
+        _push(`<p class="text-red-500 text-sm mt-1">${ssrInterpolate(errors.value.image)}</p>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><div class="flex items-center justify-between mt-6"><button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md"> Atualizar Post </button>`);
+      _push(ssrRenderComponent(_component_inertia_link, {
+        href: _ctx.route("admin.posts.update", props.post.id),
+        class: "text-gray-600 hover:underline"
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(ssrRenderComponent(unref(MenuButton), { class: "flex items-center space-x-2 text-white" }, {
+            _push2(` Cancelar `);
+          } else {
+            return [
+              createTextVNode(" Cancelar ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</div></form></div><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/PostEdit.vue");
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+};
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$h
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$g = {
+  __name: "Pagination",
+  __ssrInlineRender: true,
+  props: {
+    links: Array
+  },
+  setup(__props) {
+    const props = __props;
+    const visibleLinks = computed(() => {
+      const maxVisible = 5;
+      const links = props.links.filter((link) => !isNaN(link.label));
+      const currentIndex = links.findIndex((link) => link.active);
+      let start = Math.max(0, currentIndex - Math.floor(maxVisible / 2));
+      let end = start + maxVisible;
+      if (end > links.length) {
+        end = links.length;
+        start = Math.max(0, end - maxVisible);
+      }
+      return props.links.map((link) => {
+        if (!isNaN(link.label)) {
+          return links.slice(start, end).includes(link) ? link : null;
+        }
+        return link;
+      }).filter(Boolean);
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex justify-center mt-6 space-x-2" }, _attrs))}><!--[-->`);
+      ssrRenderList(visibleLinks.value, (link, index) => {
+        _push(`<!--[-->`);
+        if (link.url) {
+          _push(`<button class="${ssrRenderClass([{ "bg-gray-300": link.active }, "px-4 py-2 border rounded-md"])}">`);
+          if (link.label.toLowerCase().includes("pagination.previous")) {
+            _push(`<span>Anterior</span>`);
+          } else if (link.label.toLowerCase().includes("pagination.next")) {
+            _push(`<span>Próxima</span>`);
+          } else {
+            _push(`<span>${link.label ?? ""}</span>`);
+          }
+          _push(`</button>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<!--]-->`);
+      });
+      _push(`<!--]--></div>`);
+    };
+  }
+};
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Pagination.vue");
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+};
+const _sfc_main$f = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "Posts",
+  __ssrInlineRender: true,
+  props: {
+    posts: Object
+    // posts deve ser enviado como uma lista (array)
+  },
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Posts Cadastrados</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Posts Cadastrados")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<section><h1 class="text-2xl font-bold mb-6">Listagem de Posts</h1>`);
+      if (__props.posts.data.length > 0) {
+        _push(`<div><ul class="divide-y divide-gray-200"><!--[-->`);
+        ssrRenderList(__props.posts.data, (post) => {
+          _push(`<li class="py-4"><div class="flex items-center justify-between"><div><h2 class="text-lg font-semibold">#${ssrInterpolate(post.id)} - ${ssrInterpolate(post.title)}</h2><p class="text-sm text-gray-600">${ssrInterpolate(post.content)}</p></div><div><button class="rounded-md bg-sky-600 hover:bg-sky-900 text-white px-3 py-1 mr-2"> Editar </button><button class="rounded-md bg-red-600 hover:bg-red-900 text-white px-3 py-1"> Excluir </button></div></div></li>`);
+        });
+        _push(`<!--]--></ul></div>`);
+      } else {
+        _push(`<div><p class="text-gray-500 text-center">Nenhum post encontrado!</p></div>`);
+      }
+      _push(`<button class="rounded-md bg-green-600 hover:bg-green-800 text-white px-4 py-2 mt-6"> Adicionar Novo Post </button>`);
+      if (__props.posts.links) {
+        _push(ssrRenderComponent(_sfc_main$g, {
+          links: __props.posts.links
+        }, null, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</section><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Posts.vue");
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+};
+const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$f
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$e = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "UserCreate",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const name = ref("");
+    const email = ref("");
+    const password = ref("");
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Criar Usuário</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Criar Usuário")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<form><div><label class="block text-sm font-medium text-gray-700" for="name">Nome</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="name" name="name" type="text"${ssrRenderAttr("value", name.value)} required></div><div><label class="block text-sm font-medium text-gray-700" for="email">E-mail</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="email" name="email" type="email"${ssrRenderAttr("value", email.value)} required></div><div><label class="block text-sm font-medium text-gray-700" for="password">Senha</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="password" name="password" type="password"${ssrRenderAttr("value", password.value)} required></div><button class="w-full px-4 py-2 mt-4 font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700" type="submit"> Criar Usuário </button></form><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserCreate.vue");
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+};
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$e
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$d = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "UserEdit",
+  __ssrInlineRender: true,
+  props: {
+    user: {
+      type: Object,
+      default: () => ({ id: null, name: "", email: "", password: "" })
+    }
+  },
+  setup(__props) {
+    const props = __props;
+    const { name, email } = toRefs(props.user);
+    const password = ref("");
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Editando Usuário</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Editando Usuário")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<form><div><label class="block text-sm font-medium text-gray-700" for="name">Nome</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="name"${ssrRenderAttr("value", unref(name))} type="text" required></div><div><label class="block text-sm font-medium text-gray-700" for="email">Email</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="email"${ssrRenderAttr("value", unref(email))} type="email" required></div>`);
+      if (!props.user.id) {
+        _push(`<div><label class="block text-sm font-medium text-gray-700" for="password">Senha</label><input class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" id="password"${ssrRenderAttr("value", password.value)} type="password" required></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<button class="w-full px-4 py-2 mt-4 font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700" type="submit">${ssrInterpolate(props.user.id ? "Atualizar" : "Criar")}</button></form><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserEdit.vue");
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+};
+const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$d
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$c = /* @__PURE__ */ Object.assign({ layout: _sfc_main$k }, {
+  __name: "Users",
+  __ssrInlineRender: true,
+  props: {
+    users: Array
+  },
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Usuários Cadastrados</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Usuários Cadastrados")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<h1>Listagem de Usuários</h1><ul><!--[-->`);
+      ssrRenderList(__props.users, (user) => {
+        _push(`<li><div> #${ssrInterpolate(user.id)} ${ssrInterpolate(user.name)} - ${ssrInterpolate(user.email)} <button class="rounded-md bg-sky-600 hover:bg-sky-900 text-white px-2 py-1 ml-2"> Editar </button><button class="rounded-md bg-red-600 hover:bg-red-900 text-white px-2 py-1 ml-2"> Excluir </button></div></li>`);
+      });
+      _push(`<!--]--></ul><button class="rounded-md bg-sky-600 hover:bg-sky-900 text-white px-4 py-2 mt-4"> Adicionar Usuário </button><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Users.vue");
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+};
+const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$c
+}, Symbol.toStringTag, { value: "Module" }));
+const imageUrl = "/resources/img/site/logo-purgato-technology.png";
+const _sfc_main$b = {
+  __name: "Navigation",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const mobileMenuOpen = ref(false);
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a${ssrRenderAttr("href", _ctx.route("site.home"))}><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></a></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
+      _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
+      _push(`</button></div>`);
+      _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-white"${_scopeId}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
+          } else {
+            return [
+              createVNode("a", {
+                href: _ctx.route("site.home"),
+                class: "text-sm font-semibold text-white"
+              }, "Home", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.about"),
+                class: "text-sm font-semibold text-white"
+              }, "Sobre", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.hosting"),
+                class: "text-sm font-semibold text-white"
+              }, "Hospedagem", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.development"),
+                class: "text-sm font-semibold text-white"
+              }, "Desenvolvimento", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.blog"),
+                class: "text-sm font-semibold text-white"
+              }, "Blog", 8, ["href"]),
+              createVNode("a", {
+                href: _ctx.route("site.contact"),
+                class: "text-sm font-semibold text-white"
+              }, "Contato", 8, ["href"])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</nav>`);
+      _push(ssrRenderComponent(unref(Dialog), {
+        as: "div",
+        class: "relative z-50 lg:hidden",
+        onClose: ($event) => mobileMenuOpen.value = false,
+        open: mobileMenuOpen.value
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<div class="fixed inset-0 bg-black/30"${_scopeId}></div>`);
+            _push2(ssrRenderComponent(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
               default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                 if (_push3) {
-                  _push3(`<img class="w-8 h-8 rounded-full"${ssrRenderAttr("src", user.imageUrl)}${_scopeId2}><span${_scopeId2}>${ssrInterpolate(user.name)}</span>`);
+                  _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
+                  _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
+                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
                 } else {
                   return [
-                    createVNode("img", {
-                      class: "w-8 h-8 rounded-full",
-                      src: user.imageUrl
-                    }, null, 8, ["src"]),
-                    createVNode("span", null, toDisplayString(user.name), 1)
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-            _push2(``);
-            _push2(ssrRenderComponent(unref(MenuItems), { class: "absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<!--[-->`);
-                  ssrRenderList(userNavigation, (item) => {
-                    _push3(ssrRenderComponent(unref(MenuItem), {
-                      key: item.name
-                    }, {
-                      default: withCtx(({ active }, _push4, _parent4, _scopeId3) => {
-                        if (_push4) {
-                          _push4(`<a${ssrRenderAttr("href", item.href)} class="${ssrRenderClass([active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"])}"${_scopeId3}>${ssrInterpolate(item.name)}</a>`);
-                        } else {
-                          return [
-                            createVNode("a", {
-                              href: item.href,
-                              class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
-                            }, toDisplayString(item.name), 11, ["href"])
-                          ];
-                        }
-                      }),
-                      _: 2
-                    }, _parent3, _scopeId2));
-                  });
-                  _push3(`<!--]-->`);
-                } else {
-                  return [
-                    (openBlock(), createBlock(Fragment, null, renderList(userNavigation, (item) => {
-                      return createVNode(unref(MenuItem), {
-                        key: item.name
-                      }, {
-                        default: withCtx(({ active }) => [
-                          createVNode("a", {
-                            href: item.href,
-                            class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
-                          }, toDisplayString(item.name), 11, ["href"])
-                        ]),
-                        _: 2
-                      }, 1024);
-                    }), 64))
+                    createVNode("div", { class: "flex justify-between items-center" }, [
+                      createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
+                      createVNode("button", {
+                        onClick: ($event) => mobileMenuOpen.value = false
+                      }, [
+                        createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
+                      ], 8, ["onClick"])
+                    ]),
+                    createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
+                      createVNode("a", {
+                        href: _ctx.route("site.home"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Home", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.about"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Sobre", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.hosting"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Hospedagem", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.development"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Desenvolvimento", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.blog"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Blog", 8, ["href"]),
+                      createVNode("a", {
+                        href: _ctx.route("site.contact"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Contato", 8, ["href"])
+                    ])
                   ];
                 }
               }),
@@ -131,43 +562,43 @@ const _sfc_main$9 = {
             }, _parent2, _scopeId));
           } else {
             return [
-              createVNode(unref(MenuButton), { class: "flex items-center space-x-2 text-white" }, {
+              createVNode("div", { class: "fixed inset-0 bg-black/30" }),
+              createVNode(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
                 default: withCtx(() => [
-                  createVNode("img", {
-                    class: "w-8 h-8 rounded-full",
-                    src: user.imageUrl
-                  }, null, 8, ["src"]),
-                  createVNode("span", null, toDisplayString(user.name), 1)
-                ]),
-                _: 1
-              }),
-              createVNode(Transition, {
-                "enter-active-class": "transition ease-out duration-100",
-                "enter-from-class": "transform opacity-0 scale-95",
-                "enter-to-class": "transform opacity-100 scale-100",
-                "leave-active-class": "transition ease-in duration-75",
-                "leave-from-class": "transform opacity-100 scale-100",
-                "leave-to-class": "transform opacity-0 scale-95"
-              }, {
-                default: withCtx(() => [
-                  createVNode(unref(MenuItems), { class: "absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md" }, {
-                    default: withCtx(() => [
-                      (openBlock(), createBlock(Fragment, null, renderList(userNavigation, (item) => {
-                        return createVNode(unref(MenuItem), {
-                          key: item.name
-                        }, {
-                          default: withCtx(({ active }) => [
-                            createVNode("a", {
-                              href: item.href,
-                              class: [active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700"]
-                            }, toDisplayString(item.name), 11, ["href"])
-                          ]),
-                          _: 2
-                        }, 1024);
-                      }), 64))
-                    ]),
-                    _: 1
-                  })
+                  createVNode("div", { class: "flex justify-between items-center" }, [
+                    createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
+                    createVNode("button", {
+                      onClick: ($event) => mobileMenuOpen.value = false
+                    }, [
+                      createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
+                    ], 8, ["onClick"])
+                  ]),
+                  createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
+                    createVNode("a", {
+                      href: _ctx.route("site.home"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Home", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.about"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Sobre", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.hosting"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Hospedagem", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.development"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Desenvolvimento", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.blog"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Blog", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.contact"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Contato", 8, ["href"])
+                  ])
                 ]),
                 _: 1
               })
@@ -176,23 +607,145 @@ const _sfc_main$9 = {
         }),
         _: 1
       }, _parent));
-      _push(`</div></header><main class="p-6 flex-1 bg-white">`);
+      _push(`<!--]-->`);
+    };
+  }
+};
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Navigation.vue");
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+};
+const _sfc_main$a = {
+  __name: "Footer",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const year = (/* @__PURE__ */ new Date()).getFullYear();
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<footer${ssrRenderAttrs(mergeProps({ class: "text-white text-center p-4 md:p-6 mt-10" }, _attrs))}><div class="max-w-screen-lg mx-auto space-y-2 text-sm md:text-base"><p> Criado e Desenvolvido por <span class="underline font-bold"><a href="https://purgatotechnology.com.br" target="_blank" rel="noopener noreferrer"> Purgato Technology </a></span></p><p>Purgato Technology - © Todos os Direitos Reservados 2021 - ${ssrInterpolate(unref(year))}</p><p class="text-xs md:text-sm">CNPJ: 41.270.594/0001-38 | I.E: 536.155.620.117</p></div></footer>`);
+    };
+  }
+};
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Footer.vue");
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+};
+const _sfc_main$9 = {
+  __name: "Guest",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10"><div>`);
+      _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
+      _push(`</div></header><main>`);
       ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-      _push(`</main></div></div>`);
+      _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4">`);
+      _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
+      _push(`</footer><!--]-->`);
     };
   }
 };
 const _sfc_setup$9 = _sfc_main$9.setup;
 _sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/Guest.vue");
   return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
-const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const _sfc_main$8 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+  __name: "Login",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const form = ref({
+      email: "",
+      password: ""
+    });
+    const errors = ref([]);
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Login</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Login")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="flex items-center justify-center min-h-screen bg-gray-100"><div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md"><h2 class="text-2xl font-bold text-center text-gray-800">Login</h2><form><div class="mt-4"><label class="block text-sm font-medium text-gray-700">Email</label><input${ssrRenderAttr("value", form.value.email)} type="email" class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required></div><div class="mt-4"><label class="block text-sm font-medium text-gray-700">Senha</label><input${ssrRenderAttr("value", form.value.password)} type="password" class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required></div>`);
+      if (errors.value.length) {
+        _push(`<div class="mt-3 text-red-500"><!--[-->`);
+        ssrRenderList(errors.value, (error, index) => {
+          _push(`<p>${ssrInterpolate(error)}</p>`);
+        });
+        _push(`<!--]--></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<button type="submit" class="w-full px-4 py-2 mt-4 font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700"> Entrar </button></form></div></div><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Login.vue");
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+};
+const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$9
+  default: _sfc_main$8
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$8 = {
+const _sfc_main$7 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+  __name: "Register",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>Login</title>`);
+          } else {
+            return [
+              createVNode("title", null, "Login")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="flex items-center justify-center min-h-screen bg-gray-100"><div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md"><h2 class="text-2xl font-bold text-center text-gray-800">Login</h2><form><div class="mt-4"><label class="block text-sm font-medium text-gray-700">Email</label><input${ssrRenderAttr("value", _ctx.form.email)} type="email" class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required></div><div class="mt-4"><label class="block text-sm font-medium text-gray-700">Senha</label><input${ssrRenderAttr("value", _ctx.form.password)} type="password" class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required></div>`);
+      if (_ctx.errors.length) {
+        _push(`<div class="mt-3 text-red-500"><!--[-->`);
+        ssrRenderList(_ctx.errors, (error, index) => {
+          _push(`<p>${ssrInterpolate(error)}</p>`);
+        });
+        _push(`<!--]--></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<button type="submit" class="w-full px-4 py-2 mt-4 font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700"> Registrar </button></form></div></div><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Register.vue");
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+};
+const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$7
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$6 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "About",
   __ssrInlineRender: true,
   setup(__props) {
@@ -238,84 +791,76 @@ const _sfc_main$8 = {
       _push(`</div></section></div></div></div><!--]-->`);
     };
   }
-};
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+});
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/About.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$8
+  default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$7 = {
+const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Blog",
   __ssrInlineRender: true,
   props: {
-    posts: Array
+    posts: Object
+    // `posts` agora é um objeto de paginação
   },
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_Head = resolveComponent("Head");
       _push(`<!--[-->`);
-      _push(ssrRenderComponent(_component_Head, null, {
+      _push(ssrRenderComponent(unref(Head), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title${_scopeId}>Blog</title><meta head-key="description" name="description" content="Acompanhe nosso blog para dicas de desenvolvimento web, SEO, hospedagem cloud e as últimas tendências em tecnologia."${_scopeId}><meta head-key="keywords" name="keywords" content="blog de tecnologia, desenvolvimento web, SEO, hospedagem cloud, Laravel, Vue, Inertia, Tailwind CSS, marketing digital, dicas, tendências"${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"${_scopeId}>`);
+            _push2(`<title data-v-68dc56cf${_scopeId}>Nosso Blog</title><meta head-key="description" name="description" content="Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!" data-v-68dc56cf${_scopeId}>`);
           } else {
             return [
-              createVNode("title", null, "Blog"),
+              createVNode("title", null, "Nosso Blog"),
               createVNode("meta", {
                 "head-key": "description",
                 name: "description",
-                content: "Acompanhe nosso blog para dicas de desenvolvimento web, SEO, hospedagem cloud e as últimas tendências em tecnologia."
-              }),
-              createVNode("meta", {
-                "head-key": "keywords",
-                name: "keywords",
-                content: "blog de tecnologia, desenvolvimento web, SEO, hospedagem cloud, Laravel, Vue, Inertia, Tailwind CSS, marketing digital, dicas, tendências"
-              }),
-              createVNode("meta", {
-                "head-key": "author",
-                name: "author",
-                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
+                content: "Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!"
               })
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<div class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mx-auto max-w-2xl lg:mx-0"><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Nosso blog</h2><p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"><!--[-->`);
+      _push(`<div class="bg-white py-24 sm:py-32" data-v-68dc56cf><div class="mx-auto max-w-7xl px-6 lg:px-8" data-v-68dc56cf><div class="mx-auto max-w-2xl lg:mx-0" data-v-68dc56cf><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" data-v-68dc56cf>From the blog</h2><p class="mt-2 text-lg/8 text-gray-600" data-v-68dc56cf>Learn how to grow your business with our expert advice.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3" data-v-68dc56cf><!--[-->`);
       ssrRenderList(__props.posts.data, (post) => {
-        _push(`<article class="flex max-w-xl flex-col items-start justify-between"><div class="flex items-center gap-x-4 text-xs"><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500">${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">${ssrInterpolate(post.category)}</a></div><div class="group relative"><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"><a${ssrRenderAttr("href", post.href)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4"><div class="text-sm/6"><p class="font-semibold text-gray-900"><a${ssrRenderAttr("href", post.author.href)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.author)}</a></p><p class="text-gray-600">${ssrInterpolate(post.author.position)}</p></div></div></article>`);
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between" data-v-68dc56cf><div class="flex items-center gap-x-4 text-xs" data-v-68dc56cf><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500" data-v-68dc56cf>${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" data-v-68dc56cf>${ssrInterpolate(post.category)}</a></div><div class="group relative" data-v-68dc56cf><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600" data-v-68dc56cf><a${ssrRenderAttr("href", `/blog/${post.id}`)} data-v-68dc56cf><span class="absolute inset-0" data-v-68dc56cf></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-68dc56cf>${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4" data-v-68dc56cf><div class="text-sm/6" data-v-68dc56cf><p class="font-semibold text-gray-900" data-v-68dc56cf><a${ssrRenderAttr("href", post.author.href)} data-v-68dc56cf><span class="absolute inset-0" data-v-68dc56cf></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600" data-v-68dc56cf>${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
       });
-      _push(`<!--]--></div></div></div><ul><!--[-->`);
+      _push(`<!--]--></div></div></div><div class="mb-6" data-v-68dc56cf>`);
+      if (__props.posts.links) {
+        _push(ssrRenderComponent(_sfc_main$g, {
+          links: __props.posts.links
+        }, null, _parent));
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div><section class="bg-gray-100 py-16" data-v-68dc56cf><div class="container mx-auto px-4" data-v-68dc56cf><h1 class="text-4xl font-bold text-gray-800 text-center" data-v-68dc56cf>Blog</h1><p class="text-center text-gray-600 mt-4" data-v-68dc56cf> Explore nossas últimas novidades, guias e dicas de tecnologia. </p></div></section><section class="py-12" data-v-68dc56cf><div class="container mx-auto px-6" data-v-68dc56cf><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-v-68dc56cf><!--[-->`);
       ssrRenderList(__props.posts.data, (post) => {
-        _push(`<li class="p-2 border-b"><h2 class="font-semibold">${ssrInterpolate(post.title)}</h2><p>${ssrInterpolate(post.content)}</p></li>`);
+        _push(`<article class="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden" data-v-68dc56cf><div class="p-4" data-v-68dc56cf><h2 class="text-lg font-bold text-gray-800" data-v-68dc56cf><a${ssrRenderAttr("href", `/blog/${post.id}`)} class="hover:underline" data-v-68dc56cf>${ssrInterpolate(post.title)}</a></h2><p class="text-sm text-gray-600 mt-2" data-v-68dc56cf><span data-v-68dc56cf>Por: ${ssrInterpolate(post.author || "Anônimo")}</span> | <time${ssrRenderAttr("datetime", post.created_at)} data-v-68dc56cf>${ssrInterpolate(post.created_at)}</time> | <span data-v-68dc56cf>Categoria: ${ssrInterpolate(post.category || "Sem Categoria")}</span></p><p class="text-gray-700 mt-4" data-v-68dc56cf>${ssrInterpolate(post.content)}</p></div></article>`);
       });
-      _push(`<!--]--></ul><div class="flex gap-2 mt-4"><!--[-->`);
-      ssrRenderList(__props.posts.links, (link) => {
-        _push(`<button class="${ssrRenderClass([{
-          "bg-gray-300": link.active,
-          "cursor-not-allowed text-gray-500": !link.url
-        }, "px-4 py-2 border rounded"])}"${ssrIncludeBooleanAttr(!link.url) ? " disabled" : ""}>${link.label ?? ""}</button>`);
-      });
-      _push(`<!--]--></div><!--]-->`);
+      _push(`<!--]--></div></div></section><!--]-->`);
     };
   }
-};
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+});
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-68dc56cf"]]);
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$7
+  default: Blog
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$6 = {
+const _sfc_main$4 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Contact",
   __ssrInlineRender: true,
   setup(__props) {
@@ -394,18 +939,18 @@ const _sfc_main$6 = {
       _push(`<!--]--></dl></div></div></div><!--]-->`);
     };
   }
-};
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+});
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Contact.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$6
+  default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$5 = {
+const _sfc_main$3 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Development",
   __ssrInlineRender: true,
   setup(__props) {
@@ -492,18 +1037,18 @@ const _sfc_main$5 = {
       _push(`<!--]--></div></div><!--]-->`);
     };
   }
-};
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+});
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Development.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$5
+  default: _sfc_main$3
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$4 = {
+const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Home",
   __ssrInlineRender: true,
   setup(__props) {
@@ -571,18 +1116,18 @@ const _sfc_main$4 = {
       _push(`<!--]--></dl></div></div></div><div class="bg-white dark:bg-black"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
     };
   }
-};
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+});
+const _sfc_setup$2 = _sfc_main$2.setup;
+_sfc_main$2.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Home.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$4
+  default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$3 = {
+const _sfc_main$1 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Hosting",
   __ssrInlineRender: true,
   setup(__props) {
@@ -673,16 +1218,79 @@ const _sfc_main$3 = {
       _push(`<!--]--></div><div class="mx-auto mt-16 max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Selo de Parceria</h2><a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&amp;utm_medium=badge&amp;utm_source=partner&amp;utm_content=partner&amp;utm_term="><img alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a></div></div><!--]-->`);
     };
   }
-};
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+});
+const _sfc_setup$1 = _sfc_main$1.setup;
+_sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Hosting.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$3
+  default: _sfc_main$1
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+  __name: "PostShow",
+  __ssrInlineRender: true,
+  props: {
+    post: Object
+    // O post será recebido diretamente do controlador
+  },
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title${_scopeId}>${ssrInterpolate(__props.post.title)}</title><meta head-key="description" name="description"${ssrRenderAttr("content", `${__props.post.title}`)}${_scopeId}><meta head-key="author" name="author"${ssrRenderAttr("content", __props.post.author)}${_scopeId}><meta head-key="keywords" name="keywords"${ssrRenderAttr("content", __props.post.tags)}${_scopeId}><meta head-key="author" name="author"${ssrRenderAttr("content", __props.post.author && __props.post.author_position)}${_scopeId}>`);
+          } else {
+            return [
+              createVNode("title", null, toDisplayString(__props.post.title), 1),
+              createVNode("meta", {
+                "head-key": "description",
+                name: "description",
+                content: `${__props.post.title}`
+              }, null, 8, ["content"]),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: __props.post.author
+              }, null, 8, ["content"]),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: __props.post.tags
+              }, null, 8, ["content"]),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: __props.post.author && __props.post.author_position
+              }, null, 8, ["content"])
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="max-w-4xl mx-auto my-12 px-4"><article class="bg-white rounded-lg shadow-md p-6"><header><h1 class="text-3xl font-bold text-gray-900">${ssrInterpolate(__props.post.title)}</h1><div class="mt-2 text-sm text-gray-600"><span><strong>Por:</strong> ${ssrInterpolate(__props.post.author)}</span> | <span><strong>Publicado em:</strong> ${ssrInterpolate(__props.post.created_at)}</span>`);
+      if (__props.post.category) {
+        _push(`<span>| <strong>Categoria:</strong> ${ssrInterpolate(__props.post.category)}</span>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div></header><div class="mt-6 prose max-w-none text-gray-800"><p>${__props.post.content ?? ""}</p></div><footer class="mt-8 text-sm text-gray-500"><strong>Tags:</strong> ${ssrInterpolate(__props.post.tags)}</footer></article></div><!--]-->`);
+    };
+  }
+});
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/PostShow.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
 function t() {
   return t = Object.assign ? Object.assign.bind() : function(t4) {
@@ -1015,198 +1623,14 @@ const k = { install(t4, e2) {
   const r2 = (t5, r3, n2, o2 = e2) => T(t5, r3, n2, o2);
   parseInt(t4.version) > 2 ? (t4.config.globalProperties.route = r2, t4.provide("route", r2)) : t4.mixin({ methods: { route: r2 } });
 } };
-const imageUrl = "/resources/img/site/logo-purgato-technology.png";
-const _sfc_main$2 = {
-  __name: "Navigation",
-  __ssrInlineRender: true,
-  setup(__props) {
-    const mobileMenuOpen = ref(false);
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a${ssrRenderAttr("href", _ctx.route("site.home"))}><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></a></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
-      _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
-      _push(`</button></div>`);
-      _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
-          } else {
-            return [
-              createVNode("a", {
-                href: _ctx.route("site.home"),
-                class: "text-sm font-semibold text-white"
-              }, "Home", 8, ["href"]),
-              createVNode("a", {
-                href: _ctx.route("site.about"),
-                class: "text-sm font-semibold text-white"
-              }, "Sobre", 8, ["href"]),
-              createVNode("a", {
-                href: _ctx.route("site.hosting"),
-                class: "text-sm font-semibold text-white"
-              }, "Hospedagem", 8, ["href"]),
-              createVNode("a", {
-                href: _ctx.route("site.development"),
-                class: "text-sm font-semibold text-white"
-              }, "Desenvolvimento", 8, ["href"]),
-              createVNode("a", {
-                href: _ctx.route("site.contact"),
-                class: "text-sm font-semibold text-white"
-              }, "Contato", 8, ["href"])
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</nav>`);
-      _push(ssrRenderComponent(unref(Dialog), {
-        as: "div",
-        class: "relative z-50 lg:hidden",
-        onClose: ($event) => mobileMenuOpen.value = false,
-        open: mobileMenuOpen.value
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`<div class="fixed inset-0 bg-black/30"${_scopeId}></div>`);
-            _push2(ssrRenderComponent(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
-              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
-                if (_push3) {
-                  _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
-                  _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
-                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
-                } else {
-                  return [
-                    createVNode("div", { class: "flex justify-between items-center" }, [
-                      createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
-                      createVNode("button", {
-                        onClick: ($event) => mobileMenuOpen.value = false
-                      }, [
-                        createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
-                      ], 8, ["onClick"])
-                    ]),
-                    createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
-                      createVNode("a", {
-                        href: _ctx.route("site.home"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Home", 8, ["href"]),
-                      createVNode("a", {
-                        href: _ctx.route("site.about"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Sobre", 8, ["href"]),
-                      createVNode("a", {
-                        href: _ctx.route("site.hosting"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Hospedagem", 8, ["href"]),
-                      createVNode("a", {
-                        href: _ctx.route("site.development"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Desenvolvimento", 8, ["href"]),
-                      createVNode("a", {
-                        href: _ctx.route("site.contact"),
-                        class: "text-sm font-semibold text-gray-900"
-                      }, "Contato", 8, ["href"])
-                    ])
-                  ];
-                }
-              }),
-              _: 1
-            }, _parent2, _scopeId));
-          } else {
-            return [
-              createVNode("div", { class: "fixed inset-0 bg-black/30" }),
-              createVNode(unref(DialogPanel), { class: "fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6" }, {
-                default: withCtx(() => [
-                  createVNode("div", { class: "flex justify-between items-center" }, [
-                    createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
-                    createVNode("button", {
-                      onClick: ($event) => mobileMenuOpen.value = false
-                    }, [
-                      createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
-                    ], 8, ["onClick"])
-                  ]),
-                  createVNode("div", { class: "mt-6 flex flex-col space-y-4" }, [
-                    createVNode("a", {
-                      href: _ctx.route("site.home"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Home", 8, ["href"]),
-                    createVNode("a", {
-                      href: _ctx.route("site.about"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Sobre", 8, ["href"]),
-                    createVNode("a", {
-                      href: _ctx.route("site.hosting"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Hospedagem", 8, ["href"]),
-                    createVNode("a", {
-                      href: _ctx.route("site.development"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Desenvolvimento", 8, ["href"]),
-                    createVNode("a", {
-                      href: _ctx.route("site.contact"),
-                      class: "text-sm font-semibold text-gray-900"
-                    }, "Contato", 8, ["href"])
-                  ])
-                ]),
-                _: 1
-              })
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`<!--]-->`);
-    };
-  }
-};
-const _sfc_setup$2 = _sfc_main$2.setup;
-_sfc_main$2.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Navigation.vue");
-  return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
-};
-const _sfc_main$1 = {
-  __name: "Footer",
-  __ssrInlineRender: true,
-  setup(__props) {
-    const year = (/* @__PURE__ */ new Date()).getFullYear();
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<footer${ssrRenderAttrs(mergeProps({ class: "text-white text-center p-4 md:p-6 mt-10" }, _attrs))}><div class="max-w-screen-lg mx-auto space-y-2 text-sm md:text-base"><p> Criado e Desenvolvido por <span class="underline font-bold"><a href="https://purgatotechnology.com.br" target="_blank" rel="noopener noreferrer"> Purgato Technology </a></span></p><p>Purgato Technology - © Todos os Direitos Reservados 2021 - ${ssrInterpolate(unref(year))}</p><p class="text-xs md:text-sm">CNPJ: 41.270.594/0001-38 | I.E: 536.155.620.117</p></div></footer>`);
-    };
-  }
-};
-const _sfc_setup$1 = _sfc_main$1.setup;
-_sfc_main$1.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Footer.vue");
-  return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
-};
-const _sfc_main = {
-  __name: "Guest",
-  __ssrInlineRender: true,
-  setup(__props) {
-    return (_ctx, _push, _parent, _attrs) => {
-      _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10"><div>`);
-      _push(ssrRenderComponent(_sfc_main$2, null, null, _parent));
-      _push(`</div></header><main>`);
-      ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
-      _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4">`);
-      _push(ssrRenderComponent(_sfc_main$1, null, null, _parent));
-      _push(`</footer><!--]-->`);
-    };
-  }
-};
-const _sfc_setup = _sfc_main.setup;
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/Guest.vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
 createServer(
   (page) => createInertiaApp({
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/site/About.vue": __vite_glob_0_1, "./Pages/site/Blog.vue": __vite_glob_0_2, "./Pages/site/Contact.vue": __vite_glob_0_3, "./Pages/site/Development.vue": __vite_glob_0_4, "./Pages/site/Home.vue": __vite_glob_0_5, "./Pages/site/Hosting.vue": __vite_glob_0_6 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/admin/PostCreate.vue": __vite_glob_0_1, "./Pages/admin/PostEdit.vue": __vite_glob_0_2, "./Pages/admin/Posts.vue": __vite_glob_0_3, "./Pages/admin/UserCreate.vue": __vite_glob_0_4, "./Pages/admin/UserEdit.vue": __vite_glob_0_5, "./Pages/admin/Users.vue": __vite_glob_0_6, "./Pages/auth/Login.vue": __vite_glob_0_7, "./Pages/auth/Register.vue": __vite_glob_0_8, "./Pages/site/About.vue": __vite_glob_0_9, "./Pages/site/Blog.vue": __vite_glob_0_10, "./Pages/site/Contact.vue": __vite_glob_0_11, "./Pages/site/Development.vue": __vite_glob_0_12, "./Pages/site/Home.vue": __vite_glob_0_13, "./Pages/site/Hosting.vue": __vite_glob_0_14, "./Pages/site/PostShow.vue": __vite_glob_0_15 });
       let page2 = pages[`./Pages/${name}.vue`];
-      page2.default.layout = page2.default.layout || _sfc_main;
+      page2.default.layout = page2.default.layout || ((page3) => h$1(page3));
       return page2;
     },
     setup({ App, props, plugin }) {
