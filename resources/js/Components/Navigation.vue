@@ -14,13 +14,6 @@ import {
 } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 
-const mobileMenuOpen = ref(false)
-
-const services = [
-    { name: 'Desenvolvimento Web', href: '#' },
-    { name: 'Hospedagem Cloud Personalizada', href: '#' },
-    { name: 'Consultoria de SEO', href: '#' },
-]
 const imageUrl = '/resources/img/site/logo-purgato-technology.png';
 
 </script>
@@ -44,7 +37,7 @@ const imageUrl = '/resources/img/site/logo-purgato-technology.png';
                 <a :href="route('site.about')" class="text-sm font-semibold text-white">Sobre</a>
                 <a :href="route('site.hosting')" class="text-sm font-semibold text-white">Hospedagem</a>
                 <a :href="route('site.development')" class="text-sm font-semibold text-white">Desenvolvimento</a>
-<!--                <a :href="route('site.blog')" class="text-sm font-semibold text-white">Blog</a>-->
+                <a :href="route('site.blog')" class="text-sm font-semibold text-white">Blog</a>
                 <a :href="route('site.contact')" class="text-sm font-semibold text-white">Contato</a>
             </PopoverGroup>
         </nav>
@@ -65,7 +58,7 @@ const imageUrl = '/resources/img/site/logo-purgato-technology.png';
                     <a :href="route('site.about')" class="text-sm font-semibold text-gray-900">Sobre</a>
                     <a :href="route('site.hosting')" class="text-sm font-semibold text-gray-900">Hospedagem</a>
                     <a :href="route('site.development')" class="text-sm font-semibold text-gray-900">Desenvolvimento</a>
-<!--                    <a :href="route('site.blog')" class="text-sm font-semibold text-gray-900">Blog</a>-->
+                    <a :href="route('site.blog')" class="text-sm font-semibold text-gray-900">Blog</a>
                     <a :href="route('site.contact')" class="text-sm font-semibold text-gray-900">Contato</a>
                 </div>
             </DialogPanel>
