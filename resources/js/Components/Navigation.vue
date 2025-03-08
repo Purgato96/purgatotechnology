@@ -4,16 +4,17 @@ import { ref } from 'vue'
 import {
     Dialog,
     DialogPanel,
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    Popover,
-    PopoverButton,
     PopoverGroup,
-    PopoverPanel
 } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
 
+const mobileMenuOpen = ref(false)
+
+const services = [
+    { name: 'Desenvolvimento Web', href: '#' },
+    { name: 'Hospedagem Cloud Personalizada', href: '#' },
+    { name: 'Consultoria de SEO', href: '#' },
+]
 const imageUrl = '/resources/img/site/logo-purgato-technology.png';
 
 </script>

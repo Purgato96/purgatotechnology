@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 Route::group(['prefix' => 'admin'], function () {
     Route::controller(AdminController::class)->group(function () {
@@ -48,6 +49,9 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/desenvolvimento', 'development')->name('site.development');
     Route::get('/blog', 'blog')->name('site.blog'); // Listagem
     Route::get('/blog/{post}', 'blogShow')->name('site.blog.show'); // Post individual
-    Route::get('/form', 'form')->name('site.form');
     Route::get('/contato', 'contact')->name('site.contact');
+});
+
+Route::get('/teste-inertia', function () {
+    return Inertia::render('Teste', ['mensagem' => 'Se isso aparecer, o Inertia está funcionando']);
 });
