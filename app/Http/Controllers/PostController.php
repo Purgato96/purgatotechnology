@@ -95,6 +95,7 @@ class PostController extends Controller {
             'author_id' => 'required|exists:users,id',
             'tags' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
+            'slug' => 'nullable|string'
         ]);
 
         if (!$validated['slug']) {
