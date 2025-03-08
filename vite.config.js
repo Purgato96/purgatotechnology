@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 import tailwindcss from '@tailwindcss/vite'
+
 export default defineConfig({
     plugins: [
         laravel({
@@ -17,6 +18,16 @@ export default defineConfig({
                 },
             },
         }),
+
         tailwindcss(),
+
     ],
-});
+    build: {
+        outDir: 'public/build',
+    },
+    server: {
+        port: 3000
+    }
+
+})
+;
