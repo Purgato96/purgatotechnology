@@ -98,9 +98,6 @@ class PostController extends Controller {
             'image' => 'nullable|image|max:2048',
         ]);
 
-        if (!$validated['slug']) {
-            $validated['slug'] = Str::slug($validated['title']);
-        }
         $post->update($validated);
 
         return redirect()->route('admin.posts')->with('success', 'Post atualizado com sucesso!');

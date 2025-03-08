@@ -1,5 +1,5 @@
-import { mergeProps, useSSRContext, resolveComponent, withCtx, createVNode, ref, onMounted, onBeforeUnmount, watch, unref, createTextVNode, computed, toRefs, resolveDynamicComponent, toDisplayString, createSSRApp, h as h$1 } from "vue";
-import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSlot, ssrRenderComponent, ssrRenderClass, ssrRenderList, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderVNode, ssrRenderStyle } from "vue/server-renderer";
+import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr, ssrRenderSlot, ssrRenderComponent, ssrRenderClass, ssrRenderList, ssrIncludeBooleanAttr, ssrLooseContain, ssrLooseEqual, ssrRenderVNode, ssrRenderStyle } from "vue/server-renderer";
+import { useSSRContext, mergeProps, resolveComponent, withCtx, createVNode, ref, onMounted, onBeforeUnmount, watch, unref, createTextVNode, computed, toRefs, resolveDynamicComponent, toDisplayString, createSSRApp, h as h$1 } from "vue";
 import { useForm, Head, createInertiaApp, Link } from "@inertiajs/vue3";
 import { Editor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
@@ -16,6 +16,26 @@ import { Bars3Icon, XMarkIcon, EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIc
 import { CheckIcon } from "@heroicons/vue/20/solid";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
+const _sfc_main$m = {
+  __name: "Teste",
+  __ssrInlineRender: true,
+  props: { mensagem: String },
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<h1${ssrRenderAttrs(_attrs)}>${ssrInterpolate(__props.mensagem)}</h1>`);
+    };
+  }
+};
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Teste.vue");
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+};
+const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: _sfc_main$m
+}, Symbol.toStringTag, { value: "Module" }));
 const _sfc_main$l = {
   __name: "GuestAdmin",
   __ssrInlineRender: true,
@@ -62,7 +82,7 @@ _sfc_main$k.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
   return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$k
 }, Symbol.toStringTag, { value: "Module" }));
@@ -191,7 +211,7 @@ _sfc_main$i.setup = (props, ctx) => {
   return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const PostCreate = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["__scopeId", "data-v-b7ea2295"]]);
-const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: PostCreate
 }, Symbol.toStringTag, { value: "Module" }));
@@ -310,7 +330,7 @@ _sfc_main$h.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/PostEdit.vue");
   return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$h
 }, Symbol.toStringTag, { value: "Module" }));
@@ -419,7 +439,7 @@ _sfc_main$f.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Posts.vue");
   return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
-const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$f
 }, Symbol.toStringTag, { value: "Module" }));
@@ -455,7 +475,7 @@ _sfc_main$e.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserCreate.vue");
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
-const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$e
 }, Symbol.toStringTag, { value: "Module" }));
@@ -503,7 +523,7 @@ _sfc_main$d.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserEdit.vue");
   return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
-const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$d
 }, Symbol.toStringTag, { value: "Module" }));
@@ -543,7 +563,7 @@ _sfc_main$c.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Users.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$c
 }, Symbol.toStringTag, { value: "Module" }));
@@ -552,6 +572,7 @@ const _sfc_main$b = {
   __name: "Navigation",
   __ssrInlineRender: true,
   setup(__props) {
+    const mobileMenuOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a${ssrRenderAttr("href", _ctx.route("site.home"))}><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></a></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
       _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
@@ -595,8 +616,8 @@ const _sfc_main$b = {
       _push(ssrRenderComponent(unref(Dialog), {
         as: "div",
         class: "relative z-50 lg:hidden",
-        onClose: ($event) => _ctx.mobileMenuOpen = false,
-        open: _ctx.mobileMenuOpen
+        onClose: ($event) => mobileMenuOpen.value = false,
+        open: mobileMenuOpen.value
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -612,7 +633,7 @@ const _sfc_main$b = {
                     createVNode("div", { class: "flex justify-between items-center" }, [
                       createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
                       createVNode("button", {
-                        onClick: ($event) => _ctx.mobileMenuOpen = false
+                        onClick: ($event) => mobileMenuOpen.value = false
                       }, [
                         createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
                       ], 8, ["onClick"])
@@ -656,7 +677,7 @@ const _sfc_main$b = {
                   createVNode("div", { class: "flex justify-between items-center" }, [
                     createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
                     createVNode("button", {
-                      onClick: ($event) => _ctx.mobileMenuOpen = false
+                      onClick: ($event) => mobileMenuOpen.value = false
                     }, [
                       createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
                     ], 8, ["onClick"])
@@ -786,7 +807,7 @@ _sfc_main$8.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Login.vue");
   return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
-const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$8
 }, Symbol.toStringTag, { value: "Module" }));
@@ -829,7 +850,7 @@ _sfc_main$7.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Register.vue");
   return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$7
 }, Symbol.toStringTag, { value: "Module" }));
@@ -886,7 +907,7 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/About.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$6
 }, Symbol.toStringTag, { value: "Module" }));
@@ -946,7 +967,7 @@ _sfc_main$5.setup = (props, ctx) => {
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-e7d20b9e"]]);
-const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Blog
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1036,7 +1057,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Contact.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1134,7 +1155,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Development.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$3
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1207,7 +1228,17 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
         }, null), _parent);
         _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-[#57789c] dark:text-emerald-600">${ssrInterpolate(feature.description)}</dd></div>`);
       });
-      _push(`<!--]--></dl></div></div></div><div class="bg-white dark:bg-black"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
+      _push(`<!--]--></dl></div></div></div><div class="bg-white py-24 sm:py-32"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="text-center mx-auto lg:mx-0"><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Blog</h2><p class="mt-2 text-lg/8 text-gray-600">Confira as últimas notícias da Purgato Technology.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"><!--[-->`);
+      ssrRenderList(__props.posts.data, (post) => {
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between"><div class="flex items-center gap-x-4 text-xs"><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500">${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">${ssrInterpolate(post.category)}</a></div>`);
+        if (post.image) {
+          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md">`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div class="group relative"><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"><a${ssrRenderAttr("href", `/blog/${post.id}`)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4"><div class="text-sm/6"><p class="font-semibold text-gray-900"><a${ssrRenderAttr("href", post.author.href)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600">${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
+      });
+      _push(`<!--]--></div></div></div><div class="bg-white dark:bg-black"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
     };
   }
 });
@@ -1217,7 +1248,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Home.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1319,7 +1350,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Hosting.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$1
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1383,7 +1414,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/PostShow.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1723,7 +1754,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/admin/Dashboard.vue": __vite_glob_0_0, "./Pages/admin/PostCreate.vue": __vite_glob_0_1, "./Pages/admin/PostEdit.vue": __vite_glob_0_2, "./Pages/admin/Posts.vue": __vite_glob_0_3, "./Pages/admin/UserCreate.vue": __vite_glob_0_4, "./Pages/admin/UserEdit.vue": __vite_glob_0_5, "./Pages/admin/Users.vue": __vite_glob_0_6, "./Pages/auth/Login.vue": __vite_glob_0_7, "./Pages/auth/Register.vue": __vite_glob_0_8, "./Pages/site/About.vue": __vite_glob_0_9, "./Pages/site/Blog.vue": __vite_glob_0_10, "./Pages/site/Contact.vue": __vite_glob_0_11, "./Pages/site/Development.vue": __vite_glob_0_12, "./Pages/site/Home.vue": __vite_glob_0_13, "./Pages/site/Hosting.vue": __vite_glob_0_14, "./Pages/site/PostShow.vue": __vite_glob_0_15 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Teste.vue": __vite_glob_0_0, "./Pages/admin/Dashboard.vue": __vite_glob_0_1, "./Pages/admin/PostCreate.vue": __vite_glob_0_2, "./Pages/admin/PostEdit.vue": __vite_glob_0_3, "./Pages/admin/Posts.vue": __vite_glob_0_4, "./Pages/admin/UserCreate.vue": __vite_glob_0_5, "./Pages/admin/UserEdit.vue": __vite_glob_0_6, "./Pages/admin/Users.vue": __vite_glob_0_7, "./Pages/auth/Login.vue": __vite_glob_0_8, "./Pages/auth/Register.vue": __vite_glob_0_9, "./Pages/site/About.vue": __vite_glob_0_10, "./Pages/site/Blog.vue": __vite_glob_0_11, "./Pages/site/Contact.vue": __vite_glob_0_12, "./Pages/site/Development.vue": __vite_glob_0_13, "./Pages/site/Home.vue": __vite_glob_0_14, "./Pages/site/Hosting.vue": __vite_glob_0_15, "./Pages/site/PostShow.vue": __vite_glob_0_16 });
       let page2 = pages[`./Pages/${name}.vue`];
       page2.default.layout = page2.default.layout || ((page3) => h$1(page3));
       return page2;
