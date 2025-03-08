@@ -52,6 +52,3 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/contato', 'contact')->name('site.contact');
 });
 
-Route::get('/teste-inertia', function () {
-    return Inertia::render('Teste', ['mensagem' => 'Se isso aparecer, o Inertia está funcionando']);
-});
