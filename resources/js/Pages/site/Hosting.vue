@@ -1,5 +1,7 @@
 
 <script setup>
+import Guest from '@/Layouts/Guest.vue'
+defineOptions({ layout: Guest });
 import {CheckIcon} from '@heroicons/vue/20/solid'
 
 const tiers = [
@@ -98,7 +100,7 @@ const tiers = [
             </div>
         </div>
 	<div class="mx-auto mt-16 max-w-4xl text-center">
-            <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Selo de Parceria</h2>
+            <h2 class="text-base/7 font-semibold bg-white text-indigo-600 dark:text-sky-300">Selo de Parceria</h2>
             <a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&utm_medium=badge&utm_source=partner&utm_content=partner&utm_term="><img
                 alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a>
         </div>

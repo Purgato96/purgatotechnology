@@ -552,7 +552,6 @@ const _sfc_main$b = {
   __name: "Navigation",
   __ssrInlineRender: true,
   setup(__props) {
-    const mobileMenuOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"><div class="flex lg:flex-1"><a${ssrRenderAttr("href", _ctx.route("site.home"))}><img class="h-17 w-auto"${ssrRenderAttr("src", imageUrl)} alt="Purgato Technology"></a></div><div class="flex lg:hidden"><button type="button" class="p-2 text-white">`);
       _push(ssrRenderComponent(unref(Bars3Icon), { class: "size-6" }, null, _parent));
@@ -560,7 +559,7 @@ const _sfc_main$b = {
       _push(ssrRenderComponent(unref(PopoverGroup), { class: "hidden lg:flex lg:gap-x-12" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
+            _push2(`<a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-white"${_scopeId}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-white"${_scopeId}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-white"${_scopeId}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-white"${_scopeId}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-white"${_scopeId}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-white"${_scopeId}>Contato</a>`);
           } else {
             return [
               createVNode("a", {
@@ -580,6 +579,10 @@ const _sfc_main$b = {
                 class: "text-sm font-semibold text-white"
               }, "Desenvolvimento", 8, ["href"]),
               createVNode("a", {
+                href: _ctx.route("site.blog"),
+                class: "text-sm font-semibold text-white"
+              }, "Blog", 8, ["href"]),
+              createVNode("a", {
                 href: _ctx.route("site.contact"),
                 class: "text-sm font-semibold text-white"
               }, "Contato", 8, ["href"])
@@ -592,8 +595,8 @@ const _sfc_main$b = {
       _push(ssrRenderComponent(unref(Dialog), {
         as: "div",
         class: "relative z-50 lg:hidden",
-        onClose: ($event) => mobileMenuOpen.value = false,
-        open: mobileMenuOpen.value
+        onClose: ($event) => _ctx.mobileMenuOpen = false,
+        open: _ctx.mobileMenuOpen
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
@@ -603,13 +606,13 @@ const _sfc_main$b = {
                 if (_push3) {
                   _push3(`<div class="flex justify-between items-center"${_scopeId2}><span class="text-lg font-semibold text-gray-900"${_scopeId2}>Menu</span><button${_scopeId2}>`);
                   _push3(ssrRenderComponent(unref(XMarkIcon), { class: "size-6 text-gray-700" }, null, _parent3, _scopeId2));
-                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
+                  _push3(`</button></div><div class="mt-6 flex flex-col space-y-4"${_scopeId2}><a${ssrRenderAttr("href", _ctx.route("site.home"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Home</a><a${ssrRenderAttr("href", _ctx.route("site.about"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Sobre</a><a${ssrRenderAttr("href", _ctx.route("site.hosting"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Hospedagem</a><a${ssrRenderAttr("href", _ctx.route("site.development"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Desenvolvimento</a><a${ssrRenderAttr("href", _ctx.route("site.blog"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Blog</a><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="text-sm font-semibold text-gray-900"${_scopeId2}>Contato</a></div>`);
                 } else {
                   return [
                     createVNode("div", { class: "flex justify-between items-center" }, [
                       createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
                       createVNode("button", {
-                        onClick: ($event) => mobileMenuOpen.value = false
+                        onClick: ($event) => _ctx.mobileMenuOpen = false
                       }, [
                         createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
                       ], 8, ["onClick"])
@@ -632,6 +635,10 @@ const _sfc_main$b = {
                         class: "text-sm font-semibold text-gray-900"
                       }, "Desenvolvimento", 8, ["href"]),
                       createVNode("a", {
+                        href: _ctx.route("site.blog"),
+                        class: "text-sm font-semibold text-gray-900"
+                      }, "Blog", 8, ["href"]),
+                      createVNode("a", {
                         href: _ctx.route("site.contact"),
                         class: "text-sm font-semibold text-gray-900"
                       }, "Contato", 8, ["href"])
@@ -649,7 +656,7 @@ const _sfc_main$b = {
                   createVNode("div", { class: "flex justify-between items-center" }, [
                     createVNode("span", { class: "text-lg font-semibold text-gray-900" }, "Menu"),
                     createVNode("button", {
-                      onClick: ($event) => mobileMenuOpen.value = false
+                      onClick: ($event) => _ctx.mobileMenuOpen = false
                     }, [
                       createVNode(unref(XMarkIcon), { class: "size-6 text-gray-700" })
                     ], 8, ["onClick"])
@@ -671,6 +678,10 @@ const _sfc_main$b = {
                       href: _ctx.route("site.development"),
                       class: "text-sm font-semibold text-gray-900"
                     }, "Desenvolvimento", 8, ["href"]),
+                    createVNode("a", {
+                      href: _ctx.route("site.blog"),
+                      class: "text-sm font-semibold text-gray-900"
+                    }, "Blog", 8, ["href"]),
                     createVNode("a", {
                       href: _ctx.route("site.contact"),
                       class: "text-sm font-semibold text-gray-900"
@@ -892,7 +903,7 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
       _push(ssrRenderComponent(unref(Head), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title data-v-06d731d3${_scopeId}>Nosso Blog</title><meta head-key="description" name="description" content="Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!" data-v-06d731d3${_scopeId}>`);
+            _push2(`<title data-v-e7d20b9e${_scopeId}>Nosso Blog</title><meta head-key="description" name="description" content="Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!" data-v-e7d20b9e${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Nosso Blog"),
@@ -906,17 +917,17 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
         }),
         _: 1
       }, _parent));
-      _push(`<div class="bg-white py-24 sm:py-32" data-v-06d731d3><div class="mx-auto max-w-7xl px-6 lg:px-8" data-v-06d731d3><div class="mx-auto max-w-2xl lg:mx-0" data-v-06d731d3><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" data-v-06d731d3>From the blog</h2><p class="mt-2 text-lg/8 text-gray-600" data-v-06d731d3>Learn how to grow your business with our expert advice.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3" data-v-06d731d3><!--[-->`);
+      _push(`<div class="bg-white py-24 sm:py-32" data-v-e7d20b9e><div class="mx-auto max-w-7xl px-6 lg:px-8" data-v-e7d20b9e><div class="mx-auto max-w-2xl lg:mx-0" data-v-e7d20b9e><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" data-v-e7d20b9e>Nosso Blog</h2><p class="mt-2 text-lg/8 text-gray-600" data-v-e7d20b9e>Fique por dentro das últimas notícias da Purgato Technology.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3" data-v-e7d20b9e><!--[-->`);
       ssrRenderList(__props.posts.data, (post) => {
-        _push(`<article class="flex max-w-xl flex-col items-start justify-between" data-v-06d731d3><div class="flex items-center gap-x-4 text-xs" data-v-06d731d3><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500" data-v-06d731d3>${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" data-v-06d731d3>${ssrInterpolate(post.category)}</a></div>`);
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between" data-v-e7d20b9e><div class="flex items-center gap-x-4 text-xs" data-v-e7d20b9e><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500" data-v-e7d20b9e>${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" data-v-e7d20b9e>${ssrInterpolate(post.category)}</a></div>`);
         if (post.image) {
-          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md" data-v-06d731d3>`);
+          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md" data-v-e7d20b9e>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`<div class="group relative" data-v-06d731d3><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600" data-v-06d731d3><a${ssrRenderAttr("href", `/blog/${post.id}`)} data-v-06d731d3><span class="absolute inset-0" data-v-06d731d3></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-06d731d3>${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4" data-v-06d731d3><div class="text-sm/6" data-v-06d731d3><p class="font-semibold text-gray-900" data-v-06d731d3><a${ssrRenderAttr("href", post.author.href)} data-v-06d731d3><span class="absolute inset-0" data-v-06d731d3></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600" data-v-06d731d3>${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
+        _push(`<div class="group relative" data-v-e7d20b9e><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600" data-v-e7d20b9e><a${ssrRenderAttr("href", `/blog/${post.id}`)} data-v-e7d20b9e><span class="absolute inset-0" data-v-e7d20b9e></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-e7d20b9e>${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4" data-v-e7d20b9e><div class="text-sm/6" data-v-e7d20b9e><p class="font-semibold text-gray-900" data-v-e7d20b9e><a${ssrRenderAttr("href", post.author.href)} data-v-e7d20b9e><span class="absolute inset-0" data-v-e7d20b9e></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600" data-v-e7d20b9e>${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
       });
-      _push(`<!--]--></div></div></div><div class="mb-6" data-v-06d731d3>`);
+      _push(`<!--]--></div></div></div><div class="mb-6" data-v-e7d20b9e>`);
       if (__props.posts.links) {
         _push(ssrRenderComponent(_sfc_main$g, {
           links: __props.posts.links
@@ -924,11 +935,7 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
       } else {
         _push(`<!---->`);
       }
-      _push(`</div><section class="bg-gray-100 py-16" data-v-06d731d3><div class="container mx-auto px-4" data-v-06d731d3><h1 class="text-4xl font-bold text-gray-800 text-center" data-v-06d731d3>Blog</h1><p class="text-center text-gray-600 mt-4" data-v-06d731d3> Explore nossas últimas novidades, guias e dicas de tecnologia. </p></div></section><section class="py-12" data-v-06d731d3><div class="container mx-auto px-6" data-v-06d731d3><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-v-06d731d3><!--[-->`);
-      ssrRenderList(__props.posts.data, (post) => {
-        _push(`<article class="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden" data-v-06d731d3><div class="p-4" data-v-06d731d3><h2 class="text-lg font-bold text-gray-800" data-v-06d731d3><a${ssrRenderAttr("href", `/blog/${post.id}`)} class="hover:underline" data-v-06d731d3>${ssrInterpolate(post.title)}</a></h2><p class="text-sm text-gray-600 mt-2" data-v-06d731d3><span data-v-06d731d3>Por: ${ssrInterpolate(post.author || "Anônimo")}</span> | <time${ssrRenderAttr("datetime", post.created_at)} data-v-06d731d3>${ssrInterpolate(post.created_at)}</time> | <span data-v-06d731d3>Categoria: ${ssrInterpolate(post.category || "Sem Categoria")}</span></p><p class="text-gray-700 mt-4" data-v-06d731d3>${ssrInterpolate(post.content)}</p></div></article>`);
-      });
-      _push(`<!--]--></div></div></section><!--]-->`);
+      _push(`</div><!--]-->`);
     };
   }
 });
@@ -938,7 +945,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-06d731d3"]]);
+const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-e7d20b9e"]]);
 const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Blog
@@ -1134,6 +1141,10 @@ const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
 const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Home",
   __ssrInlineRender: true,
+  props: {
+    posts: Object
+    // `posts` agora é um objeto de paginação
+  },
   setup(__props) {
     const features = [
       {
@@ -1196,7 +1207,17 @@ const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
         }, null), _parent);
         _push(`</div> ${ssrInterpolate(feature.name)}</dt><dd class="mt-2 text-base/7 text-[#57789c] dark:text-emerald-600">${ssrInterpolate(feature.description)}</dd></div>`);
       });
-      _push(`<!--]--></dl></div></div></div><div class="bg-white dark:bg-black"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
+      _push(`<!--]--></dl></div></div></div><!--[-->`);
+      ssrRenderList(__props.posts.data, (post) => {
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between"><div class="flex items-center gap-x-4 text-xs"><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500">${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">${ssrInterpolate(post.category)}</a></div>`);
+        if (post.image) {
+          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md">`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div class="group relative"><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"><a${ssrRenderAttr("href", `/blog/${post.id}`)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4"><div class="text-sm/6"><p class="font-semibold text-gray-900"><a${ssrRenderAttr("href", post.author.href)}><span class="absolute inset-0"></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600">${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
+      });
+      _push(`<!--]--><div class="bg-white dark:bg-black"><div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8"><div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"><svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#7775D6"></stop><stop offset="1" stop-color="#E935C1"></stop></radialGradient></defs></svg><div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"><h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de uma Solução Rápida e Eficiente?</h4><p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite um orçamento agora mesmo!</p><div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"><a${ssrRenderAttr("href", _ctx.route("site.contact"))} class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a></div></div></div></div></div><!--]-->`);
     };
   }
 });
@@ -1210,7 +1231,7 @@ const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$1 = {
+const _sfc_main$1 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
   __name: "Hosting",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1298,10 +1319,10 @@ const _sfc_main$1 = {
         });
         _push(`<!--]--></ul><a${ssrRenderAttr("href", tier.href)}${ssrRenderAttr("aria-describedby", tier.id)} class="${ssrRenderClass([tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600", "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"])}">Quero Esse</a></div>`);
       });
-      _push(`<!--]--></div><div class="mx-auto mt-16 max-w-4xl text-center"><h2 class="text-base/7 font-semibold text-indigo-600 dark:text-sky-300">Selo de Parceria</h2><a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&amp;utm_medium=badge&amp;utm_source=partner&amp;utm_content=partner&amp;utm_term="><img alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a></div></div><!--]-->`);
+      _push(`<!--]--></div><div class="mx-auto mt-16 max-w-4xl text-center"><h2 class="text-base/7 font-semibold bg-white text-indigo-600 dark:text-sky-300">Selo de Parceria</h2><a href="https://cloudez.io/br?utm_campaign=partner-matheuspurgato8-purgato-technology-badge&amp;utm_medium=badge&amp;utm_source=partner&amp;utm_content=partner&amp;utm_term="><img alt="" width="220" height="60" src="https://files.cloudez.io/stamp/partner-dark-sm.svg"></a></div></div><!--]-->`);
     };
   }
-};
+});
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {
   const ssrContext = useSSRContext();

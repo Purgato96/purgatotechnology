@@ -16,7 +16,6 @@ class AdminController extends Controller {
     }
 
     public function attempt(Request $request) {
-//      dump($request->all());
         $credentials = [
             'email' => $request->get('email'),
             'password' => $request->get('password'),

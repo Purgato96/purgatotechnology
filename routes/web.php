@@ -5,9 +5,6 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-/**
- *Admin
- */
 Route::group(['prefix' => 'admin'], function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/', 'login')->name('login');

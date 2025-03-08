@@ -2,8 +2,6 @@
 import { ref } from 'vue';
 import { router } from '@inertiajs/vue3';
 import GuestAdmin from '@/Layouts/GuestAdmin.vue';
-
-
 defineOptions({ layout: GuestAdmin }); // Define o layout do componente
 
 // Variáveis reativas para o formulário (nome, email, senha)

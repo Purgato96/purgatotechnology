@@ -28,9 +28,8 @@ const goToPage = (url) => {
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">From the
-                    blog</h2>
-                <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+                <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Nosso Blog</h2>
+                <p class="mt-2 text-lg/8 text-gray-600">Fique por dentro das últimas notícias da Purgato Technology.</p>
             </div>
             <div
                 class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -73,51 +72,6 @@ const goToPage = (url) => {
         <Pagination v-if="posts.links" :links="posts.links"/>
     </div>
 
-
-    <!-- Seção de Cabeçalho -->
-    <section class="bg-gray-100 py-16">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-gray-800 text-center">Blog</h1>
-            <p class="text-center text-gray-600 mt-4">
-                Explore nossas últimas novidades, guias e dicas de tecnologia.
-            </p>
-        </div>
-    </section>
-    <!-- Listagem de Posts -->
-    <section class="py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article
-                    v-for="post in posts.data"
-                    :key="post.id"
-                    class="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden"
-                >
-                    <div class="p-4">
-                        <!-- Título do Post -->
-                        <h2 class="text-lg font-bold text-gray-800">
-                            <a :href="`/blog/${post.id}`" class="hover:underline">
-                                {{ post.title }}
-                            </a>
-                        </h2>
-
-                        <!-- Informações adicionais do Post -->
-                        <p class="text-sm text-gray-600 mt-2">
-                            <span>Por: {{ post.author || 'Anônimo' }}</span> |
-                            <time :datetime="post.created_at">{{ post.created_at }}</time>
-                            |
-                            <span>Categoria: {{ post.category || 'Sem Categoria' }}</span>
-
-                        </p>
-
-                        <!-- Resumo do conteúdo -->
-                        <p class="text-gray-700 mt-4">
-                            {{ post.content }}
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
 </template>
 
