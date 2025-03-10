@@ -45,7 +45,7 @@ const goToPage = (url) => {
                     <img v-if="post.image" :src="post.image" :alt="post.title" class="rounded-md shadow-md" />
                     <div class="group relative">
                         <h2 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                            <a :href="`/blog/${post.id}`">
+                            <a :href="`/blog/${post.slug}`">
                                 <span class="absolute inset-0"/>
                                 {{ post.title }}
                             </a>
