@@ -59,9 +59,10 @@ class PostController extends Controller {
             'author_id' => 'required|exists:users,id',
             'tags' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
-            'slug' => 'nullable|string|max:255|unique:posts,slug',
+            'slug' => 'nullable|string|max:255|unique:posts,slug'
         ]);
 
+        $validated['slug'] = Str::slug($validated['title']);
         Post::query()->create($validated);
 
         return redirect()->route('admin.posts')->with('success', 'Post criado com sucesso!');
@@ -96,8 +97,10 @@ class PostController extends Controller {
             'author_id' => 'required|exists:users,id',
             'tags' => 'nullable|string',
             'image' => 'nullable|image|max:2048',
+            'slug' => 'nullable|string|max:255|unique:posts,slug'
         ]);
 
+        $validated['slug'] = Str::slug($validated['title']);
         $post->update($validated);
 
         return redirect()->route('admin.posts')->with('success', 'Post atualizado com sucesso!');

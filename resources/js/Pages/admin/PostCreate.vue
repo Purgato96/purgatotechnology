@@ -144,6 +144,7 @@ const createPost = () => {
             </div>
 
             <!-- Slug -->
+<!--
             <div class="mb-4">
                 <label class="block text-sm font-medium text-gray-700" for="slug">Slug</label>
                 <input
@@ -154,6 +155,7 @@ const createPost = () => {
                     placeholder="Exemplo: meu-post-tutorial"
                 />
             </div>
+-->
 
             <!-- Botão de Enviar -->
             <button

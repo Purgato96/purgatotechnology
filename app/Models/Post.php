@@ -19,6 +19,10 @@ class Post extends Model {
         'slug',
     ];
 
+    public function getRouteKeyName() {
+        return 'slug'; // Define o campo que será usado nas rotas
+    }
+
     /*public function authorRelationship() {
         return $this->belongsTo(User::class, 'author_id', 'id');
     }*/
