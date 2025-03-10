@@ -12,19 +12,17 @@ Route::group(['prefix' => 'admin'], function () {
         Route::group(['as' => 'admin.'], function () {
             Route::post('/login/do', 'attempt')->name('login.do');
             Route::get('/logout', 'logout')->name('logout');
-            Route::group(['middleware' => ['auth']], function () {
-                Route::controller(AdminController::class)->group(function () {
-                    /*Dashboard*/
-                    Route::get('/dashboard', 'dashboard')->name('dashboard');
-                    /*Administrando Usuários*/
-                    Route::get('/users', 'users')->name('users');
-                    Route::post('/users', 'store')->name('users.store'); // Criar
-                    Route::get('/users/create', 'create')->name('users.create'); // Criar (view para formulário)
-                    Route::get('/users/{user}/edit', 'edit')->name('users.edit'); // Editar (view para formulário)
-                    Route::put('/users/{user}', 'update')->name('users.update'); // Atualizar
-                    Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Deletar
+            Route::middleware('auth')->group(function () {
+                /*Dashboard*/
+                Route::get('/dashboard', 'dashboard')->name('dashboard');
+                /*Administrando Usuários*/
+                Route::get('/users', 'users')->name('users');
+                Route::post('/users', 'store')->name('users.store'); // Criar
+                Route::get('/users/create', 'create')->name('users.create'); // Criar (view para formulário)
+                Route::get('/users/{user}/edit', 'edit')->name('users.edit'); // Editar (view para formulário)
+                Route::put('/users/{user}', 'update')->name('users.update'); // Atualizar
+                Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Deletar
 
-                });
                 Route::controller(PostController::class)->group(function () {
                     /*Administrando Posts*/
                     Route::get('posts', 'index')->name('posts');

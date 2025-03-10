@@ -22,12 +22,4 @@ export default defineConfig({
         tailwindcss(),
 
     ],
-    build: {
-        outDir: 'public/build',
-    },
-    server: {
-        port: 3000
-    }
-
-})
-;
+});
