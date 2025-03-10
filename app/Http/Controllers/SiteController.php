@@ -49,6 +49,7 @@ class SiteController extends Controller {
             'posts' => $posts->through(fn($post) => [
                 'id' => $post->id,
                 'title' => $post->title,
+                'subtitle' => $post->subtitle,
                 'content' => Str::limit(strip_tags($post->content), 100), // Exibir resumo (removendo tags HTML)
                 'created_at' => $post->created_at->format('d/m/Y'),
                 'author' => $post->author ? $post->author->name : 'Anônimo',
@@ -68,11 +69,13 @@ class SiteController extends Controller {
             'post' => [
                 'id' => $post->id,
                 'title' => $post->title,
+                'subtitle' => $post->subtitle,
                 'content' => $post->content, // Conteúdo completo
                 'created_at' => $post->created_at->format('d/m/Y'),
                 'author' => $post->author ? $post->author->name : 'Anônimo',
                 'category' => $post->category,
                 'tags' => $post->tags, // Se existirem
+                'slug' => $post->slug,
             ],
         ]);
     }

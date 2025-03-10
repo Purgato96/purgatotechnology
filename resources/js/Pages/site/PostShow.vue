@@ -27,7 +27,9 @@ const props = defineProps({
                     <span v-if="post.category">| <strong>Categoria:</strong> {{ post.category }}</span>
                 </div>
             </header>
-
+            <div class="mt-2 font-semibold text-md text-gray-700">
+                <p v-html="post.subtitle"></p>
+            </div>
             <div class="mt-6 prose max-w-none text-gray-800">
                 <p v-html="post.content"></p>
             </div>

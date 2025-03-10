@@ -924,7 +924,7 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
       _push(ssrRenderComponent(unref(Head), null, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<title data-v-e7d20b9e${_scopeId}>Nosso Blog</title><meta head-key="description" name="description" content="Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!" data-v-e7d20b9e${_scopeId}>`);
+            _push2(`<title data-v-1e26cd4d${_scopeId}>Nosso Blog</title><meta head-key="description" name="description" content="Descubra nossas dicas de tecnologia no blog da Purgato Technology. Fique por dentro!" data-v-1e26cd4d${_scopeId}>`);
           } else {
             return [
               createVNode("title", null, "Nosso Blog"),
@@ -938,17 +938,17 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
         }),
         _: 1
       }, _parent));
-      _push(`<div class="bg-white py-24 sm:py-32" data-v-e7d20b9e><div class="mx-auto max-w-7xl px-6 lg:px-8" data-v-e7d20b9e><div class="mx-auto max-w-2xl lg:mx-0" data-v-e7d20b9e><h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" data-v-e7d20b9e>Nosso Blog</h2><p class="mt-2 text-lg/8 text-gray-600" data-v-e7d20b9e>Fique por dentro das últimas notícias da Purgato Technology.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3" data-v-e7d20b9e><!--[-->`);
+      _push(`<div class="bg-white py-24 sm:py-32" data-v-1e26cd4d><div class="mx-auto max-w-7xl px-6 lg:px-8" data-v-1e26cd4d><div class="mx-auto max-w-2xl lg:mx-0" data-v-1e26cd4d><h1 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" data-v-1e26cd4d>Nosso Blog</h1><p class="mt-2 text-lg/8 text-gray-600" data-v-1e26cd4d>Fique por dentro das últimas notícias da Purgato Technology.</p></div><div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3" data-v-1e26cd4d><!--[-->`);
       ssrRenderList(__props.posts.data, (post) => {
-        _push(`<article class="flex max-w-xl flex-col items-start justify-between" data-v-e7d20b9e><div class="flex items-center gap-x-4 text-xs" data-v-e7d20b9e><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500" data-v-e7d20b9e>${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" data-v-e7d20b9e>${ssrInterpolate(post.category)}</a></div>`);
+        _push(`<article class="flex max-w-xl flex-col items-start justify-between" data-v-1e26cd4d><div class="flex items-center gap-x-4 text-xs" data-v-1e26cd4d><time${ssrRenderAttr("datetime", post.datetime)} class="text-gray-500" data-v-1e26cd4d>${ssrInterpolate(post.created_at)}</time><a${ssrRenderAttr("href", post.category.href)} class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" data-v-1e26cd4d>${ssrInterpolate(post.category)}</a></div>`);
         if (post.image) {
-          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md" data-v-e7d20b9e>`);
+          _push(`<img${ssrRenderAttr("src", post.image)}${ssrRenderAttr("alt", post.title)} class="rounded-md shadow-md" data-v-1e26cd4d>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`<div class="group relative" data-v-e7d20b9e><h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600" data-v-e7d20b9e><a${ssrRenderAttr("href", `/blog/${post.id}`)} data-v-e7d20b9e><span class="absolute inset-0" data-v-e7d20b9e></span> ${ssrInterpolate(post.title)}</a></h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-e7d20b9e>${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4" data-v-e7d20b9e><div class="text-sm/6" data-v-e7d20b9e><p class="font-semibold text-gray-900" data-v-e7d20b9e><a${ssrRenderAttr("href", post.author.href)} data-v-e7d20b9e><span class="absolute inset-0" data-v-e7d20b9e></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600" data-v-e7d20b9e>${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
+        _push(`<div class="group relative" data-v-1e26cd4d><h2 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600" data-v-1e26cd4d><a${ssrRenderAttr("href", `/blog/${post.id}`)} data-v-1e26cd4d><span class="absolute inset-0" data-v-1e26cd4d></span> ${ssrInterpolate(post.title)}</a></h2><h3 class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-1e26cd4d>${ssrInterpolate(post.subtitle)}</h3><p class="mt-5 line-clamp-3 text-sm/6 text-gray-600" data-v-1e26cd4d>${ssrInterpolate(post.content)}</p></div><div class="relative mt-8 flex items-center gap-x-4" data-v-1e26cd4d><div class="text-sm/6" data-v-1e26cd4d><p class="font-semibold text-gray-900" data-v-1e26cd4d><a${ssrRenderAttr("href", post.author.href)} data-v-1e26cd4d><span class="absolute inset-0" data-v-1e26cd4d></span> ${ssrInterpolate(post.author || "Anônimo")}</a></p><p class="text-gray-600" data-v-1e26cd4d>${ssrInterpolate(post.author_position || "Escritor")}</p></div></div></article>`);
       });
-      _push(`<!--]--></div></div></div><div class="mb-6" data-v-e7d20b9e>`);
+      _push(`<!--]--></div></div></div><div class="mb-6" data-v-1e26cd4d>`);
       if (__props.posts.links) {
         _push(ssrRenderComponent(_sfc_main$g, {
           links: __props.posts.links
@@ -966,7 +966,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-e7d20b9e"]]);
+const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-1e26cd4d"]]);
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Blog

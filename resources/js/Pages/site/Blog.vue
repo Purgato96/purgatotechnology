@@ -28,7 +28,7 @@ const goToPage = (url) => {
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Nosso Blog</h2>
+                <h1 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Nosso Blog</h1>
                 <p class="mt-2 text-lg/8 text-gray-600">Fique por dentro das últimas notícias da Purgato Technology.</p>
             </div>
             <div
@@ -44,12 +44,13 @@ const goToPage = (url) => {
                     </div>
                     <img v-if="post.image" :src="post.image" :alt="post.title" class="rounded-md shadow-md" />
                     <div class="group relative">
-                        <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+                        <h2 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                             <a :href="`/blog/${post.id}`">
                                 <span class="absolute inset-0"/>
                                 {{ post.title }}
                             </a>
-                        </h3>
+                        </h2>
+                        <h3 class="mt-5 font-semibold line-clamp-3 text-md/4 text-gray-700">{{ post.subtitle }}</h3>
                         <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">{{ post.content }}</p>
                     </div>
                     <div class="relative mt-8 flex items-center gap-x-4">
