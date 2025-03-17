@@ -18,6 +18,7 @@ class GenerateSitemap extends Command {
             ->add(Url::create('/hospedagem'))
             ->add(Url::create('/desenvolvimento'))
             ->add(Url::create('/blog'))
+            ->add(Url::create('/guia-completo-de-seo-domine-as-estrategias-para-conquistar-o-topo-do-google'))
             ->add(Url::create('/contato'));
 
         // Adiciona os posts dinamicamente
