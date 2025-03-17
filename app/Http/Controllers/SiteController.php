@@ -89,4 +89,8 @@ class SiteController extends Controller {
     public function login() {
         return Inertia::render('auth/Login');
     }
+
+    public function guideSeo() {
+        return Inertia::render('site/GuideSeo');
+    }
 }

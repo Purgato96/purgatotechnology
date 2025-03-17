@@ -48,5 +48,7 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/blog', 'blog')->name('site.blog'); // Listagem
     Route::get('/blog/{post}', 'blogShow')->name('site.blog.show'); // Post individual
     Route::get('/contato', 'contact')->name('site.contact');
+    Route::get('/guia-completo-de-seo-domine-as-estrategias-para-conquistar-o-topo-do-google', 'guideSeo')->name('site.guideSeo');
 });
+
 

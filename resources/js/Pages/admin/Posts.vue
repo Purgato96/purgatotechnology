@@ -12,9 +12,9 @@ defineProps({
 });
 
 // Função para excluir um post
-const deletePost = (id) => {
+const deletePost = (slug) => {
     if (confirm('Tem certeza que deseja excluir este post?')) {
-        router.delete(route('admin.posts.destroy', id), {
+        router.delete(route('admin.posts.destroy', slug), {
             onSuccess: () => {
                 alert('Post excluído com sucesso!');
             },
@@ -49,12 +49,12 @@ const deletePost = (id) => {
                         <div>
                             <button
                                 class="rounded-md bg-sky-600 hover:bg-sky-900 text-white px-3 py-1 mr-2"
-                                @click="router.visit(route('admin.posts.edit', post.id))">
+                                @click="router.visit(route('admin.posts.edit', post.slug))">
                                 Editar
                             </button>
                             <button
                                 class="rounded-md bg-red-600 hover:bg-red-900 text-white px-3 py-1"
-                                @click="deletePost(post.id)">
+                                @click="deletePost(post.slug)">
                                 Excluir
                             </button>
                         </div>

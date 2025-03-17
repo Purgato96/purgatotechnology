@@ -19,19 +19,19 @@ class PostController extends Controller {
             ->orderBy('created_at', 'desc')
             ->paginate(10) // 10 posts por página
             ->onEachSide(1); // Define quantas páginas vizinhas aparecem nos links
-            return Inertia::render('admin/Posts', [
-                'posts' => $posts->through(fn($post) => [
-                    'id' => $post->id,
-                    'title' => $post->title,
-                    'content' => Str::limit(strip_tags($post->content), 100), // Exibir resumo (removendo tags HTML)
-                    'created_at' => $post->created_at->format('d/m/Y'),
-                    'author' => $post->author ? $post->author->name : 'Anônimo',
-                    'author_position' => $post->author ? $post->author->position : 'Escritor',
-                    'href' => route('site.blog.show', $post->id), // Link para o post individual
-                    'category' => $post->category, // Se a categoria existir no modelo.
-                    'image' => $post->image ? asset("storage/{$post->image}") : null,
-                ]),
-            ]);
+        return Inertia::render('admin/Posts', [
+            'posts' => $posts->through(fn($post) => [
+                'id' => $post->id,
+                'title' => $post->title,
+                'content' => Str::limit(strip_tags($post->content), 100), // Exibir resumo (removendo tags HTML)
+                'created_at' => $post->created_at->format('d/m/Y'),
+                'author' => $post->author ? $post->author->name : 'Anônimo',
+                'author_position' => $post->author ? $post->author->position : 'Escritor',
+                'href' => route('site.blog.show', $post->id), // Link para o post individual
+                'category' => $post->category, // Se a categoria existir no modelo.
+                'image' => $post->image ? asset("storage/{$post->image}") : null,
+            ]),
+        ]);
 
     }
 
@@ -78,7 +78,10 @@ class PostController extends Controller {
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $post) {
+    public function edit($slug)
+    {
+        $post = Post::where('slug', $slug)->firstOrFail();
+
         return Inertia::render('admin/PostEdit', [
             'post' => $post,
             'authors' => User::all(),
@@ -110,7 +113,8 @@ class PostController extends Controller {
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post) {
+    public function destroy(Post $slug) {
+        $post = Post::where('slug', $slug)->firstOrFail();
         $post->delete();
 
         return redirect()->route('admin.posts')->with('success', 'Post deletado com sucesso!');
