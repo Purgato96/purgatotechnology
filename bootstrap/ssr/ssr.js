@@ -16,7 +16,7 @@ import { Bars3Icon, XMarkIcon, EnvelopeIcon, PhoneIcon, UserIcon, CloudArrowUpIc
 import { CheckIcon } from "@heroicons/vue/20/solid";
 import createServer from "@inertiajs/vue3/server";
 import { renderToString } from "@vue/server-renderer";
-const _sfc_main$m = {
+const _sfc_main$n = {
   __name: "Teste",
   __ssrInlineRender: true,
   props: { mensagem: String },
@@ -26,17 +26,17 @@ const _sfc_main$m = {
     };
   }
 };
-const _sfc_setup$m = _sfc_main$m.setup;
-_sfc_main$m.setup = (props, ctx) => {
+const _sfc_setup$n = _sfc_main$n.setup;
+_sfc_main$n.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/Teste.vue");
-  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
+  return _sfc_setup$n ? _sfc_setup$n(props, ctx) : void 0;
 };
 const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$m
+  default: _sfc_main$n
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$l = {
+const _sfc_main$m = {
   __name: "GuestAdmin",
   __ssrInlineRender: true,
   setup(__props) {
@@ -47,13 +47,13 @@ const _sfc_main$l = {
     };
   }
 };
-const _sfc_setup$l = _sfc_main$l.setup;
-_sfc_main$l.setup = (props, ctx) => {
+const _sfc_setup$m = _sfc_main$m.setup;
+_sfc_main$m.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/GuestAdmin.vue");
-  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
+  return _sfc_setup$m ? _sfc_setup$m(props, ctx) : void 0;
 };
-const _sfc_main$k = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$l = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "Dashboard",
   __ssrInlineRender: true,
   setup(__props) {
@@ -76,15 +76,15 @@ const _sfc_main$k = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$k = _sfc_main$k.setup;
-_sfc_main$k.setup = (props, ctx) => {
+const _sfc_setup$l = _sfc_main$l.setup;
+_sfc_main$l.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Dashboard.vue");
-  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
+  return _sfc_setup$l ? _sfc_setup$l(props, ctx) : void 0;
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$k
+  default: _sfc_main$l
 }, Symbol.toStringTag, { value: "Module" }));
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -93,7 +93,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$j = {
+const _sfc_main$k = {
   __name: "RichTextEditor",
   __ssrInlineRender: true,
   props: {
@@ -152,14 +152,14 @@ const _sfc_main$j = {
     };
   }
 };
-const _sfc_setup$j = _sfc_main$j.setup;
-_sfc_main$j.setup = (props, ctx) => {
+const _sfc_setup$k = _sfc_main$k.setup;
+_sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/RichTextEditor.vue");
-  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
+  return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
-const RichTextEditor = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["__scopeId", "data-v-fd62c20a"]]);
-const _sfc_main$i = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const RichTextEditor = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["__scopeId", "data-v-fd62c20a"]]);
+const _sfc_main$j = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "PostCreate",
   __ssrInlineRender: true,
   props: {
@@ -204,18 +204,18 @@ const _sfc_main$i = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$i = _sfc_main$i.setup;
-_sfc_main$i.setup = (props, ctx) => {
+const _sfc_setup$j = _sfc_main$j.setup;
+_sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/PostCreate.vue");
-  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
+  return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
-const PostCreate = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["__scopeId", "data-v-63615a12"]]);
+const PostCreate = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["__scopeId", "data-v-63615a12"]]);
 const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: PostCreate
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$h = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$i = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "PostEdit",
   __ssrInlineRender: true,
   props: {
@@ -324,17 +324,17 @@ const _sfc_main$h = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$h = _sfc_main$h.setup;
-_sfc_main$h.setup = (props, ctx) => {
+const _sfc_setup$i = _sfc_main$i.setup;
+_sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/PostEdit.vue");
-  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
+  return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const __vite_glob_0_3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$h
+  default: _sfc_main$i
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$g = {
+const _sfc_main$h = {
   __name: "Pagination",
   __ssrInlineRender: true,
   props: {
@@ -382,13 +382,13 @@ const _sfc_main$g = {
     };
   }
 };
-const _sfc_setup$g = _sfc_main$g.setup;
-_sfc_main$g.setup = (props, ctx) => {
+const _sfc_setup$h = _sfc_main$h.setup;
+_sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Pagination.vue");
-  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
+  return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
-const _sfc_main$f = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$g = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "Posts",
   __ssrInlineRender: true,
   props: {
@@ -423,7 +423,7 @@ const _sfc_main$f = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
       }
       _push(`<button class="rounded-md bg-green-600 hover:bg-green-800 text-white px-4 py-2 mt-6"> Adicionar Novo Post </button>`);
       if (__props.posts.links) {
-        _push(ssrRenderComponent(_sfc_main$g, {
+        _push(ssrRenderComponent(_sfc_main$h, {
           links: __props.posts.links
         }, null, _parent));
       } else {
@@ -433,17 +433,17 @@ const _sfc_main$f = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$f = _sfc_main$f.setup;
-_sfc_main$f.setup = (props, ctx) => {
+const _sfc_setup$g = _sfc_main$g.setup;
+_sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Posts.vue");
-  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
+  return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$f
+  default: _sfc_main$g
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$e = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$f = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "UserCreate",
   __ssrInlineRender: true,
   setup(__props) {
@@ -469,17 +469,17 @@ const _sfc_main$e = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$e = _sfc_main$e.setup;
-_sfc_main$e.setup = (props, ctx) => {
+const _sfc_setup$f = _sfc_main$f.setup;
+_sfc_main$f.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserCreate.vue");
-  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
+  return _sfc_setup$f ? _sfc_setup$f(props, ctx) : void 0;
 };
 const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$e
+  default: _sfc_main$f
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$d = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$e = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "UserEdit",
   __ssrInlineRender: true,
   props: {
@@ -517,17 +517,17 @@ const _sfc_main$d = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$d = _sfc_main$d.setup;
-_sfc_main$d.setup = (props, ctx) => {
+const _sfc_setup$e = _sfc_main$e.setup;
+_sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/UserEdit.vue");
-  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
+  return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$d
+  default: _sfc_main$e
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$c = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
+const _sfc_main$d = /* @__PURE__ */ Object.assign({ layout: _sfc_main$m }, {
   __name: "Users",
   __ssrInlineRender: true,
   props: {
@@ -557,18 +557,18 @@ const _sfc_main$c = /* @__PURE__ */ Object.assign({ layout: _sfc_main$l }, {
     };
   }
 });
-const _sfc_setup$c = _sfc_main$c.setup;
-_sfc_main$c.setup = (props, ctx) => {
+const _sfc_setup$d = _sfc_main$d.setup;
+_sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/admin/Users.vue");
-  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
+  return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
 const __vite_glob_0_7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$c
+  default: _sfc_main$d
 }, Symbol.toStringTag, { value: "Module" }));
 const imageUrl = "/resources/img/site/logo-purgato-technology.png";
-const _sfc_main$b = {
+const _sfc_main$c = {
   __name: "Navigation",
   __ssrInlineRender: true,
   setup(__props) {
@@ -720,13 +720,13 @@ const _sfc_main$b = {
     };
   }
 };
-const _sfc_setup$b = _sfc_main$b.setup;
-_sfc_main$b.setup = (props, ctx) => {
+const _sfc_setup$c = _sfc_main$c.setup;
+_sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Navigation.vue");
-  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
+  return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
-const _sfc_main$a = {
+const _sfc_main$b = {
   __name: "Footer",
   __ssrInlineRender: true,
   setup(__props) {
@@ -736,34 +736,34 @@ const _sfc_main$a = {
     };
   }
 };
-const _sfc_setup$a = _sfc_main$a.setup;
-_sfc_main$a.setup = (props, ctx) => {
+const _sfc_setup$b = _sfc_main$b.setup;
+_sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Components/Footer.vue");
-  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
+  return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
-const _sfc_main$9 = {
+const _sfc_main$a = {
   __name: "Guest",
   __ssrInlineRender: true,
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<!--[--><header class="bg-[#2d3e50] text-[#82b3e8] p-10"><div>`);
-      _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$c, null, null, _parent));
       _push(`</div></header><main>`);
       ssrRenderSlot(_ctx.$slots, "default", {}, null, _push, _parent);
       _push(`</main><footer class="bg-[#57789c] text-white text-center flex justify-center py-4">`);
-      _push(ssrRenderComponent(_sfc_main$a, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$b, null, null, _parent));
       _push(`</footer><!--]-->`);
     };
   }
 };
-const _sfc_setup$9 = _sfc_main$9.setup;
-_sfc_main$9.setup = (props, ctx) => {
+const _sfc_setup$a = _sfc_main$a.setup;
+_sfc_main$a.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Layouts/Guest.vue");
-  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
+  return _sfc_setup$a ? _sfc_setup$a(props, ctx) : void 0;
 };
-const _sfc_main$8 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$9 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Login",
   __ssrInlineRender: true,
   setup(__props) {
@@ -801,17 +801,17 @@ const _sfc_main$8 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$8 = _sfc_main$8.setup;
-_sfc_main$8.setup = (props, ctx) => {
+const _sfc_setup$9 = _sfc_main$9.setup;
+_sfc_main$9.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Login.vue");
-  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
+  return _sfc_setup$9 ? _sfc_setup$9(props, ctx) : void 0;
 };
 const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$8
+  default: _sfc_main$9
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$7 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$8 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Register",
   __ssrInlineRender: true,
   setup(__props) {
@@ -844,17 +844,17 @@ const _sfc_main$7 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$7 = _sfc_main$7.setup;
-_sfc_main$7.setup = (props, ctx) => {
+const _sfc_setup$8 = _sfc_main$8.setup;
+_sfc_main$8.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/auth/Register.vue");
-  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
+  return _sfc_setup$8 ? _sfc_setup$8(props, ctx) : void 0;
 };
 const __vite_glob_0_9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$7
+  default: _sfc_main$8
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$6 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$7 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "About",
   __ssrInlineRender: true,
   setup(__props) {
@@ -901,17 +901,17 @@ const _sfc_main$6 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/About.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
 const __vite_glob_0_10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$6
+  default: _sfc_main$7
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$6 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Blog",
   __ssrInlineRender: true,
   props: {
@@ -950,7 +950,7 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
       });
       _push(`<!--]--></div></div></div><div class="mb-6" data-v-6683d28f>`);
       if (__props.posts.links) {
-        _push(ssrRenderComponent(_sfc_main$g, {
+        _push(ssrRenderComponent(_sfc_main$h, {
           links: __props.posts.links
         }, null, _parent));
       } else {
@@ -960,18 +960,18 @@ const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$5 = _sfc_main$5.setup;
-_sfc_main$5.setup = (props, ctx) => {
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Blog.vue");
-  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-6683d28f"]]);
+const Blog = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-6683d28f"]]);
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Blog
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$4 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$5 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Contact",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1051,17 +1051,17 @@ const _sfc_main$4 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$4 = _sfc_main$4.setup;
-_sfc_main$4.setup = (props, ctx) => {
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Contact.vue");
-  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
 const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$4
+  default: _sfc_main$5
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$3 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$4 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Development",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1149,17 +1149,76 @@ const _sfc_main$3 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
     };
   }
 });
-const _sfc_setup$3 = _sfc_main$3.setup;
-_sfc_main$3.setup = (props, ctx) => {
+const _sfc_setup$4 = _sfc_main$4.setup;
+_sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Development.vue");
-  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+  return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
 const __vite_glob_0_13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: _sfc_main$3
+  default: _sfc_main$4
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const price = "19,90";
+const paymentLink = "https://pay.kiwify.com.br/fR9OGC9";
+const _sfc_main$3 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
+  __name: "GuideSeo",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const testimonials = [
+      { name: "João Silva", text: "Este e-book mudou completamente minha estratégia de SEO! Resultados incríveis." },
+      { name: "Maria Oliveira", text: "Muito conteúdo prático e bem explicado. Vale cada centavo!" },
+      { name: "Carlos Mendes", text: "Recomendo para todos que querem melhorar o ranqueamento no Google." }
+    ];
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_Head = resolveComponent("Head");
+      _push(`<!--[-->`);
+      _push(ssrRenderComponent(_component_Head, null, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`<title data-v-acf25065${_scopeId}>Guia Completo de SEO</title><meta name="description" content="Domine o SEO e aumente seu tráfego orgânico com nosso guia completo." data-v-acf25065${_scopeId}><meta head-key="keywords" name="keywords" content="tráfego orgânico, Domine o SEO, SEO, performance, Purgato Technology, tecnologia, sites rápidos, otimização, segurança, inovação, laravel, vue, tailwind" data-v-acf25065${_scopeId}><meta head-key="author" name="author" content="Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO" data-v-acf25065${_scopeId}>`);
+          } else {
+            return [
+              createVNode("title", null, "Guia Completo de SEO"),
+              createVNode("meta", {
+                name: "description",
+                content: "Domine o SEO e aumente seu tráfego orgânico com nosso guia completo."
+              }),
+              createVNode("meta", {
+                "head-key": "keywords",
+                name: "keywords",
+                content: "tráfego orgânico, Domine o SEO, SEO, performance, Purgato Technology, tecnologia, sites rápidos, otimização, segurança, inovação, laravel, vue, tailwind"
+              }),
+              createVNode("meta", {
+                "head-key": "author",
+                name: "author",
+                content: "Matheus Purgato, Desenvolvedor Laravel e Especialista em SEO"
+              })
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`<div class="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900" data-v-acf25065><header class="text-center py-16 bg-gradient-to-br from-blue-600 to-sky-400 text-white" data-v-acf25065><h1 class="text-5xl font-extrabold tracking-tight leading-tight" data-v-acf25065> Guia Completo de SEO: Domine as Estratégias para Conquistar o Topo do Google </h1><p class="mt-4 text-lg font-light max-w-3xl mx-auto" data-v-acf25065> Aprenda as melhores estratégias de SEO para dominar os buscadores e aumentar sua presença online. </p><a${ssrRenderAttr("href", paymentLink)} class="mt-8 inline-block px-8 py-4 bg-emerald-400 text-black font-bold rounded-lg shadow-lg text-lg hover:bg-emerald-500 hover:scale-105 transition transform" data-v-acf25065> Comprar Agora por R$ ${ssrInterpolate(price)}</a></header><section class="py-12 bg-gray-100" data-v-acf25065><h2 class="text-3xl font-semibold text-center" data-v-acf25065>O que tem neste e-book?</h2><div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto" data-v-acf25065><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ Fundamentos do SEO</h3><p class="text-gray-600" data-v-acf25065> Descubra como funciona o algoritmo do Google e a importância do SEO para melhorar a visibilidade do seu site. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ SEO On-Page</h3><p class="text-gray-600" data-v-acf25065> Saiba como otimizar o conteúdo do seu site, desde títulos até meta descriptions, para obter melhores resultados nos buscadores. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ SEO Off-Page</h3><p class="text-gray-600" data-v-acf25065> Aprenda estratégias para construir backlinks de qualidade e aumentar sua autoridade perante o Google. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ Pesquisa de Palavras-Chave</h3><p class="text-gray-600" data-v-acf25065> Descubra como encontrar as melhores palavras-chave para ranquear suas páginas com eficiência. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ SEO Técnico</h3><p class="text-gray-600" data-v-acf25065> Saiba como melhorar a indexação, estruturar URLs adequadas, aumentar a velocidade do site e corrigir erros de SEO. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ Táticas Avançadas</h3><p class="text-gray-600" data-v-acf25065> Utilize hacks e estratégias avançadas para melhorar o tráfego orgânico rapidamente. </p></div><div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><h3 class="text-xl font-bold mb-2" data-v-acf25065>✅ SEO para YouTube e Redes Sociais</h3><p class="text-gray-600" data-v-acf25065> Aprenda como otimizar seus vídeos e publicações para alcançar mais visualizações e engajamento. </p></div></div></section><section class="py-12 px-6 max-w-5xl mx-auto" data-v-acf25065><h2 class="text-3xl font-bold text-center text-gray-700" data-v-acf25065>O que você vai aprender?</h2><div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-v-acf25065><div class="p-6 bg-white shadow-md rounded-lg text-center" data-v-acf25065><span class="text-blue-600 text-2xl font-bold" data-v-acf25065>1</span><p class="mt-2" data-v-acf25065>SEO On-Page e Off-Page</p></div><div class="p-6 bg-white shadow-md rounded-lg text-center" data-v-acf25065><span class="text-blue-600 text-2xl font-bold" data-v-acf25065>2</span><p class="mt-2" data-v-acf25065>Técnicas avançadas de palavras-chave</p></div><div class="p-6 bg-white shadow-md rounded-lg text-center" data-v-acf25065><span class="text-blue-600 text-2xl font-bold" data-v-acf25065>3</span><p class="mt-2" data-v-acf25065>Estratégias eficazes de Link Building</p></div><div class="p-6 bg-white shadow-md rounded-lg text-center" data-v-acf25065><span class="text-blue-600 text-2xl font-bold" data-v-acf25065>4</span><p class="mt-2" data-v-acf25065>Evite penalizações do Google</p></div></div></section><section class="py-12 bg-gray-100 text-center" data-v-acf25065><h2 class="text-3xl font-semibold" data-v-acf25065>Para quem é este e-book?</h2><p class="mt-4 text-lg max-w-2xl mx-auto" data-v-acf25065> Ideal para empreendedores, criadores de conteúdo e profissionais de marketing que desejam dominar o SEO! </p></section><section class="py-12 px-6 max-w-9xl mx-auto text-center" data-v-acf25065><h2 class="text-3xl font-bold text-gray-700" data-v-acf25065>O que nossos leitores dizem?</h2><div class="mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-3" data-v-acf25065><!--[-->`);
+      ssrRenderList(testimonials, (testimonial, index) => {
+        _push(`<div class="p-6 bg-white rounded-lg shadow-md" data-v-acf25065><p class="italic text-gray-600" data-v-acf25065>&quot;${ssrInterpolate(testimonial.text)}&quot;</p><p class="mt-3 text-sm font-semibold text-gray-900" data-v-acf25065>- ${ssrInterpolate(testimonial.name)}</p></div>`);
+      });
+      _push(`<!--]--></div></section><section class="py-12 bg-gray-100" data-v-acf25065><h2 class="text-3xl font-semibold text-center" data-v-acf25065>Perguntas Frequentes (FAQs)</h2><div class="mt-10 max-w-4xl mx-auto space-y-6" data-v-acf25065><details class="group" data-v-acf25065><summary class="flex justify-between items-center p-4 bg-white rounded-lg shadow-md cursor-pointer text-lg font-medium group-hover:bg-gray-50" data-v-acf25065> Como o e-book será entregue? <span class="transition-transform transform group-open:rotate-180" data-v-acf25065>▲</span></summary><div class="mt-2 px-4 text-gray-600" data-v-acf25065> Após a compra, você será redirecionado para a página do ebook onde poderá fazer o download. </div></details><details class="group" data-v-acf25065><summary class="flex justify-between items-center p-4 bg-white rounded-lg shadow-md cursor-pointer text-lg font-medium group-hover:bg-gray-50" data-v-acf25065> Posso acessar o ebook no celular? <span class="transition-transform transform group-open:rotate-180" data-v-acf25065>▲</span></summary><div class="mt-2 px-4 text-gray-600" data-v-acf25065> Sim! O e-book está em formato PDF e pode ser acessado em qualquer dispositivo, incluindo celulares, tablets e computadores. </div></details><details class="group" data-v-acf25065><summary class="flex justify-between items-center p-4 bg-white rounded-lg shadow-md cursor-pointer text-lg font-medium group-hover:bg-gray-50" data-v-acf25065> O conteúdo é indicado para iniciantes? <span class="transition-transform transform group-open:rotate-180" data-v-acf25065>▲</span></summary><div class="mt-2 px-4 text-gray-600" data-v-acf25065> Sim! O e-book cobre desde os fundamentos básicos até técnicas avançadas de SEO, ideal para todos os níveis. </div></details><details class="group" data-v-acf25065><summary class="flex justify-between items-center p-4 bg-white rounded-lg shadow-md cursor-pointer text-lg font-medium group-hover:bg-gray-50" data-v-acf25065> O pagamento é seguro? <span class="transition-transform transform group-open:rotate-180" data-v-acf25065>▲</span></summary><div class="mt-2 px-4 text-gray-600" data-v-acf25065> Claro! A transação é processada por uma plataforma confiável, garantindo segurança em todas as etapas do pagamento. </div></details></div></section><footer class="py-16 text-center bg-blue-600 text-white" data-v-acf25065><h2 class="text-4xl font-bold" data-v-acf25065>Pronto para alavancar seus resultados?</h2><p class="mt-4 text-lg" data-v-acf25065> Clique no botão abaixo e adquira agora mesmo seu e-book! </p><a${ssrRenderAttr("href", paymentLink)} class="mt-8 inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg shadow-lg text-lg hover:bg-gray-200 hover:scale-105 transition transform" data-v-acf25065> Comprar Agora por R$ ${ssrInterpolate(price)}</a></footer></div><!--]-->`);
+    };
+  }
+});
+const _sfc_setup$3 = _sfc_main$3.setup;
+_sfc_main$3.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/GuideSeo.vue");
+  return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
+};
+const GuideSeo = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-acf25065"]]);
+const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: GuideSeo
+}, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$2 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Home",
   __ssrInlineRender: true,
   props: {
@@ -1248,11 +1307,11 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Home.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __vite_glob_0_14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$2
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main$1 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main$1 = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "Hosting",
   __ssrInlineRender: true,
   setup(__props) {
@@ -1350,11 +1409,11 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/Hosting.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main$1
 }, Symbol.toStringTag, { value: "Module" }));
-const _sfc_main = /* @__PURE__ */ Object.assign({ layout: _sfc_main$9 }, {
+const _sfc_main = /* @__PURE__ */ Object.assign({ layout: _sfc_main$a }, {
   __name: "PostShow",
   __ssrInlineRender: true,
   props: {
@@ -1414,7 +1473,7 @@ _sfc_main.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("resources/js/Pages/site/PostShow.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_glob_0_16 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const __vite_glob_0_17 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: _sfc_main
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1754,7 +1813,7 @@ createServer(
     page,
     render: renderToString,
     resolve: (name) => {
-      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Teste.vue": __vite_glob_0_0, "./Pages/admin/Dashboard.vue": __vite_glob_0_1, "./Pages/admin/PostCreate.vue": __vite_glob_0_2, "./Pages/admin/PostEdit.vue": __vite_glob_0_3, "./Pages/admin/Posts.vue": __vite_glob_0_4, "./Pages/admin/UserCreate.vue": __vite_glob_0_5, "./Pages/admin/UserEdit.vue": __vite_glob_0_6, "./Pages/admin/Users.vue": __vite_glob_0_7, "./Pages/auth/Login.vue": __vite_glob_0_8, "./Pages/auth/Register.vue": __vite_glob_0_9, "./Pages/site/About.vue": __vite_glob_0_10, "./Pages/site/Blog.vue": __vite_glob_0_11, "./Pages/site/Contact.vue": __vite_glob_0_12, "./Pages/site/Development.vue": __vite_glob_0_13, "./Pages/site/Home.vue": __vite_glob_0_14, "./Pages/site/Hosting.vue": __vite_glob_0_15, "./Pages/site/PostShow.vue": __vite_glob_0_16 });
+      const pages = /* @__PURE__ */ Object.assign({ "./Pages/Teste.vue": __vite_glob_0_0, "./Pages/admin/Dashboard.vue": __vite_glob_0_1, "./Pages/admin/PostCreate.vue": __vite_glob_0_2, "./Pages/admin/PostEdit.vue": __vite_glob_0_3, "./Pages/admin/Posts.vue": __vite_glob_0_4, "./Pages/admin/UserCreate.vue": __vite_glob_0_5, "./Pages/admin/UserEdit.vue": __vite_glob_0_6, "./Pages/admin/Users.vue": __vite_glob_0_7, "./Pages/auth/Login.vue": __vite_glob_0_8, "./Pages/auth/Register.vue": __vite_glob_0_9, "./Pages/site/About.vue": __vite_glob_0_10, "./Pages/site/Blog.vue": __vite_glob_0_11, "./Pages/site/Contact.vue": __vite_glob_0_12, "./Pages/site/Development.vue": __vite_glob_0_13, "./Pages/site/GuideSeo.vue": __vite_glob_0_14, "./Pages/site/Home.vue": __vite_glob_0_15, "./Pages/site/Hosting.vue": __vite_glob_0_16, "./Pages/site/PostShow.vue": __vite_glob_0_17 });
       let page2 = pages[`./Pages/${name}.vue`];
       page2.default.layout = page2.default.layout || ((page3) => h$1(page3));
       return page2;
