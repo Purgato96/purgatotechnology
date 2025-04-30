@@ -4,8 +4,8 @@ import Guest from '@/Layouts/Guest.vue'
 defineOptions({layout: Guest});
 import {ref} from 'vue';
 
-const price = '19,90';
-const paymentLink = 'https://pay.kiwify.com.br/fR9OGC9';
+const price = '24,99';
+const paymentLink = 'https://www.amazon.com.br/dp/B0F61T3F1P';
 const testimonials = [
     {name: 'João Silva', text: 'Este e-book mudou completamente minha estratégia de SEO! Resultados incríveis.'},
     {name: 'Maria Oliveira', text: 'Muito conteúdo prático e bem explicado. Vale cada centavo!'},
@@ -26,7 +26,7 @@ const testimonials = [
         <!-- Hero Section -->
         <header class="text-center py-16 bg-gradient-to-br from-blue-600 to-sky-400 text-white">
             <h1 class="text-5xl font-extrabold tracking-tight leading-tight">
-                Guia Completo de SEO: Domine as Estratégias para Conquistar o Topo do Google
+              SEO Para Quem Faz: Um Guia Direto e Completo para Programadores, Técnicos e Empreendedores
             </h1>
             <p class="mt-4 text-lg font-light max-w-3xl mx-auto">
                 Aprenda as melhores estratégias de SEO para dominar os buscadores e aumentar sua presença online.
