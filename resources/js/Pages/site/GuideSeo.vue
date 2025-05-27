@@ -163,7 +163,8 @@ const testimonials = [
                         <span class="transition-transform transform group-open:rotate-180">▲</span>
                     </summary>
                     <div class="mt-2 px-4 text-gray-600">
-                        Após a compra, você será redirecionado para a página do ebook onde poderá fazer o download.
+                       Ao acessar o link você será redirecionado para a página do Amazon Kindle. Após a compra estará disponível 
+			em sua biblioteca.
                     </div>
                 </details>
 
@@ -176,8 +177,8 @@ const testimonials = [
                         <span class="transition-transform transform group-open:rotate-180">▲</span>
                     </summary>
                     <div class="mt-2 px-4 text-gray-600">
-                        Sim! O e-book está em formato PDF e pode ser acessado em qualquer dispositivo, incluindo
-                        celulares, tablets e computadores.
+                        Sim! O e-book está em formato kindle e pode ser acessado em qualquer dispositivo, incluindo
+                        celulares, tablets e computadores. Só baixar o app!
                     </div>
                 </details>
 
