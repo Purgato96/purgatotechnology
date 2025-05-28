@@ -78,10 +78,8 @@ class PostController extends Controller {
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($slug)
+    public function edit(Post $post)
     {
-        $post = Post::where('slug', $slug)->firstOrFail();
-
         return Inertia::render('admin/PostEdit', [
             'post' => $post,
             'authors' => User::all(),
