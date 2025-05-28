@@ -119,8 +119,52 @@ const imageUrl = '/resources/img/site/mockup-site.png';
     <!-- Serviços de Hospedagem -->
     <Plans/>
 
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">O que eu faço na prática?</h2>
+            <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
+                Ofereço soluções digitais completas para empresas e profissionais que querem ir além do básico. Transformo ideias em resultados através de desenvolvimento web, métricas inteligentes e estratégias de performance orientadas por dados e inteligência artificial.
+            </p>
+            <div class="grid gap-8 md:grid-cols-2">
+
+                <!-- Desenvolvimento -->
+                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-red-600 mb-3">Desenvolvimento Web Estratégico</h3>
+                    <p class="text-gray-700">
+                        Criação de sites personalizados, rápidos e responsivos usando tecnologias modernas. Cada projeto é pensado para representar sua marca com qualidade e gerar conversão desde o primeiro clique.
+                    </p>
+                </div>
+
+                <!-- Gestão de Métricas -->
+                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-yellow-600 mb-3">Gestão de Métricas</h3>
+                    <p class="text-gray-700">
+                        Configuro ferramentas como Google Analytics, Tag Manager e Pixel do Facebook para rastrear o comportamento do usuário e tomar decisões baseadas em dados reais.
+                    </p>
+                </div>
+
+                <!-- Performance e Resultados -->
+                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-green-600 mb-3">Performance e Foco em Resultados</h3>
+                    <p class="text-gray-700">
+                        Otimização técnica e estratégica do seu site para melhorar a velocidade, a taxa de conversão e a experiência do usuário. Tudo com foco no que realmente importa: gerar resultados.
+                    </p>
+                </div>
+
+                <!-- Otimização para Pesquisas com IA -->
+                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Otimização para Pesquisas com IA</h3>
+                    <p class="text-gray-700">
+                        Posiciono seu site não só no Google, mas também nas novas inteligências artificiais de busca, como ChatGPT, Bard e Perplexity, com foco em SEO técnico e estrutura de dados avançada.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!--  Blog  -->
-    <div class="bg-white py-24 sm:py-32">
+    <div class="bg-gray-50 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="text-center mx-auto  lg:mx-0">
                 <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Blog</h2>
