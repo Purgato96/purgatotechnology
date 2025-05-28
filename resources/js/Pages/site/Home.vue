@@ -58,7 +58,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                         Technology</h1>
                     <div class="mt-8 text-left text-lg font-medium dark:text-sky-300 sm:text-xl/8">
                         <h4 class="text-3xl font-bold tracking-tight text-[#57789c]  dark:text-sky-300 sm:text-2xl">
-                            Criamos site que guiam a sua empresa pro resultado digital que você precisa.</h4>
+                            Criamos sites que guiam a sua empresa pro resultado digital que você precisa.</h4>
                         <p class="mt-4 text-xl text-[#57789c] dark:text-sky-300 sm:text-lg">
                             Desenvolvimento, gestão, performance, segurança para o seu negócio crescer sem limites.
                         </p>
