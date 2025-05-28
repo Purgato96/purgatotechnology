@@ -5,72 +5,39 @@
                 Nossos Planos e Serviços
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center text-sm md:text-base">
-                <!-- Coluna dos recursos -->
+            <!-- Mobile: versão empilhada -->
+            <div class="grid grid-cols-1 gap-6 md:hidden">
+                <div v-for="(plano, index) in planos" :key="index" class="bg-white rounded-2xl shadow p-6">
+                    <h3 :class="plano.classe + ' text-xl font-bold mb-2'">{{ plano.nome }}</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li v-for="(item, i) in servicos" :key="i">
+                            <span class="font-medium">{{ item }}:</span>
+                            <span>{{ plano.incluso[i] ? '✅' : '❌' }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Desktop: versão comparativa em colunas -->
+            <div class="hidden md:grid md:grid-cols-4 gap-6 text-sm md:text-base">
+                <!-- Coluna dos serviços -->
                 <div class="bg-white rounded-2xl shadow p-6 font-bold text-gray-700 text-left">
                     <p class="mb-4 text-lg">Serviços inclusos:</p>
                     <ul class="space-y-3 text-gray-600 font-normal">
-                        <li>Hospedagem Cloud</li>
-                        <li>Alterações de Conteúdo</li>
-                        <li>Manutenção e Atualização</li>
-                        <li>Google Meu Negócio</li>
-                        <li>Google Analytics</li>
-                        <li>Google Search Console</li>
-                        <li>Relatórios</li>
-                        <li>Otimização para Google(SEO)</li>
-                        <li>Otimização para IA (ChatGPT)</li>
-                        <li>Suporte Personalizado</li>
+                        <li v-for="(item, i) in servicos" :key="i">{{ item }}</li>
                     </ul>
                 </div>
 
-                <!-- Plano Essencial -->
-                <div class="bg-gray-100 rounded-2xl shadow p-6">
-                    <h3 class="text-xl font-bold text-red-600 mb-2">Essencial</h3>
-                    <ul class="space-y-3">
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                    </ul>
-                </div>
-
-                <!-- Plano Profissional -->
-                <div class="bg-white rounded-2xl shadow p-6 border border-yellow-500">
-                    <h3 class="text-xl font-bold text-yellow-600 mb-2">Profissional</h3>
-                    <ul class="space-y-3">
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                        <li>❌</li>
-                    </ul>
-                </div>
-
-                <!-- Plano Supremo -->
-                <div class="bg-white rounded-2xl shadow p-6 border border-green-500">
-                    <h3 class="text-xl font-bold text-green-600 mb-2">Supremo</h3>
-                    <ul class="space-y-3">
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
-                        <li>✅</li>
+                <!-- Colunas dos planos -->
+                <div
+                    v-for="(plano, index) in planos"
+                    :key="index"
+                    class="bg-white rounded-2xl shadow p-6 border"
+                    :class="plano.borda"
+                >
+                    <h3 :class="plano.classe + ' text-xl font-bold mb-2'">{{ plano.nome }}</h3>
+                    <ul class="space-y-3 text-center">
+                        <li v-for="(inc, i) in plano.incluso" :key="i">{{ inc ? '✅' : '❌' }}</li>
                     </ul>
                 </div>
             </div>
@@ -88,5 +55,37 @@
 </template>
 
 <script setup>
-// Nenhum script necessário por enquanto
+const servicos = [
+    'Hospedagem Cloud',
+    'Alterações de Conteúdo',
+    'Manutenção e Atualização',
+    'Google Meu Negócio',
+    'Google Analytics',
+    'Google Search Console',
+    'Relatórios',
+    'Otimização para Google (SEO)',
+    'Otimização para IA (ChatGPT)',
+    'Suporte Personalizado'
+]
+
+const planos = [
+    {
+        nome: 'Essencial',
+        classe: 'text-red-600',
+        borda: 'border-gray-200',
+        incluso: [true, true, true, false, false, false, false, false, false, false]
+    },
+    {
+        nome: 'Profissional',
+        classe: 'text-yellow-600',
+        borda: 'border-yellow-500',
+        incluso: [true, true, true, true, true, false, false, false, false, false]
+    },
+    {
+        nome: 'Supremo',
+        classe: 'text-green-600',
+        borda: 'border-green-500',
+        incluso: [true, true, true, true, true, true, true, true, true, true]
+    }
+]
 </script>
