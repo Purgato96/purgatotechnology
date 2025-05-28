@@ -1,6 +1,6 @@
 <script setup>
 import GuestAdmin from '@/Layouts/GuestAdmin.vue';
-import { Head, useRouter } from '@inertiajs/vue3'; // Importa Head e useRouter
+import { Head,  } from '@inertiajs/vue3'; // Importa Head e useRouter
 import Pagination from '@/Components/Pagination.vue';
 
 defineOptions({ layout: GuestAdmin });
@@ -9,7 +9,6 @@ const props = defineProps({
     posts: Object,
 });
 
-const router = useRouter();
 
 // Função para excluir post
 const deletePost = (slug) => {
