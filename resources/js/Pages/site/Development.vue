@@ -6,7 +6,7 @@ const tiers = [
     {
         name: 'Desenvolvimento WordPress',
         id: 'tier-hobby',
-        href: 'mailto:contato@purgatotechnology.com.br',
+        href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
         priceMonthly: 'R$1970,00',
         description: "O site perfeito para você está apenas começando na web.",
         features: [
@@ -21,7 +21,7 @@ const tiers = [
     {
         name: 'Desenvolvimento LIVT',
         id: 'tier-enterprise',
-        href: 'mailto:contato@purgatotechnology.com.br',
+        href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
         priceMonthly: 'R$3170,00',
         description: 'Tenha um site de alta performance com a stack LIVT e destaque-se entre os melhores da web.',
         features: [
@@ -37,6 +37,21 @@ const tiers = [
             'Menos Dependência de Plugins'
         ],
         featured: true,
+    },
+    {
+        name: 'Desenvolvimento WordPress',
+        id: 'tier-hobby',
+        href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
+        priceMonthly: 'R$1970,00',
+        description: "O site perfeito para você está apenas começando na web.",
+        features: [
+            'Fácil Gerenciamento ',
+            'Grande Ecossistema ',
+            'SEO Amigável ',
+            'Baixo Custo Inicial ',
+            'Comunidade Ativa '
+        ],
+        featured: false,
     },
 ]
 import Guest from '@/Layouts/Guest.vue'
@@ -67,7 +82,7 @@ defineOptions({ layout: Guest });
             Escolha um plano acessível que inclua os melhores recursos para envolver seu público, fidelizar o cliente e
             impulsionar as vendas.</p>
         <div
-            class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
+            class="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-3">
             <div v-for="(tier, tierIdx) in tiers" :key="tier.id"
                  :class="[tier.featured ? 'relative bg-gray-900 shadow-2xl' : 'bg-white/60 dark:bg-white sm:mx-8 lg:mx-0', tier.featured ? '' : tierIdx === 0 ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl' : 'sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none', 'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10']">
                 <h3 :id="tier.id"

@@ -2,6 +2,7 @@
 import Guest from '@/Layouts/Guest.vue'
 defineOptions({ layout: Guest });
 import {ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon} from '@heroicons/vue/24/outline'
+import Plans from "@/Components/Plans.vue";
 // Serviços de Hospedagem
 const features = [
     {
@@ -33,6 +34,7 @@ const features = [
 defineProps({
     posts: Object // `posts` agora é um objeto de paginação
 });
+const imageUrl = '/resources/img/site/mockup-site.png';
 </script>
 
 
@@ -48,23 +50,23 @@ defineProps({
     </Head>
     <!-- Hero Principal -->
     <div class="bg-white dark:bg-black">
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-            <div class="absolute transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-            </div>
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                <div class="text-center">
+        <div class="grid grid-cols-2 gap-2 p-6">
+            <div class="mx-auto max-w-2xl py-16 sm:py-32 lg:py-24">
+                <div class="flex-column">
                     <h1 class="text-5xl font-semibold tracking-tight text-balance text-[#57789c] dark:text-sky-600 sm:text-7xl">
                         Purgato
                         Technology</h1>
-                    <div class="mt-8 text-center text-lg font-medium dark:text-sky-300 sm:text-xl/8">
+                    <div class="mt-8 text-left text-lg font-medium dark:text-sky-300 sm:text-xl/8">
                         <h4 class="text-3xl font-bold tracking-tight text-[#57789c]  dark:text-sky-300 sm:text-2xl">
-                            Soluções Web & Cloud
-                            Sob Medida</h4>
+                            Criamos site que guiam a sua empresa pro resultado digital que você precisa.</h4>
                         <p class="mt-4 text-xl text-[#57789c] dark:text-sky-300 sm:text-lg">
-                            Desenvolvimento, hospedagem e tecnologia para o seu negócio crescer sem limites.
+                            Desenvolvimento, gestão, performance, segurança para o seu negócio crescer sem limites.
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="flex justify-center align-content-center">
+                <img :src="imageUrl" alt="Desenvolvimento Web - Purgato Technology" width="550" height="550">
             </div>
             <div
                 class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -75,34 +77,53 @@ defineProps({
             </div>
         </div>
     </div>
-    <!-- Serviços de Hospedagem -->
-    <div class="bg-white dark:bg-black py-12 sm:py-32">
-        <div class="mx-auto max-w-7xl px-12 lg:px-16">
-            <div class="mx-auto max-w-2xl lg:text-center">
-                <h2 class="text-base/7 font-semibold text-[#57789c] dark:text-emerald-600">Hospedagem de Alta
-                    Performance</h2>
-                <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#57789c] dark:text-emerald-300 sm:text-5xl lg:text-balance">
-                    Seu site mais rápido, seguro e sempre no ar!</p>
-                <p class="mt-6 text-lg/8 text-[#57789c] dark:text-emerald-600">Infraestrutura poderosa, escalável e
-                    confiável para garantir
-                    a melhor experiência para seus clientes.</p>
-            </div>
-            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-                <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                    <div v-for="feature in features" :key="feature.name" class="relative pl-16">
-                        <dt class="text-base/7 font-semibold text-[#2d3e50] dark:text-emerald-300">
-                            <div
-                                class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-[#2d3e50]  dark:bg-emerald-600">
-                                <component :is="feature.icon" class="size-6 text-white" aria-hidden="true"/>
-                            </div>
-                            {{ feature.name }}
-                        </dt>
-                        <dd class="mt-2 text-base/7 text-[#57789c] dark:text-emerald-600">{{ feature.description }}</dd>
-                    </div>
-                </dl>
+
+    <!--  LP | Site Institucional | One-Page  -->
+
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10">Qual tipo de site ideal para você?</h2>
+            <div class="grid gap-10 md:grid-cols-4">
+
+                <!-- Landing Page -->
+                <div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-red-600 mb-4">Landing Page (LP)</h3>
+                    <p class="text-gray-700">
+                        Página focada em conversão, usada para divulgar um serviço, produto ou campanha específica. Ideal para anúncios, lançamentos e capturas de leads. Design objetivo e estratégico para gerar ações rápidas.
+                    </p>
+                </div>
+
+                <!-- Site Institucional -->
+                <div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-yellow-600 mb-4">Site Institucional</h3>
+                    <p class="text-gray-700">
+                        Site básico que apresenta sua empresa, missão, serviços, equipe e formas de contato. Ideal para fortalecer a autoridade da marca e criar presença digital sólida e profissional.
+                    </p>
+                </div>
+
+                <!-- One Page -->
+                <div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-green-600 mb-4">One Page</h3>
+                    <p class="text-gray-700">
+                        Estrutura enxuta e direta em uma única página com navegação fluída por seções. Ideal para quem quer presença online rápida, elegante e sem muitas páginas internas.
+                    </p>
+                </div>
+
+                <!-- Site Institucional + Blog -->
+                <div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-lg transition-all">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Site Institucional + Blog</h3>
+                    <p class="text-gray-700">
+                        Site completo que apresenta sua empresa, missão, serviços, equipe e formas de contato e blog. Ideal para empresas ou criadores que querem atrair tráfego, educar o público e gerar leads
+                    </p>
+                </div>
+
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Serviços de Hospedagem -->
+    <Plans/>
+
     <!--  Blog  -->
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">

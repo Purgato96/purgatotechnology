@@ -6,20 +6,15 @@ import {
     DialogPanel,
     PopoverGroup,
 } from '@headlessui/vue'
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { Bars3Icon, XMarkIcon} from '@heroicons/vue/24/outline'
 
 const mobileMenuOpen = ref(false)
 
-const services = [
-    { name: 'Desenvolvimento Web', href: '#' },
-    { name: 'Hospedagem Cloud Personalizada', href: '#' },
-    { name: 'Consultoria de SEO', href: '#' },
-]
 const imageUrl = '/resources/img/site/logo-purgato-technology.png';
 
 </script>
 <template>
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav class="mx-auto flex max-w-7xl items-center justify-betweenlg:px-8" aria-label="Global">
             <!-- LOGO -->
             <div class="flex lg:flex-1">
                 <a :href="route('site.home')"><img class="h-17 w-auto" :src="imageUrl" alt="Purgato Technology" /></a>

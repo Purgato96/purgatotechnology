@@ -11,7 +11,7 @@
     </main>
 
 <!--  Footer  -->
-    <footer class="bg-[#57789c] text-white text-center flex justify-center py-4" >
+    <footer class="bg-[#57789c] text-white text-center flex justify-center py-2" >
         <Footer/>
     </footer>
 </template>
