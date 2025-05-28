@@ -50,30 +50,25 @@ const imageUrl = '/resources/img/site/mockup-site.png';
     </Head>
     <!-- Hero Principal -->
     <div class="bg-white dark:bg-black">
-        <div class="grid grid-cols-2 gap-2 p-6">
-            <div class="mx-auto max-w-2xl py-16 sm:py-32 lg:py-24">
-                <div class="flex-column">
-                    <h1 class="text-5xl font-semibold tracking-tight text-balance text-[#57789c] dark:text-sky-600 sm:text-7xl">
-                        Purgato
-                        Technology</h1>
-                    <div class="mt-8 text-left text-lg font-medium dark:text-sky-300 sm:text-xl/8">
-                        <h4 class="text-3xl font-bold tracking-tight text-[#57789c]  dark:text-sky-300 sm:text-2xl">
-                            Criamos sites que guiam a sua empresa pro resultado digital que você precisa.</h4>
-                        <p class="mt-4 text-xl text-[#57789c] dark:text-sky-300 sm:text-lg">
-                            Desenvolvimento, gestão, performance, segurança para o seu negócio crescer sem limites.
-                        </p>
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Texto -->
+            <div class="mx-auto max-w-2xl py-10 sm:py-16 md:py-24 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#57789c] dark:text-sky-600">
+                    Purgato Technology
+                </h1>
+                <div class="mt-6 text-lg font-medium dark:text-sky-300">
+                    <h4 class="text-2xl md:text-3xl font-bold text-[#57789c] dark:text-sky-300">
+                        Criamos sites que guiam a sua empresa pro resultado digital que você precisa.
+                    </h4>
+                    <p class="mt-4 text-base md:text-xl text-[#57789c] dark:text-sky-300">
+                        Desenvolvimento, gestão, performance, segurança para o seu negócio crescer sem limites.
+                    </p>
                 </div>
             </div>
-            <div class="flex justify-center align-content-center">
-                <img :src="imageUrl" alt="Desenvolvimento Web - Purgato Technology" width="550" height="550">
-            </div>
-            <div
-                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                aria-hidden="true">
-                <div
-                    class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"/>
+
+            <!-- Imagem -->
+            <div class="flex justify-center items-center">
+                <img :src="imageUrl" alt="Desenvolvimento Web - Purgato Technology" class="w-full max-w-[400px] md:max-w-[550px] h-auto">
             </div>
         </div>
     </div>
