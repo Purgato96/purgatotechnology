@@ -1,61 +1,55 @@
-
 <script setup>
 import {CheckIcon} from '@heroicons/vue/20/solid'
 
 const tiers = [
     {
-        name: 'Desenvolvimento WordPress',
+        name: 'Landing Page (LP) | One Page',
         id: 'tier-hobby',
         href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
-        priceMonthly: 'R$1970,00',
-        description: "O site perfeito para você está apenas começando na web.",
+        description: "Uma página única, direta e poderosa. Focada 100% em conversão: ideal para divulgar serviços, produtos, eventos ou campanhas específicas. Estruturada com copywriting estratégico, layout profissional e chamada para ação otimizada.",
         features: [
-            'Fácil Gerenciamento ',
-            'Grande Ecossistema ',
-            'SEO Amigável ',
-            'Baixo Custo Inicial ',
-            'Comunidade Ativa '
+            'Página com design focado em conversão',
+            'Hospedagem Cloud Premium',
+            'Alterações de conteúdo sob demanda',
+            'Manutenção e atualizações contínuas'
         ],
         featured: false,
     },
     {
-        name: 'Desenvolvimento LIVT',
+        name: 'Site Institucional + Blog',
         id: 'tier-enterprise',
         href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
-        priceMonthly: 'R$3170,00',
-        description: 'Tenha um site de alta performance com a stack LIVT e destaque-se entre os melhores da web.',
+        description: 'Tudo do plano Institucional, com o poder do conteúdo. Publique artigos, gere autoridade e conquiste o Google. Ideal para negócios que querem crescer de forma orgânica, educar o público e gerar novos leads.',
         features: [
-            'Alta Performance',
-            'Infraestrutura Escalável',
-            'Segurança Avançada',
-            'Total Personalização',
-            'Maior Controle',
-            'Melhor Experiência do Usuário',
-            'Menor Tempo de Carregamento',
-            'SEO Avançado',
-            'Integrações Personalizadas',
-            'Menos Dependência de Plugins'
+            'Tudo do plano Institucional',
+            'Blog integrado com layout otimizado',
+            'Suporte personalizado',
+            'Estratégia de conteúdo para SEO',
+            'Otimização para buscas e para IA (ChatGPT, Gemini etc)',
+            'Relatórios de desempenho e insights mensais',
+
         ],
         featured: true,
     },
     {
-        name: 'Desenvolvimento WordPress',
+        name: 'Site Institucional',
         id: 'tier-hobby',
         href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
-        priceMonthly: 'R$1970,00',
-        description: "O site perfeito para você está apenas começando na web.",
+        description: "Apresente sua empresa de forma profissional, com uma estrutura clara e confiável. Tenha uma presença sólida na internet, mostre seus serviços, equipe, missão e canais de contato.",
         features: [
-            'Fácil Gerenciamento ',
-            'Grande Ecossistema ',
-            'SEO Amigável ',
-            'Baixo Custo Inicial ',
-            'Comunidade Ativa '
+            'Website completo e responsivo',
+            'Hospedagem Cloud Premium',
+            'Google Meu Negócio configurado',
+            'Integração com Google Analytics e Search Console',
+            'Alterações de conteúdo',
+            'Manutenção e atualizações regulares'
         ],
         featured: false,
     },
 ]
 import Guest from '@/Layouts/Guest.vue'
-defineOptions({ layout: Guest });
+
+defineOptions({layout: Guest});
 </script>
 
 <template>
@@ -88,13 +82,6 @@ defineOptions({ layout: Guest });
                 <h3 :id="tier.id"
                     :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base/7 font-semibold']">
                     {{ tier.name }}</h3>
-                <p class="mt-4 flex items-baseline gap-x-2">
-                    <span
-                        :class="[tier.featured ? 'text-white' : 'text-gray-900', 'text-5xl font-semibold tracking-tight']"> A partir de {{
-                            tier.priceMonthly
-                        }}</span>
-                    <span :class="[tier.featured ? 'text-gray-400' : 'text-gray-500', 'text-base']">/Mês</span>
-                </p>
                 <p :class="[tier.featured ? 'text-gray-300' : 'text-gray-600', 'mt-6 text-base/7']">{{
                         tier.description
                     }}</p>
@@ -107,7 +94,8 @@ defineOptions({ layout: Guest });
                     </li>
                 </ul>
                 <a :href="tier.href" :aria-describedby="tier.id"
-                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero Esse</a>
+                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero
+                    Esse</a>
             </div>
         </div>
     </div>

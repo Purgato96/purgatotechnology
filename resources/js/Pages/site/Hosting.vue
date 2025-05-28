@@ -8,8 +8,7 @@ const tiers = [
     {
         name: 'Cloud Compartilhado',
         id: 'tier-hobby',
-        href: 'https://cloud.purgatotechnology.com.br/register',
-        priceMonthly: 'R$59,90',
+        href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
         description: "O plano perfeito se você está apenas começando na web.",
         features: [
             'Backup diário',
@@ -17,7 +16,6 @@ const tiers = [
             'Desempenho',
             'Até 5 E-mails',
             'Suporte 24/7',
-            'WordPress | WooCommerce',
             'Até 100.000 Visualizações por mês'
         ],
         featured: false,
@@ -25,8 +23,7 @@ const tiers = [
     {
         name: 'Cloud Dedicado',
         id: 'tier-enterprise',
-        href: 'https://cloud.purgatotechnology.com.br/register',
-        priceMonthly: 'R$149,90',
+        href: 'https://wa.me/5519993492828?text=Olá%20quero%20saber%20mais%20sobre%20os%20planos%20da%20Purgato%20Technology',
         description: 'A plano para quem quer estar entre os melhores na web.',
         features: [
             'Backup diário',
@@ -39,7 +36,6 @@ const tiers = [
             '100 GB CDN',
             'Cache Premium',
             'Suporte 24/7',
-            'Laravel | Vue | Magento',
             '+100.000 Visualizações por mês'
         ],
         featured: true,
@@ -77,13 +73,6 @@ const tiers = [
                 <h3 :id="tier.id"
                     :class="[tier.featured ? 'text-indigo-400' : 'text-indigo-600', 'text-base/7 font-semibold']">
                     {{ tier.name }}</h3>
-                <p class="mt-4 flex items-baseline gap-x-2">
-                    <span
-                        :class="[tier.featured ? 'text-white' : 'text-gray-900', 'text-5xl font-semibold tracking-tight']"> A partir de {{
-                            tier.priceMonthly
-                        }}</span>
-                    <span :class="[tier.featured ? 'text-gray-400' : 'text-gray-500', 'text-base']">/Mês</span>
-                </p>
                 <p :class="[tier.featured ? 'text-gray-300' : 'text-gray-600', 'mt-6 text-base/7']">{{
                         tier.description
                     }}</p>
@@ -96,7 +85,7 @@ const tiers = [
                     </li>
                 </ul>
                 <a :href="tier.href" :aria-describedby="tier.id"
-                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Quero Esse</a>
+                   :class="[tier.featured ? 'bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500' : 'text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">Conslte Valores</a>
             </div>
         </div>
     </div>
