@@ -14,16 +14,7 @@ class UserSeeder extends Seeder {
      * Run the database seeds.
      */
     public function run(): void {
-        DB::table('users')->insert([
-            'name' => 'Matheus Purgato',
-            'email' => 'matheuspurgato@gmail.com',
-            'password' => Hash::make('Teste$123*'),
-            'email_verified_at' => now(),
-            'remember_token' => Str::random(10),
-            'role' => 'admin',
-            'position' => 'Desenvolvedor Laravel e Especialista em SEO',
-            'created_at' => now(),
-            'updated_at' => now(),
+      //
         ]);
 
         //User::factory(50)->create();
