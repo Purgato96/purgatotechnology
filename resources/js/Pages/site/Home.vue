@@ -178,50 +178,6 @@ const imageUrl = '/resources/img/site/mockup-site.png';
     <!-- Serviços de Hospedagem -->
     <Plans/>
 
-    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">O que eu faço na prática?</h2>
-            <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-12">
-                Ofereço soluções digitais completas para empresas e profissionais que querem ir além do básico. Transformo ideias em resultados através de desenvolvimento web, métricas inteligentes e estratégias de performance orientadas por dados e inteligência artificial.
-            </p>
-            <div class="grid gap-8 md:grid-cols-2">
-
-                <!-- Desenvolvimento -->
-                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-red-600 mb-3">Desenvolvimento Web Estratégico</h3>
-                    <p class="text-gray-700">
-                        Criação de sites personalizados, rápidos e responsivos usando tecnologias modernas. Cada projeto é pensado para representar sua marca com qualidade e gerar conversão desde o primeiro clique.
-                    </p>
-                </div>
-
-                <!-- Gestão de Métricas -->
-                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-yellow-600 mb-3">Gestão de Métricas</h3>
-                    <p class="text-gray-700">
-                        Configuro ferramentas como Google Analytics, Tag Manager e Pixel do Facebook para rastrear o comportamento do usuário e tomar decisões baseadas em dados reais.
-                    </p>
-                </div>
-
-                <!-- Performance e Resultados -->
-                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-green-600 mb-3">Performance e Foco em Resultados</h3>
-                    <p class="text-gray-700">
-                        Otimização técnica e estratégica do seu site para melhorar a velocidade, a taxa de conversão e a experiência do usuário. Tudo com foco no que realmente importa: gerar resultados.
-                    </p>
-                </div>
-
-                <!-- Otimização para Pesquisas com IA -->
-                <div class="bg-gray-100 rounded-xl p-6 text-left shadow hover:shadow-lg transition-all">
-                    <h3 class="text-xl font-semibold text-purple-700 mb-3">Otimização para Pesquisas com IA</h3>
-                    <p class="text-gray-700">
-                        Posiciono seu site não só no Google, mas também nas novas inteligências artificiais de busca, como ChatGPT, Bard e Perplexity, com foco em SEO técnico e estrutura de dados avançada.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!--  Blog  -->
     <div class="bg-gray-50 py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -262,37 +218,6 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                         </div>
                     </div>
                 </article>
-            </div>
-        </div>
-    </div>
-    <!--  Contato  -->
-    <div class="bg-white dark:bg-black">
-        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-            <div
-                class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-                <svg viewBox="0 0 1024 1024"
-                     class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
-                     aria-hidden="true">
-                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
-                            fill-opacity="0.7"/>
-                    <defs>
-                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                            <stop stop-color="#7775D6"/>
-                            <stop offset="1" stop-color="#E935C1"/>
-                        </radialGradient>
-                    </defs>
-                </svg>
-                <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-                    <h4 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Precisando de
-                        uma Solução Rápida e Eficiente?</h4>
-                    <p class="mt-6 text-lg/8 text-pretty text-gray-300">Estamos prontos para entender suas necessidades
-                        e oferecer as melhores soluções em hospedagem e desenvolvimento. Tire suas dúvidas ou solicite
-                        um orçamento agora mesmo!</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                        <a :href="route('site.contact')"
-                           class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Contate-nos</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
