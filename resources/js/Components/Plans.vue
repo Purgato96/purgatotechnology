@@ -100,7 +100,7 @@
 import { ref } from 'vue'
 
 const servicos = [
-    'Hospedagem Cloud',
+    'Seu Site na Nuvem',
     'Alterações de Conteúdo',
     'Manutenção e Atualização',
     'Google Meu Negócio',
