@@ -76,7 +76,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
     <section class="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">
-                Como eu cuido dos sites que desenvolvo
+                Como cuidamos dos sites que desenvolvemos
             </h2>
 
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -85,7 +85,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-red-600 mb-3">Atualizações Técnicas</h3>
                     <p class="text-gray-700">
-                        Mantenho seu site sempre atualizado com as últimas versões de tecnologias e correções de segurança, garantindo estabilidade e proteção contra falhas e invasões.
+                        Mantemos todos os sites sempre atualizados com as versões mais recentes das tecnologias e com as correções de segurança necessárias, garantindo estabilidade e proteção contínua.
                     </p>
                 </div>
 
@@ -93,7 +93,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-yellow-600 mb-3">Monitoramento de Performance</h3>
                     <p class="text-gray-700">
-                        Verifico periodicamente o desempenho do site (tempo de carregamento, responsividade e estabilidade), otimizando o que for necessário para melhor experiência do usuário.
+                        Monitoramos constantemente o desempenho dos sites (tempo de carregamento, responsividade e estabilidade) e realizamos otimizações para garantir uma experiência fluida ao usuário.
                     </p>
                 </div>
 
@@ -101,7 +101,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-green-600 mb-3">SEO Técnico e IA</h3>
                     <p class="text-gray-700">
-                        Ajustes constantes em SEO técnico, estrutura de dados, sitemap e integração com plataformas de IA para garantir melhor posicionamento no Google e em ferramentas como ChatGPT e Perplexity.
+                        Aplicamos ajustes frequentes em SEO técnico, estrutura de dados, sitemap e integrações com IA, visando melhores resultados nos buscadores e nas novas ferramentas de pesquisa com inteligência artificial.
                     </p>
                 </div>
 
@@ -109,7 +109,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-blue-600 mb-3">Segurança e Backups</h3>
                     <p class="text-gray-700">
-                        Realizo backups periódicos e implemento camadas de segurança (como firewall, autenticação e monitoramento de atividades suspeitas) para proteger seu site e seus dados.
+                        Realizamos backups periódicos e implementamos diversas camadas de segurança — incluindo firewall, autenticação reforçada e monitoramento proativo — para proteger os sites e os dados.
                     </p>
                 </div>
 
@@ -117,7 +117,7 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-purple-700 mb-3">Suporte Contínuo</h3>
                     <p class="text-gray-700">
-                        Fico à disposição para ajustes, atualizações de conteúdo ou melhorias no visual e na usabilidade. O site é seu, mas o cuidado é meu.
+                        Estamos sempre disponíveis para ajustes, melhorias visuais, atualizações de conteúdo e suporte técnico. Nossa prioridade é manter o site em evolução constante.
                     </p>
                 </div>
 
@@ -125,14 +125,13 @@ const imageUrl = '/resources/img/site/mockup-site.png';
                 <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all">
                     <h3 class="text-xl font-semibold text-pink-600 mb-3">Métricas e Integrações</h3>
                     <p class="text-gray-700">
-                        Integro seu site com Google Analytics, Tag Manager, Pixel do Facebook e mais — para você entender como seu público se comporta e tomar decisões com base em dados reais.
+                        Integramos os sites com Google Analytics, Tag Manager, Pixel do Facebook, entre outras ferramentas — oferecendo dados estratégicos para decisões orientadas por métricas reais.
                     </p>
                 </div>
 
             </div>
         </div>
     </section>
-
     <!--  LP | Site Institucional | One-Page  -->
 
     <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
