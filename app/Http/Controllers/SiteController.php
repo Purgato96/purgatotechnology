@@ -11,19 +11,20 @@ class SiteController extends Controller {
     public function index() {
         $posts = Post::with('author')
             ->orderBy('created_at', 'desc')
-            ->paginate(3) // 3 posts por página
-            ->onEachSide(1); // Define quantas páginas vizinhas aparecem nos links
+            ->paginate(3); // 3 posts por página
         return Inertia::render('site/Home', [
             'posts' => $posts->through(fn($post) => [
                 'id' => $post->id,
                 'title' => $post->title,
+                'subtitle' => $post->subtitle,
+                'slug' => $post->slug,
                 'content' => Str::limit(strip_tags($post->content), 100), // Exibir resumo (removendo tags HTML)
                 'created_at' => $post->created_at->format('d/m/Y'),
                 'author' => $post->author ? $post->author->name : 'Anônimo',
                 'author_position' => $post->author ? $post->author->position : 'Escritor',
-                'href' => route('site.blog.show', $post->slug), // Alterado para usar slug
+                'href' => route('site.blog.show', $post->slug), // Agora usa o slug
                 'category' => $post->category, // Se a categoria existir no modelo.
-                'image' => $post->image ? asset("storage/{$post->image}") : null,
+                'image' => $post->image,
             ]),
         ]);
     }
