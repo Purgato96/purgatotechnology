@@ -202,8 +202,8 @@ defineOptions({ layout: GuestLP })
 const imageUrl = '/resources/img/site/how-to-protect-yourself-in-the-age-of-ai.jpg'
 
 const props = defineProps({
-    amazonUrl: { type: String, default: 'www.amazon.com/dp/B0FM4H787T/' },
-    canonicalUrl: { type: String, default: 'www.amazon.com/dp/B0FM4H787T/' },
+    amazonUrl: { type: String, default: 'https://amazon.com/dp/B0FM4H787T/' },
+    canonicalUrl: { type: String, default: 'https://amazon.com/dp/B0FM4H787T/' },
     ogImageUrl: { type: String, default: imageUrl }
 })
 
