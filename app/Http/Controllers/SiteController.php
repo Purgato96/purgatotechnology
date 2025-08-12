@@ -94,4 +94,8 @@ class SiteController extends Controller {
     public function guideSeo() {
         return Inertia::render('site/GuideSeo');
     }
+
+    public function howToProtectYourself() {
+        return Inertia::render('site/HowToProtectYourself');
+    }
 }
