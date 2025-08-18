@@ -1,38 +1,33 @@
 <script setup>
-import GuestAdmin from '@/Layouts/GuestAdmin.vue';
-import { Head,  } from '@inertiajs/vue3'; // Importa Head e useRouter
-import Pagination from '@/Components/Pagination.vue';
+import GuestAdmin from '@/Layouts/GuestAdmin.vue'
+import { Head, router } from '@inertiajs/vue3'
+import Pagination from '@/Components/Pagination.vue'
 
-defineOptions({ layout: GuestAdmin });
+defineOptions({ layout: GuestAdmin })
 
 const props = defineProps({
-    posts: Object,
-});
+    posts: { type: Object, required: true },
+})
 
-
-// Função para excluir post
 const deletePost = (slug) => {
+    if (!slug) return alert('Slug ausente.')
     if (confirm('Tem certeza que deseja excluir este post?')) {
         router.delete(route('admin.posts.destroy', slug), {
-            onSuccess: () => {
-                alert('Post excluído com sucesso!');
-            },
-            onError: () => {
-                alert('Falha ao excluir o post.');
-            },
-        });
+            onSuccess: () => alert('Post excluído com sucesso!'),
+            onError: () => alert('Falha ao excluir o post.'),
+            preserveScroll: true,
+        })
     }
-};
+}
 
-// Função para editar post
 const editPost = (slug) => {
-    router.visit(route('admin.posts.edit', slug));
-};
+    if (!slug) return alert('Slug ausente.')
+    router.visit(route('admin.posts.edit', slug))
+}
 
-// Função para criar novo post
 const createPost = () => {
-    router.visit(route('admin.posts.create'));
-};
+    router.visit(route('admin.posts.create'))
+}
 </script>
 
 <template>
@@ -43,15 +38,15 @@ const createPost = () => {
     <section>
         <h1 class="text-2xl font-bold mb-6">Listagem de Posts</h1>
 
-        <div v-if="posts.data.length > 0">
+        <div v-if="posts?.data?.length">
             <ul class="divide-y divide-gray-200">
                 <li v-for="post in posts.data" :key="post.id" class="py-4">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h2 class="text-lg font-semibold">#{{ post.id }} - {{ post.title }}</h2>
-                            <p class="text-sm text-gray-600">{{ post.content }}</p>
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="min-w-0">
+                            <h2 class="text-lg font-semibold truncate">#{{ post.id }} — {{ post.title }}</h2>
+                            <p class="text-sm text-gray-600 line-clamp-2">{{ post.content }}</p>
                         </div>
-                        <div>
+                        <div class="shrink-0">
                             <button
                                 class="rounded-md bg-sky-600 hover:bg-sky-900 text-white px-3 py-1 mr-2"
                                 @click="editPost(post.slug)"
@@ -81,6 +76,6 @@ const createPost = () => {
             Adicionar Novo Post
         </button>
 
-        <Pagination v-if="posts.links" :links="posts.links" />
+        <Pagination v-if="posts?.links" :links="posts.links" />
     </section>
 </template>

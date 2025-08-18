@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Spatie\Image\Image;
 
-class PostController extends Controller {
+class SitePostController extends Controller {
     /**
      * Display a listing of the resource.
      */

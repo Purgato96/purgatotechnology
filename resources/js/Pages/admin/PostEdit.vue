@@ -1,43 +1,38 @@
 <script setup>
-import GuestAdmin from '@/Layouts/GuestAdmin.vue'; // Layout padrão
-defineOptions({layout: GuestAdmin}); // Define o layout para o componente
-import {ref} from "vue";
-import {useForm} from "@inertiajs/vue3";
-import RichTextEditor from '@/Components/RichTextEditor.vue';
+import GuestAdmin from '@/Layouts/GuestAdmin.vue'
+defineOptions({ layout: GuestAdmin })
 
-// Recebendo a prop `post` e `authors`, que serão passadas pela resposta da rota.
+import { ref } from 'vue'
+import { useForm } from '@inertiajs/vue3'
+import RichTextEditor from '@/Components/RichTextEditor.vue'
+
 const props = defineProps({
-    post: Object,
-    authors: Array,
-});
+    post: { type: Object, required: true },
+    authors: { type: Array, required: true },
+})
 
-// Agora você pode acessar props.post corretamente // Inicializando o formulário com os dados do post.
+const errors = ref({})
+
 const form = useForm({
-    title: props.post?.title || "",
-    subtitle: props.post?.subtitle || "",
-    content: props.post?.content || "",
-    category: props.post?.category || "",
-    author_id: props.post?.author || "",
-    tags: props.post?.tags || "",
-    image: null,  // Imagem tratada separadamente com File API.
-});
+    title: props.post?.title || '',
+    subtitle: props.post?.subtitle || '',
+    content: props.post?.content || '',
+    category: props.post?.category || '',
+    author_id: props.post?.author_id || '',
+    tags: props.post?.tags || '',
+    image: null, // arquivo
+    slug: props.post?.slug || '',
+})
 
-
-const errors = ref({});
-
-// Função para tratar alteração de imagem.
 const onFileChange = (event) => {
-    form.image = event.target.files[0];
-};
+    form.image = event.target.files[0]
+}
 
-// Função para atualizar o post.
 const updatePost = () => {
-    form.put(route("admin.posts.update", props.post.id), {
-        onError: (errorBag) => {
-            errors.value = errorBag;
-        },
-    });
-};
+    form.put(route('admin.posts.update', props.post.slug), {
+        onError: (bag) => (errors.value = bag),
+    })
+}
 </script>
 
 <template>
@@ -45,29 +40,43 @@ const updatePost = () => {
         <title>Editando Posts</title>
     </Head>
 
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded p-6">
+    <div class="max-w-3xl mx-auto">
         <h1 class="text-2xl font-bold mb-6">Editar Post</h1>
 
-        <!-- Formulário de edição -->
-        <form @submit.prevent="updatePost">
-            <div class="mb-4">
-                <label for="title" class="block text-sm font-medium text-gray-700">Título</label>
+        <form @submit.prevent="updatePost" class="space-y-4">
+            <!-- Título -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="title">Título</label>
                 <input
-                    id="title"
                     type="text"
+                    id="title"
                     v-model="form.title"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                     :class="{ 'border-red-500': errors.title }"
+                    required
                 />
                 <p v-if="errors.title" class="text-red-500 text-sm mt-1">{{ errors.title }}</p>
             </div>
 
-            <!-- Subtítulo -->
-            <div class="mb-4">
-                <label for="subtitle" class="block text-sm font-medium text-gray-700">Subtítulo</label>
+            <!-- Slug -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="slug">Slug</label>
                 <input
-                    id="subtitle"
                     type="text"
+                    id="slug"
+                    v-model="form.slug"
+                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
+                    :class="{ 'border-red-500': errors.slug }"
+                />
+                <p v-if="errors.slug" class="text-red-500 text-sm mt-1">{{ errors.slug }}</p>
+            </div>
+
+            <!-- Subtítulo -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="subtitle">Subtítulo</label>
+                <input
+                    type="text"
+                    id="subtitle"
                     v-model="form.subtitle"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                     :class="{ 'border-red-500': errors.subtitle }"
@@ -76,8 +85,8 @@ const updatePost = () => {
             </div>
 
             <!-- Conteúdo -->
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700" for="category">Conteúdo</label>
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="content">Conteúdo</label>
                 <RichTextEditor
                     v-model="form.content"
                     id="content"
@@ -87,11 +96,11 @@ const updatePost = () => {
             </div>
 
             <!-- Categoria -->
-            <div class="mb-4">
-                <label for="category" class="block text-sm font-medium text-gray-700">Categoria</label>
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="category">Categoria</label>
                 <input
-                    id="category"
                     type="text"
+                    id="category"
                     v-model="form.category"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                     :class="{ 'border-red-500': errors.category }"
@@ -100,55 +109,52 @@ const updatePost = () => {
             </div>
 
             <!-- Autor -->
-            <div class="mb-4">
+            <div>
                 <label class="block text-sm font-medium text-gray-700" for="author">Autor</label>
                 <select
                     id="author"
                     v-model="form.author_id"
                     class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
                 >
-                    <option value="" selected disabled>Selecione um autor</option>
+                    <option value="" disabled>Selecione um autor</option>
                     <option v-for="author in authors" :key="author.id" :value="author.id">
                         {{ author.name }}
                     </option>
                 </select>
-                <p v-if="errors.author" class="text-red-500 text-sm mt-1">{{ errors.author }}</p>
-            </div>
-            <!-- Tag -->
-            <div class="mb-4">
-                <label for="tags" class="block text-sm font-medium text-gray-700">Tag</label>
-                <input
-                    id="tags"
-                    type="text"
-                    v-model="form.tags"
-                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
-                    :class="{ 'border-red-500': errors.tags }"
-                />
-                <p v-if="errors.tags" class="text-red-500 text-sm mt-1">{{ errors.tags }}</p>
-            </div>
-            <!-- Image -->
-            <div class="mb-4">
-                <label for="image" class="block text-sm font-medium text-gray-700">Imagem</label>
-                <input
-                    id="image"
-                    type="file"
-                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
-                    @change="onFileChange"
-                />
-                <p v-if="errors.image" class="text-red-500 text-sm mt-1">{{ errors.image }}</p>
+                <p v-if="errors.author_id" class="text-red-500 text-sm mt-1">{{ errors.author_id }}</p>
             </div>
 
-            <!-- Botões -->
+            <!-- Tags -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="tags">Tags</label>
+                <input
+                    type="text"
+                    id="tags"
+                    v-model="form.tags"
+                    class="w-full border px-3 py-2 rounded-md focus:ring focus:ring-blue-400"
+                />
+            </div>
+
+            <!-- Imagem -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700" for="image">Imagem</label>
+                <input
+                    type="file"
+                    id="image"
+                    accept="image/*"
+                    @change="onFileChange"
+                    class="w-full"
+                />
+            </div>
+
             <div class="flex items-center justify-between mt-6">
-                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">
                     Atualizar Post
                 </button>
-                <inertia-link
-                    :href="route('admin.posts.update', props.post.id)"
-                    class="text-gray-600 hover:underline"
-                >
+
+                <a :href="route('admin.posts')" class="text-gray-600 hover:underline">
                     Cancelar
-                </inertia-link>
+                </a>
             </div>
         </form>
     </div>

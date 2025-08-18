@@ -4,7 +4,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 Route::group(['prefix' => 'admin'], function () {
     Route::controller(AdminController::class)->group(function () {
