@@ -56,3 +56,10 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
 # Proteção contra listagem de diretórios (segurança extra)
 Options -Indexes
 
+<IfModule mod_headers.c>
+  <Location "/admin">
+    Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header always set Pragma "no-cache"
+    Header always set Expires 0
+  </Location>
+</IfModule>
