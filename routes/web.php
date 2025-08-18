@@ -24,14 +24,17 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Deletar
 
                 Route::controller(PostController::class)->group(function () {
-                    /*Administrando Posts*/
+                    // Administrando Posts
                     Route::get('posts', 'index')->name('posts');
                     Route::get('posts/create', 'create')->name('posts.create');
                     Route::post('posts', 'store')->name('posts.store');
-                    Route::get('posts/{post}/edit', 'edit')->name('posts.edit');
-                    Route::put('posts/{post}', 'update')->name('posts.update');
-                    Route::delete('posts/{post}', 'destroy')->name('posts.destroy');
+
+                    // 🔧 Binding explícito por slug
+                    Route::get('posts/{post:slug}/edit', 'edit')->name('posts.edit');
+                    Route::put('posts/{post:slug}', 'update')->name('posts.update');
+                    Route::delete('posts/{post:slug}', 'destroy')->name('posts.destroy');
                 });
+
             });
         });
     });
