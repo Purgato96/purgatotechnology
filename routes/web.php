@@ -52,6 +52,7 @@ Route::controller(SiteController::class)->group(function () {
     Route::get('/contato', 'contact')->name('site.contact');
     Route::get('/guia-completo-de-seo-domine-as-estrategias-para-conquistar-o-topo-do-google', 'guideSeo')->name('site.guideSeo');
     Route::get('/how-to-protect-yourself-in-the-age-of-ai', 'howToProtectYourself')->name('site.howToProtectYourself');
+    Route::get('/politica-de-privacidade', 'privacyPolicy')->name('site.privacyPolicy');
 });
 
 

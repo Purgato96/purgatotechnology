@@ -21,10 +21,6 @@
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NG28XJQV');</script>
     <!-- End Google Tag Manager -->
-    <!-- Ads Sense Google -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9706230547321289"
-            crossorigin="anonymous"></script>
-    <!-- End Ads Sense Google -->
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
         {
@@ -51,9 +47,6 @@
             }
         }
     </script>
-	<!-- Script Google AdSense  -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9706230547321289"
-     crossorigin="anonymous"></script>
 </head>
 <body class="font-sans antialiased">
 <!-- Google Tag Manager (noscript) -->

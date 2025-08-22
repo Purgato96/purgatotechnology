@@ -97,4 +97,8 @@ class SiteController extends Controller {
     public function howToProtectYourself() {
         return Inertia::render('site/HowToProtectYourself');
     }
+
+    public function privacyPolicy() {
+        return Inertia::render('site/PrivacyPolicy');
+    }
 }
