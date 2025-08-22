@@ -50,7 +50,7 @@ onMounted(() => {
         <AdSlot
             v-if="adsense?.enabled"
             :client-id="adsense.clientId"
-            slot="REEMPLACE_TOP_SLOT"
+            slot="8820137566"
         format="auto"
         :full-width="true"
         style="display:block; min-height:280px; margin-bottom:1.5rem;"
@@ -82,7 +82,7 @@ onMounted(() => {
             <AdSlot
                 v-if="adsense?.enabled"
                 :client-id="adsense.clientId"
-                slot="REEMPLACE_MID_SLOT"
+                slot="6002402535"
             format="auto"
             :full-width="true"
             style="display:block; min-height:280px; margin:1.5rem 0;"
@@ -104,7 +104,7 @@ onMounted(() => {
         <AdSlot
             v-if="adsense?.enabled"
             :client-id="adsense.clientId"
-            slot="REEMPLACE_BOTTOM_SLOT"
+            slot="4201417467"
         format="auto"
         :full-width="true"
         style="display:block; min-height:280px; margin-top:1.5rem;"
