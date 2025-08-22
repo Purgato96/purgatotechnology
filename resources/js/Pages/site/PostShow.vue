@@ -1,15 +1,15 @@
-<!-- resources/js/Pages/site/PostShow.vue (ou o caminho da sua página de post) -->
 <script setup lang="ts">
 import Guest from '@/Layouts/Guest.vue'
 defineOptions({ layout: Guest })
 
 import { onMounted, computed } from 'vue'
 import { Head, usePage } from '@inertiajs/vue3'
-import AdSlot from '@/Components/AdSlot.vue'
-import { useConsent } from '@/Composables/useConsent'
-import CookieSettingsButton from '@/Components/CookieSettingsButton.vue'
 
-// Props vindas do controller
+// ⚠️ mantenha paths em minúsculo p/ evitar bug em prod (FS case-sensitive)
+import AdSlot from '@/components/AdSlot.vue'
+import { useConsent } from '@/composables/useConsent'
+import CookieSettingsButton from '@/components/CookieSettingsButton.vue'
+
 const props = defineProps<{
     post: {
         title: string
@@ -26,16 +26,15 @@ const props = defineProps<{
 const page = usePage()
 const { initConsent } = useConsent()
 
-// Compartilhado via Inertia::share no AppServiceProvider
+// vem do Inertia::share no AppServiceProvider
 const adsense = computed(() => page.props.adsense as { enabled: boolean; clientId?: string })
 
 onMounted(() => {
-    // Carrega CMP e só carrega AdSense após consentimento
-    if (adsense.value?.enabled && adsense.value?.clientId) {
-        initConsent(adsense.value.clientId)
-    }
+    // ✅ SEMPRE inicializa o banner; o AdSense só carrega após "Aceitar"
+    initConsent(adsense.value?.clientId)
 })
 </script>
+
 
 <template>
     <Head>
