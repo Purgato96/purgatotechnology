@@ -6,9 +6,8 @@ import { onMounted, computed } from 'vue'
 import { Head, usePage } from '@inertiajs/vue3'
 
 // ⚠️ mantenha paths em minúsculo p/ evitar bug em prod (FS case-sensitive)
-import AdSlot from '@/components/AdSlot.vue'
-import { useConsent } from '@/composables/useConsent'
-import CookieSettingsButton from '@/components/CookieSettingsButton.vue'
+import AdSlot from '@/Components/AdSlot.vue'
+import { useConsent } from '@/Composables/useConsent'
 
 const props = defineProps<{
     post: {
