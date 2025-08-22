@@ -4,8 +4,6 @@ defineOptions({ layout: Guest })
 
 import { onMounted, computed } from 'vue'
 import { Head, usePage } from '@inertiajs/vue3'
-
-// ⚠️ mantenha paths em minúsculo p/ evitar bug em prod (FS case-sensitive)
 import AdSlot from '@/Components/AdSlot.vue'
 import { useConsent } from '@/Composables/useConsent'
 
@@ -25,11 +23,10 @@ const props = defineProps<{
 const page = usePage()
 const { initConsent } = useConsent()
 
-// vem do Inertia::share no AppServiceProvider
 const adsense = computed(() => page.props.adsense as { enabled: boolean; clientId?: string })
 
 onMounted(() => {
-    // ✅ SEMPRE inicializa o banner; o AdSense só carrega após "Aceitar"
+    // SEMPRE inicializa a CMP; AdSense só carrega após “Aceitar”
     initConsent(adsense.value?.clientId)
 })
 </script>
