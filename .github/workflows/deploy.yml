@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
-         with:
+        with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
@@ -30,30 +30,19 @@ jobs:
           script: |
             set -e
 
-            # Navegar ate o projeto
             cd ~/purgatotechnology
 
-            # Pull das mudancas
             git pull origin main
 
-            # Build e restart dos containers
             docker compose -f docker-compose.prod.yml up -d --build --remove-orphans
 
-            # Rodar migrations
             docker exec purgatotechnology_backend php artisan migrate --force
 
-            # Limpar caches e otimizar
             docker exec purgatotechnology_backend php artisan config:cache
-            docker exec purgatotechnology_backen with:
-          host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: 22
-          script: |d php artisan route:cache
+            docker exec purgatotechnology_backend php artisan route:cache
             docker exec purgatotechnology_backend php artisan view:cache
             docker exec purgatotechnology_backend php artisan event:cache
 
-            # Limpar containers/imagens antigas
             docker image prune -f
 
             echo "Deploy concluido com sucesso!"
