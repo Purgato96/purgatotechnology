@@ -6,7 +6,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      patch: '/',
+      path: '/',
       name: 'Index',
       component: Index,
     },
