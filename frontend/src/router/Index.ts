@@ -7,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       patch: '/',
-      name: Index,
+      name: 'Index',
       component: Index,
     },
   ],
