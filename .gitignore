@@ -1,3 +1,4 @@
 docker-compose.prod.yml
 .env
 echo "docker-compose.prod.yml" >> .gitignore
+docker-compose.yml
